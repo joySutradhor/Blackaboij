@@ -1,0 +1,73 @@
+
+/* img hover effect */
+.product-card {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .front-img {
+    width: 100%;
+    transition: opacity 0.3s ease;
+  }
+  
+  .back-img {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+  }
+  
+  .product-card:hover .front-img {
+    opacity: 0;
+  }
+  
+  .product-card:hover .back-img {
+    opacity: 1;
+  }
+
+  /* buttton hover Effect */
+  .details-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Center the button */
+    background-color: transparent;
+    color: #B7B7B7 ;
+    font-size: small;
+    border: 1px solid #B7B7B7;
+    padding: 5px 20px;
+    border-radius: 2px;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+    opacity: 0; /* Initially hidden */
+  }
+  
+  .product-card:hover .details-button {
+    opacity: 1;
+  }
+  
+
+  /* custom tabs styles*/
+.custom-tab-list {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    background-color: transparent; /* Optional: Set the background color to your preference */
+  }
+  
+  .custom-tab {
+    padding: 5px 15px;
+    cursor: pointer;
+    margin: 0 0px;
+    border: none; /* Remove the default border */
+    outline: none; /* Remove the default focus outline */
+  }
+  
+  .custom-tab:hover {
+    background-color: #B7B7B7; 
+   
+  }
+  

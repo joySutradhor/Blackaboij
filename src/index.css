@@ -8,9 +8,15 @@
 
 } */
 
+@layer components {
+  .section-gap {
+    @apply pt-[50px]  ;
+  }
+}
+
 @layer base {
   h1{
-    @apply text-4xl font-serif ;
+    @apply text-4xl font-serif text-center ;
   }
   header {
     @apply text-[#b1b1b1] text-[13px]  bg-[#1b1b1b] h-[45px] flex justify-center items-center;
