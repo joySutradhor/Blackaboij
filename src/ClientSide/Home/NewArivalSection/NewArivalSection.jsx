@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
 import "./NewArivalSection.css"
+import { Link } from 'react-router-dom';
 
 
 const NewArivalSection = () => {
@@ -75,7 +76,7 @@ const NewArivalSection = () => {
                         <div className='mb-[30px] text-center'>
                             <TabList
                                 className="custom-tab-list"
-                                 // Remove the default bottom border
+                            // Remove the default bottom border
                             >
                                 <Tab className="custom-tab">Men</Tab>
                                 <Tab className="custom-tab">Women</Tab>
@@ -89,7 +90,7 @@ const NewArivalSection = () => {
                                     <div key={product.id} className="bg-[#B7B7B7] product-card">
                                         <img src={product.img} alt={product.productName} className="front-img" />
                                         <img src={product.backImg} alt="" className="back-img " />
-                                        <button className="details-button">Details</button>
+                                        <Link to={`product/${product.id}`}> <button className="details-button">Details</button></Link>
                                         <h3 className="text-center py-4">{product.productName}</h3>
                                         <p className="pb-3 text-center">Euro.{product.price}</p>
                                     </div>

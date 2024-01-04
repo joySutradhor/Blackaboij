@@ -8,6 +8,8 @@ import {
 } from "react-router-dom";
 import Main from './ClientSide/main';
 import Home from './ClientSide/Home/Home';
+import SingleProduct from './ClientSide/Home/SingleProduct/SingleProduct';
+import ManCollections from './ClientSide/Pages/ManCollections/ManCollections';
 // all routes
 const router = createBrowserRouter([
   {
@@ -17,6 +19,14 @@ const router = createBrowserRouter([
       {
         path : "/",
         element: <Home></Home>
+      },
+      {
+        path : "/product/:id",
+        element: <SingleProduct></SingleProduct>
+      },
+      {
+        path : "/menCollections",
+        element : <ManCollections></ManCollections>
       }
     ]
   },

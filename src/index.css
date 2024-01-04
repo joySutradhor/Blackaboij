@@ -12,6 +12,10 @@
   .section-gap {
     @apply pt-[50px]  ;
   }
+  .btn {
+    @apply  px-[8px] py-[5px] bg-slate-100 text-black  ;
+  }
+  
 }
 
 @layer base {
@@ -20,5 +24,8 @@
   }
   header {
     @apply text-[#b1b1b1] text-[13px]  bg-[#1b1b1b] h-[45px] flex justify-center items-center;
+  }
+  li{
+    @apply text-white hover:text-[#B1B1B1] 
   }
 }

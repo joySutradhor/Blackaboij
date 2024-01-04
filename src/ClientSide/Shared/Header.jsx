@@ -1,9 +1,11 @@
 import { HiEnvelope, HiMiniShoppingCart } from "react-icons/hi2";
 import { HiSearch, HiUser } from "react-icons/hi";
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 const Header = () => {
     const [isSticky, setIsSticky] = useState(false);
+    const [isMenHovered, setIsMenHovered] = useState(false);
 
     useEffect(() => {
         const handleScroll = () => {
@@ -25,17 +27,18 @@ const Header = () => {
             {/* Header Section */}
             <div
                 style={{
-                    backgroundImage: "url('https://i.ibb.co/SP1rhKQ/Banner.png')",
-                    backgroundSize: 'cover',
-                    backgroundPosition: 'center',
-                    backgroundRepeat: "no-repeat",
-                    height: '100vh',
+                    // backgroundImage: "url('https://i.ibb.co/SP1rhKQ/Banner.png')",
+                    // backgroundSize: 'cover',
+                    // backgroundPosition: 'center',
+                    // backgroundRepeat: "no-repeat",
+                    // height: '100vh',
                     position: 'relative', // Add this line
-                    zIndex: isSticky ? '10' : '0', // Add this line
+                    zIndex: isSticky ? '9999' : '8888', // Add this line
+                    backgroundColor: isMenHovered ? 'black' : 'transparent', // Added this line
                 }}
             >
-                <div className={`pt-8  ${isSticky ? 'fixed top-0 left-0 right-0 bg-black  text-white transition-colors duration-200 ease-in ' : ''}`}>
-                    <div className="flex justify-between px-[50px] pb-[30px]">
+                <div className={`pt-8 ${isSticky ? 'fixed top-0 left-0 right-0 bg-black text-white transition-colors duration-200 ease-in ' : ''}`}>
+                    <div className={`flex justify-between px-[50px] pb-[30px] `}>
                         <div className="flex gap-x-3">
                             <span> <HiEnvelope className="text-white h-[18px] w-[18px]" /></span>
                             <span> <HiEnvelope className="text-white h-[18px] w-[18px]" /></span>
@@ -43,7 +46,7 @@ const Header = () => {
                             <span> <HiEnvelope className="text-white h-[18px] w-[18px]" /></span>
                         </div>
                         <div>
-                            <img src="https://i.ibb.co/3sNL27c/logo.png" className="w-[85px] md:mr-[27px]" alt="" />
+                           <Link to="/"> <img src="https://i.ibb.co/3sNL27c/logo.png" className="w-[85px] md:mr-[27px]" alt="" /></Link>
                         </div>
                         <div className="flex gap-x-3">
                             <span ><HiUser className="text-white h-[18px] w-[18px]" /></span>
@@ -52,15 +55,53 @@ const Header = () => {
                         </div>
                     </div>
                     {/* list items */}
-                    <ul  className={`flex justify-center py-[7px]  gap-[30px] text-white ${isSticky ? 'text-white border-b border-t border-[#383838]' : ''}`}>
-                        <li>Men</li>
+                    <div
+                        className={`flex  justify-center py-[7px] list-none gap-[30px] text-[#b1b1b1] ${isSticky ? 'border-b border-t border-[#383838]' : ''} `}
+
+                    >
+                        <li className={` group  ${isMenHovered ? 'text-white ' : ''}`}
+                            onMouseEnter={() => setIsMenHovered(true)}
+                            onMouseLeave={() => setIsMenHovered(false)}
+                        >
+                            Men
+                            <div className="absolute left-0  hidden group-hover:block bg-black z-50 text-white">
+                                <div className="grid grid-cols-2 justify-around items-start pt-10  ">
+                                    <div className="flex justify-around">
+                                        <ul className="whitespace-nowrap  space-y-1 text-[12px]">
+                                            <li className="pb-[20px]"><Link to="/menCollections">READY TO WEAR</Link></li>
+                                            <li><Link to="#">NEW ARRIVALS</Link></li>
+                                            <li><Link to="#">OUTFEETS</Link></li>
+                                            <li><Link to="#">PANTS</Link></li>
+                                            <li><Link to="#">HOODIES AND JACKETS</Link></li>
+                                            <li><Link to="#">TEES</Link></li>
+                                        </ul>
+                                        <ul className="whitespace-nowrap space-y-1 text-[12px]">
+                                            <li className="pb-[20px] "><Link to="#">READY TO WEAR</Link></li>
+                                            <li><Link to="#">NEW ARRIVALS</Link></li>
+                                            <li><Link to="#">OUTFEETS</Link></li>
+                                            <li><Link to="#">PANTS</Link></li>
+                                            <li><Link to="#">HOODIES AND JACKETS</Link></li>
+                                            <li><Link to="#">TEES</Link></li>
+                                        </ul>
+                                    </div>
+                                    <div className="flex ">
+                                        <div >
+                                            <img className="object-cover" src="https://i.ibb.co/q9SC0WV/BLVCKPSG-PR-1080x.webp" alt="" />
+                                        </div>
+                                        <div >
+                                            <img className="object-cover" src="https://i.ibb.co/q9SC0WV/BLVCKPSG-PR-1080x.webp" alt="" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
                         <li>Women</li>
                         <li>Accessories</li>
                         <li>Digital</li>
                         <li>Seles</li>
                         <li>Collab</li>
                         <li>Member</li>
-                    </ul>
+                    </div>
                 </div>
             </div>
             <div>
