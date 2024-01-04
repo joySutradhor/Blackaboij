@@ -68,7 +68,7 @@ const NewArivalSection = () => {
     }, [accessoriesProducts]);
 
     return (
-        <div className="section-gap">
+        <div className="section-gap ">
             <div className='flex flex-col'>
                 <h1 className='mb-[20px] text-center'>Just Dropped</h1>
                 <div>

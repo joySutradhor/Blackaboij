@@ -10,7 +10,7 @@ const Header = () => {
     useEffect(() => {
         const handleScroll = () => {
             const scrollPosition = window.scrollY;
-            setIsSticky(scrollPosition > 0);
+            setIsSticky(scrollPosition > 10);
         };
 
         window.addEventListener('scroll', handleScroll);
@@ -22,8 +22,14 @@ const Header = () => {
 
     return (
         <nav className="">
-            <header>Up to 60% OFF on selected items. With an additional 20%, code: BLVCKWINTER</header>
-
+            <header
+                style={{
+                    transition: 'max-height 0.5s ease-in-out',
+                    maxHeight: isSticky ? '0' : '100px',
+                }}
+            >
+                Up to 60% OFF on selected items. With an additional 20%, code: BLVCKWINTER
+            </header>
             {/* Header Section */}
             <div
                 style={{
@@ -33,11 +39,15 @@ const Header = () => {
                     // backgroundRepeat: "no-repeat",
                     // height: '100vh',
                     position: 'relative', // Add this line
+                    transition: 'border 0.3s ease-in-out', // Add this line for smooth transition
+                    borderTop: isSticky ? '1px solid #383838' : 'none',
+                    borderBottom: isSticky ? '1px solid #383838' : 'none',
                     zIndex: isSticky ? '9999' : '8888', // Add this line
                     backgroundColor: isMenHovered ? 'black' : 'transparent', // Added this line
+
                 }}
             >
-                <div className={`pt-8 ${isSticky ? 'fixed top-0 left-0 right-0 bg-black text-white transition-colors duration-200 ease-in ' : ''}`}>
+                <div className={`pt-8 ${isSticky ? 'fixed top-0 left-0 right-0 bg-black text-white transition-colors duration-500 ease-in-out ' : ''}`}>
                     <div className={`flex justify-between px-[50px] pb-[30px] `}>
                         <div className="flex gap-x-3">
                             <span> <HiEnvelope className="text-white h-[18px] w-[18px]" /></span>
@@ -46,7 +56,7 @@ const Header = () => {
                             <span> <HiEnvelope className="text-white h-[18px] w-[18px]" /></span>
                         </div>
                         <div>
-                           <Link to="/"> <img src="https://i.ibb.co/3sNL27c/logo.png" className="w-[85px] md:mr-[27px]" alt="" /></Link>
+                            <Link to="/"> <img src="https://i.ibb.co/3sNL27c/logo.png" className="w-[85px] md:mr-[27px]" alt="" /></Link>
                         </div>
                         <div className="flex gap-x-3">
                             <span ><HiUser className="text-white h-[18px] w-[18px]" /></span>
