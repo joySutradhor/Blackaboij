@@ -26,6 +26,7 @@
     @apply text-[#b1b1b1] text-[13px]  bg-[#1b1b1b] h-[45px] flex justify-center items-center;
   }
   li{
-    @apply text-white hover:text-[#B1B1B1] 
+    @apply text-white  
   }
+  /* hover:text-[#B1B1B1] */
 }
