@@ -55,7 +55,7 @@
     padding: 0;
     display: flex;
     justify-content: center;
-    background-color: transparent; /* Optional: Set the background color to your preference */
+    /* background-color: transparent; Optional: Set the background color to your preference */
   }
   
   .custom-tab {
@@ -64,10 +64,12 @@
     margin: 0 0px;
     border: none; /* Remove the default border */
     outline: none; /* Remove the default focus outline */
+    color: #646464;
   }
   
   .custom-tab:hover {
-    background-color: #B7B7B7; 
+    /* background-color: red; */
+    color: #000000;
    
   }
   

@@ -1,4 +1,6 @@
-import { HiEnvelope } from "react-icons/hi2";
+import { AiOutlineYoutube } from "react-icons/ai";
+import { CiFacebook } from "react-icons/ci";
+import { FaInstagram, FaPinterestP } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
 
@@ -47,10 +49,10 @@ const Footer = () => {
                     <h2 className="pb-3">SOCIAL</h2>
                     <p>Stay connected</p>
                     <div className=" flex gap-x-3 pt-2 ">
-                        <span> <HiEnvelope className="text-white h-[18px] w-[18px]"></HiEnvelope></span>
-                        <span> <HiEnvelope className="text-white h-[18px] w-[18px]"></HiEnvelope></span>
-                        <span> <HiEnvelope className="text-white h-[18px] w-[18px]"></HiEnvelope></span>
-                        <span> <HiEnvelope className="text-white h-[18px] w-[18px]"></HiEnvelope></span>
+                        <span> <CiFacebook className="text-white h-[18px] w-[18px]" /></span>
+                        <span> <FaPinterestP className="text-white h-[18px] w-[18px]" /></span>
+                        <span> <AiOutlineYoutube className="text-white h-[18px] w-[18px]" /></span>
+                        <span> <FaInstagram className="text-white h-[18px] w-[18px]" /></span>
                     </div>
 
                 </div>

@@ -3,6 +3,11 @@ import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
 import "./NewArivalSection.css"
 import { Link } from 'react-router-dom';
+import { MdEuroSymbol } from "react-icons/md";
+import { FaPlus } from "react-icons/fa";
+
+import { Toaster, toast } from 'sonner'
+
 
 
 const NewArivalSection = () => {
@@ -68,31 +73,36 @@ const NewArivalSection = () => {
     }, [accessoriesProducts]);
 
     return (
-        <div className="section-gap ">
+        <div className="md:section-gap pt-[20px] ">
+            <Toaster
+            />
             <div className='flex flex-col'>
-                <h1 className='mb-[20px] text-center'>Just Dropped</h1>
+                <h1 className='mb-[10px] md:mb-[20px] text-center'>Just Dropped</h1>
                 <div>
                     <Tabs>
-                        <div className='mb-[30px] text-center'>
+                        <div className=' mb-[20px] md:mb-[50px] text-center'>
                             <TabList
                                 className="custom-tab-list"
                             // Remove the default bottom border
                             >
-                                <Tab className="custom-tab">Men</Tab>
+                                <Tab className="custom-tab ">Men</Tab>
                                 <Tab className="custom-tab">Women</Tab>
-                                <Tab className="custom-tab">Accessories</Tab>
+                                <Tab className="custom-tab">Prince</Tab>
+                                <Tab className="custom-tab">Princess</Tab>
                             </TabList>
                         </div>
 
                         <TabPanel>
-                            <div className="grid md:grid-cols-4 grid-cols-2 gap-[2px]">
+                            <div className="grid md:grid-cols-4 grid-cols-2 gap-[2px] ">
                                 {men.map((product) => (
                                     <div key={product.id} className="bg-[#B7B7B7] product-card">
                                         <img src={product.img} alt={product.productName} className="front-img" />
                                         <img src={product.backImg} alt="" className="back-img " />
+                                        <button className='absolute top-1 left-1  text-white bg-[#5A5A5A] md:px-4 md:py-1 md:text-[16px] px-2 py-1 text-[8px] '>New</button>
+                                        <button className='absolute md:top-3 top-2 right-3  text-white ' onClick={() => toast.success(`${product.productName} is added`)}><FaPlus></FaPlus></button>
                                         <Link to={`product/${product.id}`}> <button className="details-button">Details</button></Link>
                                         <h3 className="text-center py-4">{product.productName}</h3>
-                                        <p className="pb-3 text-center">Euro.{product.price}</p>
+                                        <p className="pb-3 text-center"> <span className='flex justify-center items-center'><MdEuroSymbol></MdEuroSymbol> {product.price}</span> </p>
                                     </div>
                                 ))}
                             </div>

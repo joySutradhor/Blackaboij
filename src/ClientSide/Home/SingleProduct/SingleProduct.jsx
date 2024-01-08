@@ -1,6 +1,7 @@
 import { Carousel } from 'react-responsive-carousel';
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import CustomizedAccordions from './CustomizedAccordions';
+import { MdEuroSymbol } from 'react-icons/md';
 
 
 
@@ -10,7 +11,7 @@ const SingleProduct = () => {
     return (
         <div>
             <img className="mt-[-120px] h-[150px] w-full" src="https://i.ibb.co/hy7jH3N/black.png" alt="" />
-            <div className='flex gap-[50px] bg-black text-white'>
+            <div className='grid md:grid-cols-2  gap-[00px] md:mt-[50px]  '>
                 <div>
                     <Carousel
                         width={600}  // Set the width
@@ -31,9 +32,9 @@ const SingleProduct = () => {
                     </Carousel>
                 </div>
                 <div>
-                    <p>Home/Product/Tshirts</p>
-                    <h2 className='my-[25px]'>SPORT T-SHIRT</h2>
-                    <h2> EUR.1250.00</h2>
+                    <p className='text-[14px] text-[#212121]'>Home . Blvck Winter Beanie</p>
+                    <h2 className='md:my-[20px] md:text-[39px] text-[#212121] '>Black Winter Beanie</h2>
+                    <h2><span className='flex  items-center md:text-[23px]'><MdEuroSymbol></MdEuroSymbol> 7400.00</span></h2>
                     <p className='mt-[25px] mr-[40px]'>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ut autem officiis tempore iusto hic rem perferendis sequi recusandae blanditiis totam delectus quam, vitae placeat possimus libero aliquid deleniti alias nemo commodi repellendus dicta incidunt quo repudiandae unde? Qui, numquam consectetur.</p>
                     <div className=''>
                         <div className='flex my-[25px] space-x-3'>

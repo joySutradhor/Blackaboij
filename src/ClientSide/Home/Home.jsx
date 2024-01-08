@@ -1,6 +1,8 @@
-import BlogPosts from "./BlogPosts/BlogPosts";
+// import BlogPosts from "./BlogPosts/BlogPosts";
+import BlackSaleSection from "./BlackSaleSection/BlackSaleSection";
 import HeroSection from "./HeroSection/HeroSection";
 import NewArivalSection from "./NewArivalSection/NewArivalSection";
+import ShadesSection from "./ShadesSection/ShadesSection";
 
 
 const Home = () => {
@@ -10,7 +12,9 @@ const Home = () => {
                 <HeroSection></HeroSection>
             </div>
             <NewArivalSection></NewArivalSection>
-            <BlogPosts></BlogPosts>
+            {/* <BlogPosts></BlogPosts> */}
+            <BlackSaleSection></BlackSaleSection>
+            <ShadesSection></ShadesSection>
         </div>
     );
 };

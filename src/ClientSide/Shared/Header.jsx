@@ -1,15 +1,14 @@
-import { HiEnvelope, HiMiniChevronUp, HiMiniShoppingCart } from "react-icons/hi2";
+import { HiMiniChevronUp, HiMiniShoppingCart } from "react-icons/hi2";
 import { HiSearch, HiUser } from "react-icons/hi";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { HiBars3BottomRight } from "react-icons/hi2";
 import { HiMiniXMark } from "react-icons/hi2";
 import { HiMiniChevronDown } from "react-icons/hi2";
-import { RiFacebookCircleLine } from "react-icons/ri";
-import { FaInstagram } from "react-icons/fa";
-import { CiTwitter } from "react-icons/ci";
-import { CiLinkedin } from "react-icons/ci";
-import { AiOutlineYoutube } from "react-icons/ai";
+import { FaInstagram, FaPinterest, } from "react-icons/fa";
+import { IoLogoYoutube, } from "react-icons/io";
+import { FaFacebook } from "react-icons/fa";
+
 
 
 
@@ -46,6 +45,7 @@ const Header = () => {
         setIsListMenuOpen(!isListMenuOpen);
     };
 
+    const iconSize = 19;
     return (
         <nav>
             <div className="md:block hidden">
@@ -56,7 +56,7 @@ const Header = () => {
                         maxHeight: isSticky ? '0' : '100px',
                     }}
                 >
-                    Up to 60% OFF on selected items. With an additional 20%, code: BLVCKWINTER
+                    Up to 60% OFF on selected items. With an additional 20%, code: BLACK WINTER
                 </header>
                 {/* Header Section */}
                 <div
@@ -79,10 +79,10 @@ const Header = () => {
                     <div className={`pt-8 ${isSticky ? 'fixed top-0 left-0 right-0 bg-black text-white transition-colors duration-500 ease-in-out ' : ''}`}>
                         <div className={`flex justify-between px-[50px] pb-[30px] `}>
                             <div className="flex gap-x-3">
-                                <span> <HiEnvelope className="text-white h-[18px] w-[18px]" /></span>
-                                <span> <HiEnvelope className="text-white h-[18px] w-[18px]" /></span>
-                                <span> <HiEnvelope className="text-white h-[18px] w-[18px]" /></span>
-                                <span> <HiEnvelope className="text-white h-[18px] w-[18px]" /></span>
+                                <span style={{ fontSize: `${iconSize}px` }} > <FaFacebook className="text-white  " /></span>
+                                <span style={{ fontSize: `${iconSize}px` }}  > <FaPinterest className="text-white " /></span>
+                                <span style={{ fontSize: `${iconSize}px` }}  > <FaInstagram className="text-white " /></span>
+                                <span style={{ fontSize: `${iconSize}px` }} > <IoLogoYoutube className="text-white " /></span>
                             </div>
                             <div>
                                 <Link to="/"> <img src="https://i.ibb.co/3sNL27c/logo.png" className="w-[85px] md:mr-[27px]" alt="" /></Link>
@@ -107,20 +107,23 @@ const Header = () => {
                                     <div className="grid grid-cols-2 justify-around items-start pt-10  ">
                                         <div className="flex justify-around">
                                             <ul className="whitespace-nowrap  space-y-1 text-[12px]">
-                                                <li className="pb-[20px]"><Link to="/menCollections">READY TO WEAR</Link></li>
+                                                <li className="pb-[20px]"><Link to="/menCollections">NEW COLLECTIONS</Link></li>
                                                 <li><Link to="#">NEW ARRIVALS</Link></li>
                                                 <li><Link to="#">OUTFEETS</Link></li>
                                                 <li><Link to="#">PANTS</Link></li>
                                                 <li><Link to="#">HOODIES AND JACKETS</Link></li>
                                                 <li><Link to="#">TEES</Link></li>
+                                                <li className="pt-[10px] font-semibold"><Link to="#">ACCESORIES</Link></li>
                                             </ul>
                                             <ul className="whitespace-nowrap space-y-1 text-[12px]">
-                                                <li className="pb-[20px] "><Link to="#">READY TO WEAR</Link></li>
+                                                <li className="pb-[20px] "><Link to="#">NEW COLLECTIONS</Link></li>
                                                 <li><Link to="#">NEW ARRIVALS</Link></li>
                                                 <li><Link to="#">OUTFEETS</Link></li>
                                                 <li><Link to="#">PANTS</Link></li>
                                                 <li><Link to="#">HOODIES AND JACKETS</Link></li>
                                                 <li><Link to="#">TEES</Link></li>
+                                                <li className="pt-[10px] font-semibold" ><Link to="#">ACCESORIES</Link></li>
+
                                             </ul>
                                         </div>
                                         <div className="flex ">
@@ -134,12 +137,125 @@ const Header = () => {
                                     </div>
                                 </div>
                             </li>
-                            <li>Women</li>
-                            <li>Accessories</li>
-                            <li>Digital</li>
-                            <li>Seles</li>
-                            <li>Collab</li>
-                            <li>Member</li>
+                            <li className={` group  ${isMenHovered ? 'text-white ' : ''}`}
+                                onMouseEnter={() => setIsMenHovered(true)}
+                                onMouseLeave={() => setIsMenHovered(false)}
+                            >
+                                WOMEN
+                                <div className="absolute left-0  hidden group-hover:block bg-black z-50 text-white">
+                                    <div className="grid grid-cols-2 justify-around items-start pt-10  ">
+                                        <div className="flex justify-around">
+                                            <ul className="whitespace-nowrap  space-y-1 text-[12px]">
+                                                <li className="pb-[20px]"><Link to="/menCollections">NEW COLLECTIONS</Link></li>
+                                                <li><Link to="#">NEW ARRIVALS</Link></li>
+                                                <li><Link to="#">OUTFEETS</Link></li>
+                                                <li><Link to="#">PANTS</Link></li>
+                                                <li><Link to="#">HOODIES AND JACKETS</Link></li>
+                                                <li><Link to="#">TEES</Link></li>
+                                                <li className="pt-[10px] font-semibold"><Link to="#">ACCESORIES</Link></li>
+                                            </ul>
+                                            <ul className="whitespace-nowrap space-y-1 text-[12px]">
+                                                <li className="pb-[20px] "><Link to="#">NEW COLLECTIONS</Link></li>
+                                                <li><Link to="#">NEW ARRIVALS</Link></li>
+                                                <li><Link to="#">OUTFEETS</Link></li>
+                                                <li><Link to="#">PANTS</Link></li>
+                                                <li><Link to="#">HOODIES AND JACKETS</Link></li>
+                                                <li><Link to="#">TEES</Link></li>
+                                                <li className="pt-[10px] font-semibold" ><Link to="#">ACCESORIES</Link></li>
+
+                                            </ul>
+                                        </div>
+                                        <div className="flex ">
+                                            <div >
+                                                <img className="object-cover" src="https://i.ibb.co/q9SC0WV/BLVCKPSG-PR-1080x.webp" alt="" />
+                                            </div>
+                                            <div >
+                                                <img className="object-cover" src="https://i.ibb.co/q9SC0WV/BLVCKPSG-PR-1080x.webp" alt="" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li className={` group  ${isMenHovered ? 'text-white ' : ''}`}
+                                onMouseEnter={() => setIsMenHovered(true)}
+                                onMouseLeave={() => setIsMenHovered(false)}
+                            >
+                                PRINCE
+                                <div className="absolute left-0  hidden group-hover:block bg-black z-50 text-white">
+                                    <div className="grid grid-cols-2 justify-around items-start pt-10  ">
+                                        <div className="flex justify-around">
+                                            <ul className="whitespace-nowrap  space-y-1 text-[12px]">
+                                                <li className="pb-[20px]"><Link to="/menCollections">NEW COLLECTIONS</Link></li>
+                                                <li><Link to="#">NEW ARRIVALS</Link></li>
+                                                <li><Link to="#">OUTFEETS</Link></li>
+                                                <li><Link to="#">PANTS</Link></li>
+                                                <li><Link to="#">HOODIES AND JACKETS</Link></li>
+                                                <li><Link to="#">TEES</Link></li>
+                                                <li className="pt-[10px] font-semibold"><Link to="#">ACCESORIES</Link></li>
+                                            </ul>
+                                            <ul className="whitespace-nowrap space-y-1 text-[12px]">
+                                                <li className="pb-[20px] "><Link to="#">NEW COLLECTIONS</Link></li>
+                                                <li><Link to="#">NEW ARRIVALS</Link></li>
+                                                <li><Link to="#">OUTFEETS</Link></li>
+                                                <li><Link to="#">PANTS</Link></li>
+                                                <li><Link to="#">HOODIES AND JACKETS</Link></li>
+                                                <li><Link to="#">TEES</Link></li>
+                                                <li className="pt-[10px] font-semibold" ><Link to="#">ACCESORIES</Link></li>
+
+                                            </ul>
+                                        </div>
+                                        <div className="flex ">
+                                            <div >
+                                                <img className="object-cover" src="https://i.ibb.co/q9SC0WV/BLVCKPSG-PR-1080x.webp" alt="" />
+                                            </div>
+                                            <div >
+                                                <img className="object-cover" src="https://i.ibb.co/q9SC0WV/BLVCKPSG-PR-1080x.webp" alt="" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li className={` group  ${isMenHovered ? 'text-white ' : ''}`}
+                                onMouseEnter={() => setIsMenHovered(true)}
+                                onMouseLeave={() => setIsMenHovered(false)}
+                            >
+                                PRINCESS
+                                <div className="absolute left-0  hidden group-hover:block bg-black z-50 text-white">
+                                    <div className="grid grid-cols-2 justify-around items-start pt-10  ">
+                                        <div className="flex justify-around">
+                                            <ul className="whitespace-nowrap  space-y-1 text-[12px]">
+                                                <li className="pb-[20px]"><Link to="/menCollections">NEW COLLECTIONS</Link></li>
+                                                <li><Link to="#">NEW ARRIVALS</Link></li>
+                                                <li><Link to="#">OUTFEETS</Link></li>
+                                                <li><Link to="#">PANTS</Link></li>
+                                                <li><Link to="#">HOODIES AND JACKETS</Link></li>
+                                                <li><Link to="#">TEES</Link></li>
+                                                <li className="pt-[10px] font-semibold"><Link to="#">ACCESORIES</Link></li>
+                                            </ul>
+                                            <ul className="whitespace-nowrap space-y-1 text-[12px]">
+                                                <li className="pb-[20px] "><Link to="#">NEW COLLECTIONS</Link></li>
+                                                <li><Link to="#">NEW ARRIVALS</Link></li>
+                                                <li><Link to="#">OUTFEETS</Link></li>
+                                                <li><Link to="#">PANTS</Link></li>
+                                                <li><Link to="#">HOODIES AND JACKETS</Link></li>
+                                                <li><Link to="#">TEES</Link></li>
+                                                <li className="pt-[10px] font-semibold" ><Link to="#">ACCESORIES</Link></li>
+
+                                            </ul>
+                                        </div>
+                                        <div className="flex ">
+                                            <div >
+                                                <img className="object-cover" src="https://i.ibb.co/q9SC0WV/BLVCKPSG-PR-1080x.webp" alt="" />
+                                            </div>
+                                            <div >
+                                                <img className="object-cover" src="https://i.ibb.co/q9SC0WV/BLVCKPSG-PR-1080x.webp" alt="" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li>STORE</li>
                         </div>
                     </div>
                 </div>
@@ -192,11 +308,10 @@ const Header = () => {
                                 {/* Add more menu items as needed */}
                             </ul>
                             <div className=" flex justify-center items-center space-x-5 pt-[20px]  ">
-                                <RiFacebookCircleLine size={20}></RiFacebookCircleLine>
-                                <FaInstagram size={20} />
-                                <CiTwitter size={20} />
-                                <CiLinkedin size={20} />
-                                <AiOutlineYoutube size={20} />
+                                <span style={{ fontSize: `${iconSize}px` }} > <FaFacebook className="text-white  " /></span>
+                                <span style={{ fontSize: `${iconSize}px` }}  > <FaPinterest className="text-white " /></span>
+                                <span style={{ fontSize: `${iconSize}px` }}  > <FaInstagram className="text-white " /></span>
+                                <span style={{ fontSize: `${iconSize}px` }} > <IoLogoYoutube className="text-white " /></span>
 
                             </div>
                         </div>
