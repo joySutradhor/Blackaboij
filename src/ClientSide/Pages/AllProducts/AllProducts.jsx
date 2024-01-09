@@ -1,7 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
-import "./NewArivalSection.css"
 import { Link } from 'react-router-dom';
 import { MdEuroSymbol } from "react-icons/md";
 import { FaPlus } from "react-icons/fa";
@@ -9,9 +8,8 @@ import { FaPlus } from "react-icons/fa";
 import { Toaster, toast } from 'sonner'
 
 
+const AllProducts = () => {
 
-const NewArivalSection = () => {
-    // men products array
     const [men, setMen] = useState([]);
     const [women, setWomen] = useState([]);
     const [accessories, setAccessories] = useState([]);
@@ -109,12 +107,15 @@ const NewArivalSection = () => {
                 console.error('Fetch error:', error);
             });
     }, [princessProducts]);
-
     return (
-        <div className="md:section-gap pt-[20px] ">
-            <Toaster
-            />
-            <div className='flex flex-col'>
+        <div>
+            <div>
+                <img className="mt-[-119px] md:h-[450px] h-[150px] w-full object-cover" src="https://i.ibb.co/CnLjN4P/img-ph-collection-hero-1512x.webp" alt="" />
+            </div>
+            <div className="md:section-gap pt-[20px] ">
+                <Toaster
+                />
+                <div className='flex flex-col'>
                 <h1 className='mb-[10px] md:mb-[20px] text-center'>Just Dropped</h1>
                 <div>
                     <Tabs>
@@ -209,8 +210,9 @@ const NewArivalSection = () => {
                     </Tabs>
                 </div>
             </div>
+            </div>
         </div>
     );
 };
 
-export default NewArivalSection;
+export default AllProducts;

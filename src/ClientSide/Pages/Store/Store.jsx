@@ -28,7 +28,7 @@ const Store = () => {
                     <h4 className="underline md:py-[16px] py-2">Opening Hours: :</h4>
                     <p>Monday-Saturday 10am-9pm</p>
                     <p className="md:py-[16px] py-2">Monday-Saturday 10am-9pm</p>
-                    <p className="pb-6 md:pb-0"><button className="px-10 py-3 border hover:bg-black hover:text-[#b1b1b1] ">Check The Map</button></p>
+                    <p className="pb-6 md:pb-0"><button className="px-10 py-3 bg-black hover:text-[#686565] border  text-[#b1b1b1] ">Check The Map</button></p>
 
                 </div>
             </div>

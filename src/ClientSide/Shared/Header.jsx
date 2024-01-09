@@ -98,7 +98,7 @@ const Header = () => {
                             className={`flex  justify-center  py-[7px] list-none gap-[30px] text-[#b1b1b1] ${isSticky ? 'border-b border-t border-[#383838]' : ''} `}
 
                         >
-                            <li className={` text-[15px] group  ${isMenHovered ? 'text-white ' : ''}`}
+                            <li className={` text-[15px]  group  ${isMenHovered ? 'text-white ' : ''}`}
                                 onMouseEnter={() => setIsMenHovered(true)}
                                 onMouseLeave={() => setIsMenHovered(false)}
                             >
@@ -256,6 +256,7 @@ const Header = () => {
                             </li>
 
                            <Link to="/store"> <li className="text-[15px]">STORE</li></Link>
+                           <Link to="/"> <li className="text-[15px]">ACCESSORIES</li></Link>
                         </div>
                     </div>
                 </div>
@@ -263,7 +264,7 @@ const Header = () => {
             <div className="md:hidden  ">
                 <div className={`flex justify-between py-[30px] px-[20px] relative ${isMobileMenuOpen ? "bg-black z-30  " : ""}  `}>
                     <div>
-                        <img className="h-[15px]  " src="https://i.ibb.co/3sNL27c/logo.png" alt="" />
+                       <Link to="/"> <img className="h-[15px]  " src="https://i.ibb.co/3sNL27c/logo.png" alt="" /></Link>
                     </div>
                     <div>
                         {isMobileMenuOpen ? (
@@ -284,7 +285,7 @@ const Header = () => {
                                     </div>
                                     {
                                         isListMenuOpen ? <ul className={`pl-[5px]  `}>
-                                            <li>dummy1</li>
+                                            <Link to='/menCollections'><li>New collections</li></Link>
                                             <li>dummy1</li>
                                             <li>dummy1</li>
                                             <li>dummy1</li>

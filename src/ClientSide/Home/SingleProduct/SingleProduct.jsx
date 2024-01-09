@@ -44,6 +44,7 @@ const SingleProduct = () => {
                     <div className=' ml-0 '>
                         <CustomizedAccordions></CustomizedAccordions>
                     </div>
+                    <p className='py-4'><button className='px-[20px] py-2 text-[#b1b1b1] hover:text-[#686565] hover:border-[#b7b7b7] border bg-black'>Write Review</button></p>
                 </div>
             </div>
         </div>
