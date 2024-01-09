@@ -50,7 +50,7 @@ const Header = () => {
         <nav>
             <div className="md:block hidden">
                 <header
-                    className="text-[10px] text-center md:text-[16px]"
+                    className="text-[10px] text-center md:text-[15px]"
                     style={{
                         transition: 'max-height 0.5s ease-in-out',
                         maxHeight: isSticky ? '0' : '100px',
@@ -71,7 +71,7 @@ const Header = () => {
                         transition: 'border 0.3s ease-in-out', // Add this line for smooth transition
                         borderTop: isSticky ? '1px solid #383838' : 'none',
                         borderBottom: isSticky ? '1px solid #383838' : 'none',
-                        zIndex: isSticky ? '9999' : '8888', // Add this line
+                        zIndex: isSticky ? '9999' : '50', // Add this line
                         backgroundColor: isMenHovered ? 'black' : 'transparent', // Added this line
 
                     }}
@@ -95,10 +95,10 @@ const Header = () => {
                         </div>
                         {/* list items */}
                         <div
-                            className={`flex  justify-center py-[7px] list-none gap-[30px] text-[#b1b1b1] ${isSticky ? 'border-b border-t border-[#383838]' : ''} `}
+                            className={`flex  justify-center  py-[7px] list-none gap-[30px] text-[#b1b1b1] ${isSticky ? 'border-b border-t border-[#383838]' : ''} `}
 
                         >
-                            <li className={` group  ${isMenHovered ? 'text-white ' : ''}`}
+                            <li className={` text-[15px] group  ${isMenHovered ? 'text-white ' : ''}`}
                                 onMouseEnter={() => setIsMenHovered(true)}
                                 onMouseLeave={() => setIsMenHovered(false)}
                             >
@@ -137,7 +137,7 @@ const Header = () => {
                                     </div>
                                 </div>
                             </li>
-                            <li className={` group  ${isMenHovered ? 'text-white ' : ''}`}
+                            <li className={`text-[15px] group  ${isMenHovered ? 'text-white ' : ''}`}
                                 onMouseEnter={() => setIsMenHovered(true)}
                                 onMouseLeave={() => setIsMenHovered(false)}
                             >
@@ -176,7 +176,7 @@ const Header = () => {
                                     </div>
                                 </div>
                             </li>
-                            <li className={` group  ${isMenHovered ? 'text-white ' : ''}`}
+                            <li className={` text-[15px] group  ${isMenHovered ? 'text-white ' : ''}`}
                                 onMouseEnter={() => setIsMenHovered(true)}
                                 onMouseLeave={() => setIsMenHovered(false)}
                             >
@@ -215,7 +215,7 @@ const Header = () => {
                                     </div>
                                 </div>
                             </li>
-                            <li className={` group  ${isMenHovered ? 'text-white ' : ''}`}
+                            <li className={`text-[15px] group  ${isMenHovered ? 'text-white ' : ''}`}
                                 onMouseEnter={() => setIsMenHovered(true)}
                                 onMouseLeave={() => setIsMenHovered(false)}
                             >
@@ -255,13 +255,13 @@ const Header = () => {
                                 </div>
                             </li>
 
-                            <li>STORE</li>
+                           <Link to="/store"> <li className="text-[15px]">STORE</li></Link>
                         </div>
                     </div>
                 </div>
             </div>
-            <div className="md:hidden ">
-                <div className={`flex justify-between py-[40px] px-[20px] relative ${isMobileMenuOpen ? "bg-black  " : ""}  `}>
+            <div className="md:hidden  ">
+                <div className={`flex justify-between py-[30px] px-[20px] relative ${isMobileMenuOpen ? "bg-black z-30  " : ""}  `}>
                     <div>
                         <img className="h-[15px]  " src="https://i.ibb.co/3sNL27c/logo.png" alt="" />
                     </div>

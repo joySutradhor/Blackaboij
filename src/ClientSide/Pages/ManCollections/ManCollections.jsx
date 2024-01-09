@@ -28,7 +28,7 @@ const ManCollections = () => {
         <div>
             <div>
                 <img className="mt-[-119px] h-[450px] w-full object-cover" src="https://i.ibb.co/CnLjN4P/img-ph-collection-hero-1512x.webp" alt="" />
-                <div className="absolute top-0 left-0 h-[495px] w-full  bg-gray-800 opacity-50"></div>
+
             </div>
             <div className="grid md:grid-cols-4 grid-cols-2 gap-[2px]">
                                 {menCollections.map((product) => (

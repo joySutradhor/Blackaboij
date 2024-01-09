@@ -101,8 +101,8 @@ const NewArivalSection = () => {
                                         <button className='absolute top-1 left-1  text-white bg-[#5A5A5A] md:px-4 md:py-1 md:text-[16px] px-2 py-1 text-[8px] '>New</button>
                                         <button className='absolute md:top-3 top-2 right-3  text-white ' onClick={() => toast.success(`${product.productName} is added`)}><FaPlus></FaPlus></button>
                                         <Link to={`product/${product.id}`}> <button className="details-button">Details</button></Link>
-                                        <h3 className="text-center py-4">{product.productName}</h3>
-                                        <p className="pb-3 text-center"> <span className='flex justify-center items-center'><MdEuroSymbol></MdEuroSymbol> {product.price}</span> </p>
+                                        <h3 className="text-center md:py-4 py-1 md:text-[22px] text-[18px]">{product.productName}</h3>
+                                        <p className="pb-3 text-center text-[15px]"> <span className='flex justify-center items-center'><MdEuroSymbol></MdEuroSymbol> {product.price}</span> </p>
                                     </div>
                                 ))}
                             </div>

@@ -10,6 +10,7 @@ import Main from './ClientSide/main';
 import Home from './ClientSide/Home/Home';
 import SingleProduct from './ClientSide/Home/SingleProduct/SingleProduct';
 import ManCollections from './ClientSide/Pages/ManCollections/ManCollections';
+import Store from './ClientSide/Pages/Store/Store';
 // all routes
 const router = createBrowserRouter([
   {
@@ -27,6 +28,10 @@ const router = createBrowserRouter([
       {
         path : "/menCollections",
         element : <ManCollections></ManCollections>
+      },
+      {
+        path : "/store",
+        element: <Store></Store>
       }
     ]
   },

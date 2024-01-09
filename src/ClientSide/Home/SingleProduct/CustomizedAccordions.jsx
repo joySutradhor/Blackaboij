@@ -1,10 +1,13 @@
 import * as React from 'react';
-import { styled } from '@mui/material/styles';
+import { styled } from '@mui/system';
 
 import MuiAccordion from '@mui/material/Accordion';
 import MuiAccordionSummary from '@mui/material/AccordionSummary';
 import MuiAccordionDetails from '@mui/material/AccordionDetails';
 import Typography from '@mui/material/Typography';
+// import ExpandMoreIcon from '@mui/icons-material/ExpandMore'; // Import the ExpandMore icon
+import { MdExpandMore } from "react-icons/md";
+
 
 const Accordion = styled((props) => (
   <MuiAccordion disableGutters elevation={0} square {...props} />
@@ -16,33 +19,32 @@ const Accordion = styled((props) => (
   '&::before': {
     display: 'none',
   },
-  backgroundColor: 'black',
-  color: "white"
+ 
 }));
 
 const AccordionSummary = styled((props) => (
   <MuiAccordionSummary
+    expandIcon={<MdExpandMore style={{ fontSize: 28 }} />} // Add the ExpandMore icon
     {...props}
   />
-))(({ theme }) => ({
-  backgroundColor:
-    theme.palette.mode === 'dark'
-      ? 'rgba(255, 255, 255, .05)'
-      : 'rgba(0, 0, 0, .03)',
+))(() => ({
+ 
   flexDirection: 'row-reverse',
   '& .MuiAccordionSummary-expandIconWrapper.Mui-expanded': {
-    transform: 'rotate(90deg)',
+    transform: 'rotate(180deg)',
   },
   '& .MuiAccordionSummary-content': {
     margin: 0,
     padding: 0,
   },
   padding: 0,
+  backgroundColor: 'white', 
+  width: '100%', 
 }));
 
 const AccordionDetails = styled(MuiAccordionDetails)(({ theme }) => ({
-  padding: `${theme.spacing(2)} 0`,
-  borderTop: '1px solid #b1b1b1',
+  padding: `${theme.spacing(0)} 0`,
+  
 }));
 
 export default function CustomizedAccordions() {
@@ -56,7 +58,7 @@ export default function CustomizedAccordions() {
     <div>
       <Accordion expanded={expanded === 'panel1'} onChange={handleChange('panel1')}>
         <AccordionSummary aria-controls="panel1d-content" id="panel1d-header">
-          <Typography >Hello Collapsible Group Item #1</Typography>
+          <Typography>Hello Collapsible Group Item #1</Typography>
         </AccordionSummary>
         <AccordionDetails>
           <Typography>

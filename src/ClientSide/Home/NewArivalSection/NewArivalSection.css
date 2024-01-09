@@ -65,6 +65,7 @@
     border: none; /* Remove the default border */
     outline: none; /* Remove the default focus outline */
     color: #646464;
+    font-size: 15px;
   }
   
   .custom-tab:hover {
