@@ -10,6 +10,7 @@ const HeroSection = () => {
             backgroundPosition: 'center',
             backgroundRepeat: "no-repeat",
             height: '100vh',
+            width :"100wh"
             // '@media (max-width: 768px)': {
             //     height: '50vh', // Adjust the height for smaller screens
             // },
@@ -21,14 +22,14 @@ const HeroSection = () => {
                 className="flex flex-col md:flex-row gap-5"
             style={{
                 position: 'absolute',
-                top: '55%',
+                top: '60%',
                 left: '50%',
                 transform: 'translate(-50%, -50%)',
                 textAlign: 'center',
             }}>
                 {/* <h1 className="md:text-[60px] text-[25px] text-[#b1b1b1]">ALL BLACK  IS HERE</h1> */}
-               <Link to="/menCollections"> <button className="px-[20px] py-3 bg-black text-[#b1b1b1]"> SHOP MEN</button></Link>
-                <button  className="px-[20px] py-3 bg-black text-[#b1b1b1]" > SHOP WOMEN</button>
+               <p className="w-[200px] flex justify-center items-center h-[50px] text-white z-10 hover:text-[#b1b1b1] bg-black"><Link to="/menCollections">  SHOP MEN</Link></p>
+               <p className="w-[200px] flex justify-center items-center h-[50px] text-white z-10 hover:text-[#b1b1b1] bg-black"><Link to="/">  SHOP WOMEN</Link></p>
             </div>
 
         </div>

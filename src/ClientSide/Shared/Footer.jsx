@@ -12,9 +12,9 @@ const Footer = () => {
                 <img src="https://i.ibb.co/3sNL27c/logo.png" className="w-[85px] " alt="" />
             </div>
 
-            <div className="md:flex md:justify-around  grid grid-cols-2 mx-[10px] md:mx-0 section-gap">
+            <div className="md:flex md:justify-between  grid grid-cols-2 mx-[20px] md:mx-[50px] section-gap">
                 <div className="text-white">
-                    <h2 className="py-3 font-semibold">Collections</h2>
+                    <h2 className="py-3 ">COLLECTIONS</h2>
                     <ul>
                         <li>Men</li>
                         <li>Women</li>
@@ -26,7 +26,7 @@ const Footer = () => {
                     </ul>
                 </div>
                 <div className="text-white">
-                    <h2 className="py-3 font-semibold">Information</h2>
+                    <h2 className="py-3 ">INFORMATION</h2>
                     <ul>
                         <li>Return</li>
                         <li>Shiping</li>
@@ -37,7 +37,7 @@ const Footer = () => {
                     </ul>
                 </div>
                 <div className="text-white md:mt-0 mt-[20px]">
-                    <h2 className="py-3 font-semibold">More</h2>
+                    <h2 className="py-3 ">MORE</h2>
                     <ul>
                         <li>Home</li>
                         <li>Contact</li>
@@ -47,7 +47,7 @@ const Footer = () => {
                     </ul>
                 </div>
                 <div className="text-white">
-                    <h2 className="py-3 font-semibold">SOCIAL</h2>
+                    <h2 className="py-3 ">SOCIAL</h2>
                     <p>Stay connected</p>
                     <div className=" flex gap-x-3 pt-2 ">
                         <span style={{ fontSize: `${iconSize}px` }} > <FaFacebook className="text-white  " /></span>
@@ -58,7 +58,7 @@ const Footer = () => {
 
                 </div>
             </div>
-            <p className="text-white text-center text-[14px] pt-3 pb-1">Copyright © 2024 <Link className="text-green-300" to='https://ethicalden.com/'>Ethical Den.</Link></p>
+            <p className="text-white text-center text-[14px] md:pt-8 pt-3  pb-1">Copyright © 2024 <Link className="text-green-300" to='https://ethicalden.com/'>Ethical Den.</Link></p>
 
         </div>
     );

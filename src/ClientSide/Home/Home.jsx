@@ -8,7 +8,7 @@ import ShadesSection from "./ShadesSection/ShadesSection";
 const Home = () => {
     return (
         <div>
-            <div className="mt-[-119px] ">
+            <div className=" ">
                 <HeroSection></HeroSection>
             </div>
             <NewArivalSection></NewArivalSection>

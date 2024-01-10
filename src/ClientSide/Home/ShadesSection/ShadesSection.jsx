@@ -14,7 +14,9 @@ const ShadesSection = () => {
             <div className="flex flex-col text-white justify-center items-center h-full">
                 <h2 className= "md:text-[100px] text-[30px] text-center">All shades of black available.</h2> 
                 <h4 className="md:py-10 py-3">
-                    <Link to="/allProducts"><button className="bg-black md:py-5 md:px-10 px-4 py-2 text-[12px] md:text-[16px] rounded-[5px] hover:text-[#b1b1b1]">Shop The Collecitons</button></Link></h4>
+                    <Link to="/allProducts">
+                    <p className="w-[200px] flex justify-center items-center text-white h-[50px] text-[12px] md:text-[16px]  hover:text-[#b1b1b1] bg-black"> SHOP COLLECTIONS</p>
+</Link></h4>
             </div>
         </div>
     );

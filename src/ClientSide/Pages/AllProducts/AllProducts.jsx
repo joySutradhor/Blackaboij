@@ -116,7 +116,6 @@ const AllProducts = () => {
                 <Toaster
                 />
                 <div className='flex flex-col'>
-                <h1 className='mb-[10px] md:mb-[20px] text-center'>Just Dropped</h1>
                 <div>
                     <Tabs>
                         <div className=' mb-[20px] md:mb-[50px] text-center'>

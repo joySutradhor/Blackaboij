@@ -17,7 +17,7 @@ const BlackSaleSection = () => {
                 <h2 className="md:text-[110px] text-[30px]">Black Friday Sale</h2>
                 <h4 className="md:py-10 py-3">
                     <Link to="/allProducts">
-                        <button className="bg-black md:py-5 md:px-10 px-4 py-2 text-[12px] md:text-[16px] rounded-[5px] hover:text-[#b1b1b1]">Shop Now</button>
+                        <p className="w-[200px] flex justify-center items-center text-white h-[50px] text-[12px] md:text-[16px]  hover:text-[#b1b1b1] bg-black">SHOP NOW</p>
                     </Link>
 
                 </h4>
