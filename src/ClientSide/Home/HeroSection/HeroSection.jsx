@@ -29,7 +29,7 @@ const HeroSection = () => {
             }}>
                 {/* <h1 className="md:text-[60px] text-[25px] text-[#b1b1b1]">ALL BLACK  IS HERE</h1> */}
                <p className="w-[200px] flex justify-center items-center h-[50px] text-white z-10 hover:text-[#b1b1b1] bg-black"><Link to="/menCollections">  SHOP MEN</Link></p>
-               <p className="w-[200px] flex justify-center items-center h-[50px] text-white z-10 hover:text-[#b1b1b1] bg-black"><Link to="/">  SHOP WOMEN</Link></p>
+               <p className="w-[200px] flex justify-center items-center h-[50px] text-white z-10 hover:text-[#b1b1b1] bg-black"><Link to="/womens">  SHOP WOMEN</Link></p>
             </div>
 
         </div>

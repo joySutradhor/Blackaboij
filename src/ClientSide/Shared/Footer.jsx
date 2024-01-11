@@ -9,7 +9,7 @@ const Footer = () => {
     return (
         <div className="section-gap md:pb-[10px] bg-black text-[14px] md:text-[16px]">
             <div className="flex justify-center items-center">
-                <img src="https://i.ibb.co/3sNL27c/logo.png" className="w-[85px] " alt="" />
+                <img src="https://i.ibb.co/3sNL27c/logo.png" className="md:w-[85px] xl:w-[100px]" alt="" />
             </div>
 
             <div className="md:flex md:justify-between  grid grid-cols-2 mx-[20px] md:mx-[50px] section-gap">

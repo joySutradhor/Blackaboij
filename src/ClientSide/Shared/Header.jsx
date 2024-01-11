@@ -96,7 +96,7 @@ const Header = () => {
 
                             {/* desktop logo */}
                             <div>
-                                <Link to="/"> <img src="https://i.ibb.co/3sNL27c/logo.png" className="w-[85px] md:mr-[27px]" alt="" /></Link>
+                                <Link to="/"> <img src="https://i.ibb.co/3sNL27c/logo.png" className="sm:w-[85px] xl:w-[100px]  md:mr-[26px]" alt="" /></Link>
                             </div>
 
                             {/* destop profile seacrch and cart icons */}
@@ -233,10 +233,12 @@ const Header = () => {
                     </div>
                 </div>
             </div>
+            {/* mobile menu */}
             <div className="md:hidden absolute w-full  ">
                 <div className={`flex justify-between py-[30px] px-[20px] relative ${isMobileMenuOpen ? "bg-black z-30  " : ""}  `}>
+                    {/* footer logo */}
                     <div>
-                        <Link to="/"> <img className="h-[15px]  " src="https://i.ibb.co/3sNL27c/logo.png" alt="" /></Link>
+                    <Link to="/"> <img src="https://i.ibb.co/3sNL27c/logo.png" className="w-[85px] h-[15px] " alt="" /></Link>
                     </div>
                     <div>
                         {isMobileMenuOpen ? (
@@ -278,8 +280,9 @@ const Header = () => {
                                 <li className="relative">
                                     <Link to="/accessories" className="text-white">Accessories</Link>
                                 </li>
-                                {/* Add more menu items as needed */}
+                               
                             </ul>
+                            {/* footer icons */}
                             <div className=" flex justify-center items-center space-x-5 pt-[20px]  ">
                                 <span style={{ fontSize: `${iconSize}px` }} > <FaFacebook className="text-white  " /></span>
                                 <span style={{ fontSize: `${iconSize}px` }}  > <FaPinterest className="text-white " /></span>
