@@ -110,7 +110,7 @@ const AllProducts = () => {
     return (
         <div>
             <div>
-                <img className="mt-[-119px] md:h-[450px] h-[150px] w-full object-cover" src="https://i.ibb.co/CnLjN4P/img-ph-collection-hero-1512x.webp" alt="" />
+                <img className=" md:h-[450px] h-[150px] w-full object-cover" src="https://i.ibb.co/CnLjN4P/img-ph-collection-hero-1512x.webp" alt="" />
             </div>
             <div className="md:section-gap pt-[20px] ">
                 <Toaster

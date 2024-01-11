@@ -19,9 +19,8 @@ const Footer = () => {
                         <li>Men</li>
                         <li>Women</li>
                         <li>Accessories</li>
-                        <li>Digital</li>
-                        <li>White</li>
-                        <li>Stores</li>
+                        <li>Prince</li>
+                        <li>Princess</li>
                         <li>Seles</li>
                     </ul>
                 </div>
@@ -33,7 +32,6 @@ const Footer = () => {
                         <li>Tearms and conditons</li>
                         <li>Privacy</li>
                         <li>FAQ</li>
-                        <li>Stores</li>
                     </ul>
                 </div>
                 <div className="text-white md:mt-0 mt-[20px]">
@@ -43,7 +41,6 @@ const Footer = () => {
                         <li>Contact</li>
                         <li>Blog</li>
                         <li>About</li>
-                        <li>Affliate Program</li>
                     </ul>
                 </div>
                 <div className="text-white">

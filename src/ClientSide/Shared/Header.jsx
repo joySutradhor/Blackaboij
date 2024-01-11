@@ -10,6 +10,7 @@ import { FaFacebook } from "react-icons/fa";
 import { IoSearchSharp } from "react-icons/io5";
 import { AiOutlineShoppingCart } from "react-icons/ai";
 import { FaRegUser } from "react-icons/fa6";
+import { Fade } from "react-awesome-reveal";
 
 const Header = () => {
     const [isSticky, setIsSticky] = useState(false);
@@ -17,6 +18,9 @@ const Header = () => {
     const [isWomenHovered, setIsWomenHovered] = useState(false);
     const [isPrinceHovered, SetIsPrinceHovered] = useState(false);
     const [isPrincesHovered, SetIsPrincesHovered] = useState(false);
+    const [isStoreHovered, SetIsStoreHovered] = useState(false);
+    const [isSelesHovered, SetIsSelesHovered] = useState(false);
+    const [isAccessoriesHovered, SetIsAccessoriesHovered] = useState(false);
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
     const [isListMenuOpen, setIsListMenuOpen] = useState(false);
 
@@ -67,7 +71,7 @@ const Header = () => {
                         borderTop: isSticky ? '1px solid #383838' : 'none',
                         borderBottom: isSticky ? '1px solid #383838' : 'none',
                         zIndex: isSticky ? '9999' : '50', // Add this line
-                        backgroundColor: isMenHovered || isWomenHovered || isPrinceHovered || isPrincesHovered ? 'black' : 'transparent', // Added this line
+                        backgroundColor: isMenHovered || isWomenHovered || isPrinceHovered || isPrincesHovered || isStoreHovered || isSelesHovered || isAccessoriesHovered ? 'black' : 'transparent', // Added this line
 
                     }}
                 >
@@ -91,86 +95,107 @@ const Header = () => {
                         </div>
                         {/* list items */}
                         <div
-                            className={`flex   justify-center   list-none  text-[#b1b1b1] ${isSticky ? 'border-b border-t border-[#383838]' : ''} ${isMenHovered || isWomenHovered || isPrinceHovered || isPrincesHovered  ? "border-b border-t border-[#383838] bg-black" : "bg-transparent border-b-hidden border-t-hidden	"} `}
+                            className={`flex   justify-center   list-none  text-[#b1b1b1] ${isSticky ? 'border-b border-t border-[#383838]' : ''} ${isMenHovered || isWomenHovered || isPrinceHovered || isPrincesHovered || isStoreHovered || isSelesHovered || isAccessoriesHovered ? "border-b border-t border-[#383838] bg-black" : "bg-transparent border-b-hidden border-t-hidden	"} `}
 
                         >
-                            <li className={`relative py-[10px] px-[30px] text-[15px]  group  ${isMenHovered ? 'text-white ' : ''}`}
+                            <li className={`relative py-[10px] px-[15px] text-[15px] border-b-2-transparent  group  ${isMenHovered ? 'text-white border-b-2' : ''}`}
                                 onMouseEnter={() => setIsMenHovered(true)}
                                 onMouseLeave={() => setIsMenHovered(false)}
                             >
                                 MEN
 
-                                <ul className={`absolute pl-6 pr-[250px] text-[12px] top-[44px] whitespace-nowrap   ${isMenHovered ? 'block bg-black' : 'hidden'}`}>
-                                    <ul className="py-[15px] font-semibold"><Link to="/menCollections">MENS NEW ARRIVALS</Link></ul>
-                                    <li ><Link to="#">READY-TO-WEAR</Link></li>
-                                    <li className="pt-[5px]"><Link to="#">TEES</Link></li>
-                                    <li className="pt-[5px]"><Link to="#">HOODIES AND SWEATERS</Link></li>
-                                    <li className="pt-[5px]"><Link to="#">PANTS</Link></li>
-                                    <li className="pt-[5px]"><Link to="#">OUTWEAR</Link></li>
-                                    <li className="pt-[15px] pb-10 font-semibold"><Link to="#">ACCESORIES</Link></li>
-                                </ul>
+                                <Fade direction="left" >
+                                    <ul className={`absolute pl-6 pr-[250px] text-[12px] top-[46px] whitespace-nowrap   ${isMenHovered ? 'block bg-black' : 'hidden'}`}>
+                                        <ul className="py-[15px] font-semibold"><Link to="/menCollections">MENS NEW ARRIVALS</Link></ul>
+                                        <li ><Link to="#">READY-TO-WEAR</Link></li>
+                                        <li className="pt-[5px]"><Link to="#">TEES</Link></li>
+                                        <li className="pt-[5px]"><Link to="#">HOODIES AND SWEATERS</Link></li>
+                                        <li className="pt-[5px]"><Link to="#">PANTS</Link></li>
+                                        <li className="pt-[5px]"><Link to="#">OUTWEAR</Link></li>
+                                        <li className="pt-[15px] pb-10 font-semibold"><Link to="#">ACCESORIES</Link></li>
+                                    </ul>
+
+                                </Fade>
 
 
                             </li>
-                            <li className={`relative pr-[30px] py-[10px] text-[15px]  group  ${isWomenHovered ? 'text-white ' : ''}`}
+                            <li className={`relative px-[15px] py-[10px] text-[15px]  border-b-2-transparent  group  ${isWomenHovered ? 'text-white border-b-2 ' : ''}`}
                                 onMouseEnter={() => setIsWomenHovered(true)}
                                 onMouseLeave={() => setIsWomenHovered(false)}
                             >
                                 WOMEN
 
-                                <ul className={`absolute pl-6 pr-[250px] text-[12px] top-[44px] whitespace-nowrap   ${isWomenHovered ? 'block bg-black' : 'hidden'}`}>
-                                    <ul className="py-[15px] font-semibold"><Link to="/">WOMEN NEW ARRIVALS</Link></ul>
-                                    <li ><Link to="#">READY-TO-WEAR</Link></li>
-                                    <li className="pt-[5px]"><Link to="#">TEES</Link></li>
-                                    <li className="pt-[5px]"><Link to="#">HOODIES AND SWEATERS</Link></li>
-                                    <li className="pt-[5px]"><Link to="#">PANTS</Link></li>
-                                    <li className="pt-[5px]"><Link to="#">OUTWEAR</Link></li>
-                                    <li className="pt-[15px] pb-10 font-semibold"><Link to="#">ACCESORIES</Link></li>
-                                </ul>
+                                <Fade direction="left">
+                                    <ul className={`absolute pl-6 pr-[250px] text-[12px] top-[46px] whitespace-nowrap   ${isWomenHovered ? 'block bg-black' : 'hidden'}`}>
+                                        <ul className="py-[15px] font-semibold"><Link to="/">WOMEN NEW ARRIVALS</Link></ul>
+                                        <li ><Link to="#">READY-TO-WEAR</Link></li>
+                                        <li className="pt-[5px]"><Link to="#">TEES</Link></li>
+                                        <li className="pt-[5px]"><Link to="#">HOODIES AND SWEATERS</Link></li>
+                                        <li className="pt-[5px]"><Link to="#">PANTS</Link></li>
+                                        <li className="pt-[5px]"><Link to="#">OUTWEAR</Link></li>
+                                        <li className="pt-[15px] pb-10 font-semibold"><Link to="#">ACCESORIES</Link></li>
+                                    </ul>
+                                </Fade>
 
 
                             </li>
-                            <li className={`relative pr-[30px] py-[10px] text-[15px]  group  ${isPrinceHovered ? 'text-white ' : ''}`}
+                            <li className={`relative px-[15px] py-[10px] text-[15px]  border-b-2-transparent group  ${isPrinceHovered ? 'text-white border-b-2 ' : ''}`}
                                 onMouseEnter={() => SetIsPrinceHovered(true)}
                                 onMouseLeave={() => SetIsPrinceHovered(false)}
                             >
                                 PRINCE
 
-                                <ul className={`absolute pl-6 pr-[250px] text-[12px] top-[44px] whitespace-nowrap   ${isPrinceHovered ? 'block bg-black' : 'hidden'}`}>
-                                    <ul className="py-[15px] font-semibold"><Link to="/">PRINCE NEW ARRIVALS</Link></ul>
-                                    <li ><Link to="#">READY-TO-WEAR</Link></li>
-                                    <li className="pt-[5px]"><Link to="#">TEES</Link></li>
-                                    <li className="pt-[5px]"><Link to="#">HOODIES AND SWEATERS</Link></li>
-                                    <li className="pt-[5px]"><Link to="#">PANTS</Link></li>
-                                    <li className="pt-[5px]"><Link to="#">OUTWEAR</Link></li>
-                                    <li className="pt-[15px] pb-10 font-semibold"><Link to="#">ACCESORIES</Link></li>
-                                </ul>
+                                <Fade direction="left">
+                                    <ul className={`absolute pl-6 pr-[250px] text-[12px] top-[46px] whitespace-nowrap   ${isPrinceHovered ? 'block bg-black' : 'hidden'}`}>
+                                        <ul className="py-[15px] font-semibold"><Link to="/">PRINCE NEW ARRIVALS</Link></ul>
+                                        <li ><Link to="#">READY-TO-WEAR</Link></li>
+                                        <li className="pt-[5px]"><Link to="#">TEES</Link></li>
+                                        <li className="pt-[5px]"><Link to="#">HOODIES AND SWEATERS</Link></li>
+                                        <li className="pt-[5px]"><Link to="#">PANTS</Link></li>
+                                        <li className="pt-[5px]"><Link to="#">OUTWEAR</Link></li>
+                                        <li className="pt-[15px] pb-10 font-semibold"><Link to="#">ACCESORIES</Link></li>
+                                    </ul>
+                                </Fade>
 
 
                             </li>
-                            <li className={`relative pr-[30px] py-[10px] text-[15px]  group  ${isPrincesHovered ? 'text-white ' : ''}`}
+                            <li className={`relative px-[15px] py-[10px] text-[15px] border-b-2-transparent group  ${isPrincesHovered ? 'text-white  border-b-2' : ''}`}
                                 onMouseEnter={() => SetIsPrincesHovered(true)}
                                 onMouseLeave={() => SetIsPrincesHovered(false)}
                             >
                                 PRINCESS
 
-                                <ul className={`absolute pl-6 pr-[250px] text-[12px] top-[44px] whitespace-nowrap   ${isPrincesHovered ? 'block bg-black' : 'hidden'}`}>
-                                    <ul className="py-[15px] font-semibold"><Link to="/">PRINCESS NEW ARRIVALS</Link></ul>
-                                    <li ><Link to="#">READY-TO-WEAR</Link></li>
-                                    <li className="pt-[5px]"><Link to="#">TEES</Link></li>
-                                    <li className="pt-[5px]"><Link to="#">HOODIES AND SWEATERS</Link></li>
-                                    <li className="pt-[5px]"><Link to="#">PANTS</Link></li>
-                                    <li className="pt-[5px]"><Link to="#">OUTWEAR</Link></li>
-                                    <li className="pt-[15px] pb-10 font-semibold"><Link to="#">ACCESORIES</Link></li>
-                                </ul>
-
-
+                                <Fade direction="left">
+                                    <ul className={`absolute pl-6 pr-[250px] text-[12px] top-[46px] whitespace-nowrap   ${isPrincesHovered ? 'block bg-black' : 'hidden'}`}>
+                                        <ul className="py-[15px] font-semibold"><Link to="/">PRINCESS NEW ARRIVALS</Link></ul>
+                                        <li ><Link to="#">READY-TO-WEAR</Link></li>
+                                        <li className="pt-[5px]"><Link to="#">TEES</Link></li>
+                                        <li className="pt-[5px]"><Link to="#">HOODIES AND SWEATERS</Link></li>
+                                        <li className="pt-[5px]"><Link to="#">PANTS</Link></li>
+                                        <li className="pt-[5px]"><Link to="#">OUTWEAR</Link></li>
+                                        <li className="pt-[15px] pb-10 font-semibold"><Link to="#">ACCESORIES</Link></li>
+                                    </ul>
+                                </Fade>
                             </li>
-                           
 
-                            <Link to="/store"> <li className="py-[10px] text-[15px] pr-[30px]">SELES</li></Link>
-                            <Link to="/store"> <li className="py-[10px] text-[15px] pr-[30px]">STORE</li></Link>
-                            <Link to="/"> <li className="py-[10px] text-[15px] pr-[30px]">ACCESSORIES</li></Link>
+                            <Link to="/store">
+                                <li className={`relative px-[15px] py-[10px] text-[15px] border-b-2-transparent group  ${isSelesHovered ? 'text-white  border-b-2' : ''}`}
+                                    onMouseEnter={() => SetIsSelesHovered(true)}
+                                    onMouseLeave={() => SetIsSelesHovered(false)}
+                                >SELES</li>
+                            </Link>
+                            <Link to="/store">
+                                <li className={`relative px-[15px] py-[10px] text-[15px] border-b-2-transparent group  ${isStoreHovered ? 'text-white  border-b-2' : ''}`}
+                                    onMouseEnter={() => SetIsStoreHovered(true)}
+                                    onMouseLeave={() => SetIsStoreHovered(false)}
+                                >STORE</li>
+                            </Link>
+                            <Link to="/">
+                                <li className={`relative px-[15px] py-[10px] text-[15px] border-b-2-transparent group ${isAccessoriesHovered ? 'text-white  border-b-2' : ''}`}
+                                    onMouseEnter={() => SetIsAccessoriesHovered(true)}
+                                    onMouseLeave={() => SetIsAccessoriesHovered(false)}
+                                >ACCESSORIES</li>
+                            </Link>
                         </div>
                     </div>
                 </div>
