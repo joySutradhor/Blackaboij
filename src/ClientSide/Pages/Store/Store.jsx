@@ -22,9 +22,8 @@ const Store = () => {
                 </div>
                 <div className="mx-[20px] md:mx-0">
                     <h2 className="md:text-[37px] text-[22px] md:py-[16px] py-2">Contact Us</h2>
-                    <h4 className="underline">Address :</h4>
-                    <p className="md:py-[16px] py-2">Westfield Valley Fair</p>
-                    <p className="">2855 Stevens Creek Blvd, Santa Clara, CA 95050</p>
+                    <p className="md:py-[16px] py-2">Email : blackaboy973000@hotmail.fr</p>
+                    <p className="">Phone : +8800000000</p>
                     <h4 className="underline md:py-[16px] py-2">Opening Hours: :</h4>
                     <p>Monday-Saturday 10am-9pm</p>
                     <p className="md:py-[16px] py-2">Monday-Saturday 10am-9pm</p>

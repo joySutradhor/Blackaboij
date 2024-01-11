@@ -59,6 +59,13 @@
   /* background-color: transparent; Optional: Set the background color to your preference */
 }
 
+@media (max-width: 767px) {
+  .custom-tab-list {
+    flex-wrap: wrap;
+    align-items: center;
+  }
+}
+
 .custom-tab {
   padding: 5px 15px;
   cursor: pointer;

@@ -12,6 +12,16 @@ import SingleProduct from './ClientSide/Home/SingleProduct/SingleProduct';
 import ManCollections from './ClientSide/Pages/ManCollections/ManCollections';
 import Store from './ClientSide/Pages/Store/Store';
 import AllProducts from './ClientSide/Pages/AllProducts/AllProducts';
+import Tees from './ClientSide/Pages/Tees/Tees';
+import HoodiesAndSweeters from './ClientSide/Pages/HoodiesAndSweeters/HoodiesAndSweeters';
+import Pants from './ClientSide/Pages/Pants/Pants';
+import Outwear from './ClientSide/Pages/Outwear/Outwear';
+import Accessories from './ClientSide/Pages/Accessories/Accessories';
+import Womens from './ClientSide/Pages/WomensCollections/Womens/Womens';
+import WomensTees from './ClientSide/Pages/WomensCollections/WomensTees/WomensTees';
+import WomenHoodies from './ClientSide/Pages/WomensCollections/WomenHoodies/WomenHoodies';
+import WomenPants from './ClientSide/Pages/WomensCollections/WomenPants/WomenPants';
+import WomenOutwear from './ClientSide/Pages/WomensCollections/WomenOutwear/WomenOutwear';
 // all routes
 const router = createBrowserRouter([
   {
@@ -45,6 +55,46 @@ const router = createBrowserRouter([
       {
         path : "/allProducts",
         element : <AllProducts></AllProducts>
+      },
+      {
+        path : "/tees",
+        element : <Tees></Tees>
+      },
+      {
+        path : "/hoodiesAndSweeters" ,
+        element : <HoodiesAndSweeters></HoodiesAndSweeters>
+      },
+      {
+        path : "/pants",
+        element : <Pants></Pants>
+      },
+      {
+        path : "/outwear",
+        element : <Outwear></Outwear>
+      },
+      {
+        path : "/accessories",
+        element : <Accessories></Accessories>
+      },
+      {
+        path : "/womens",
+        element : <Womens></Womens>
+      },
+      {
+        path : "/womenTees",
+        element : <WomensTees></WomensTees>
+      },
+      {
+        path : "/womensHoodies",
+        element : <WomenHoodies></WomenHoodies>
+      },
+      {
+        path : "/womenPants",
+        element : <WomenPants></WomenPants>
+      },
+      {
+        path : "/womenOutwear",
+        element : <WomenOutwear></WomenOutwear>
       }
     ]
   },

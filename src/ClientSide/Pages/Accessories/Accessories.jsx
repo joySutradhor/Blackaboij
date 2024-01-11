@@ -24,14 +24,14 @@ const Star = ({ rating }) => {
     return <div>{stars}</div>;
 };
 
-const ManCollections = () => {
-    const [menCollections, setMenCollections] = useState([]);
+const Accessories = () => {
+    const [accessoriesCollections, setAccessoriesCollections] = useState([]);
 
-    const menCollectionsProducts = "/MenCollections.json";
+    const accessoriesCollectionsProducts = "/accessories.json";
 
     useEffect(() => {
         // Fetch the JSON data
-        fetch(menCollectionsProducts)
+        fetch(accessoriesCollectionsProducts)
             .then(response => {
                 if (!response.ok) {
                     throw new Error(`HTTP error! Status: ${response.status}`);
@@ -39,13 +39,13 @@ const ManCollections = () => {
                 return response.json();
             })
             .then(data => {
-                setMenCollections(data);
+                setAccessoriesCollections(data);
                 console.log(data);
             })
             .catch(error => {
                 console.error('Fetch error:', error);
             });
-    }, [menCollectionsProducts]);
+    }, [accessoriesCollectionsProducts]);
 
     return (
         <div>
@@ -53,7 +53,7 @@ const ManCollections = () => {
                 <img className="md:h-[450px] h-[150px] w-full object-cover" src="https://i.ibb.co/CnLjN4P/img-ph-collection-hero-1512x.webp" alt="" />
             </div>
             <div className="grid md:grid-cols-4 grid-cols-2 gap-[2px]">
-                {menCollections.map((product) => (
+                {accessoriesCollections.map((product) => (
                     <div key={product.id} className="bg-[#B7B7B7] product-card">
                         <img src={product.img} alt={product.productName} className="front-img" />
                         <img src={product.backImg} alt="" className="back-img " />
@@ -79,4 +79,4 @@ const ManCollections = () => {
     );
 };
 
-export default ManCollections;
+export default Accessories;
