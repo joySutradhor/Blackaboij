@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 const Footer = () => {
     const iconSize = 19;
     return (
-        <div className="section-gap md:pb-[10px] bg-black text-[14px] md:text-[16px]">
+        <div className="section-gap md:pb-[10px] bg-black text-[14px] md:text-[16px] font-custom">
             <div className="flex justify-center items-center">
                 <img src="https://i.ibb.co/3sNL27c/logo.png" className="md:w-[85px] xl:w-[100px]" alt="" />
             </div>

@@ -2,11 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
-/* @font-face {
-  font-family: 'Mabella';
+@font-face {
+  font-family: 'mabella';
   src: url('./ClientSide/Fonts/Mabella.TTF') format('TTF');
 
-} */
+}
 
 @layer components {
   .section-gap {

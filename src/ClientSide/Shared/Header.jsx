@@ -49,7 +49,7 @@ const Header = () => {
         <nav>
             <div className="md:block hidden absolute top-0 w-full">
                 <header
-                    className="text-[10px] text-center md:text-[15px]"
+                    className="text-[10px] text-center font-custom md:text-[15px]"
                     style={{
                         transition: 'max-height 0.5s ease-in-out',
                         maxHeight: isSticky ? '0' : '100px',
@@ -115,7 +115,7 @@ const Header = () => {
 
                         {/* desktop  list items */}
                         <div
-                            className={`flex   justify-center   list-none  text-[#b1b1b1] ${isSticky ? 'border-b border-t border-[#383838]' : ''} ${isMenHovered || isWomenHovered || isPrinceHovered || isPrincesHovered || isStoreHovered || isSelesHovered || isAccessoriesHovered ? "border-b border-t border-[#383838] bg-black" : "bg-transparent border-b-hidden border-t-hidden	"} `}
+                            className={`flex   justify-center   list-none font-custom text-[#b1b1b1] ${isSticky ? 'border-b border-t border-[#383838]' : ''} ${isMenHovered || isWomenHovered || isPrinceHovered || isPrincesHovered || isStoreHovered || isSelesHovered || isAccessoriesHovered ? "border-b border-t border-[#383838] bg-black" : "bg-transparent border-b-hidden border-t-hidden	"} `}
 
                         >
                             <Link to="/menCollections" className={`relative text-white py-[10px] px-[15px] text-[15px] border-b-2-transparent  group  ${isMenHovered ? 'text-white border-b-2' : ''}`}
@@ -235,7 +235,7 @@ const Header = () => {
             </div>
             {/* mobile menu */}
             <div className="md:hidden absolute w-full  ">
-                <div className={`flex justify-between py-[30px] px-[20px] relative ${isMobileMenuOpen ? "bg-black z-30  " : ""}  `}>
+                <div className={`flex justify-between py-[30px] px-[20px] font-custom relative ${isMobileMenuOpen ? "bg-black z-30  " : ""}  `}>
                     {/* footer logo */}
                     <div>
                     <Link to="/"> <img src="https://i.ibb.co/3sNL27c/logo.png" className="w-[85px] h-[15px] " alt="" /></Link>

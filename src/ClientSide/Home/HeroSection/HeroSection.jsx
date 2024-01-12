@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import Button from "../../Utilites/Button";
 
 
 const HeroSection = () => {
@@ -15,7 +16,6 @@ const HeroSection = () => {
             //     height: '50vh', // Adjust the height for smaller screens
             // },
 
-
         }}>
 
             <div 
@@ -28,8 +28,12 @@ const HeroSection = () => {
                 textAlign: 'center',
             }}>
                 {/* <h1 className="md:text-[60px] text-[25px] text-[#b1b1b1]">ALL BLACK  IS HERE</h1> */}
-               <p className="w-[200px] flex justify-center items-center h-[50px] text-white z-10 hover:text-[#b1b1b1] bg-black"><Link to="/menCollections">  SHOP MEN</Link></p>
-               <p className="w-[200px] flex justify-center items-center h-[50px] text-white z-10 hover:text-[#b1b1b1] bg-black"><Link to="/womens">  SHOP WOMEN</Link></p>
+               {/* <p className="w-[200px] flex justify-center items-center font-custom text-white z-10 hover:text-[#b1b1b1] bg-black"><Link to="/menCollections">  SHOP MEN</Link></p> */}
+               {/* <p className="w-[200px] flex justify-center items-center font-custom text-white z-10 hover:text-[#b1b1b1] bg-black"><Link to="/womens"> <Button  buttonText="SHOP WOMEN" ></Button></Link></p>
+               <p className="w-[200px] flex justify-center items-center font-custom text-white z-10 hover:text-[#b1b1b1] bg-black"></p> */}
+               <Link to="/menCollections"> <Button  buttonText="SHOP MEN" ></Button></Link>
+               <Link to="/menCollections"> <Button  buttonText="SHOP WOMEN" ></Button></Link>
+               
             </div>
 
         </div>

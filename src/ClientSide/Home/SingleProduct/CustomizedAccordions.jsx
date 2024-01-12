@@ -55,7 +55,7 @@ export default function CustomizedAccordions() {
   };
 
   return (
-    <div>
+    <div className='font-custom'>
       <Accordion expanded={expanded === 'panel1'} onChange={handleChange('panel1')}>
         <AccordionSummary aria-controls="panel1d-content" id="panel1d-header">
           <Typography>Hello Collapsible Group Item #1</Typography>

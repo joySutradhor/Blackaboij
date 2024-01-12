@@ -13,13 +13,12 @@ const BlackSaleSection = () => {
     return (
         <div style={sectionStyle} className="md:h-[500px] h-[250px]">
             <div className="flex flex-col text-white justify-center items-center h-full">
-                <h3 className="text-[12px] md:text-[16px]">UP TO 60% OFF ON SELECTED ITEMS</h3>
-                <h2 className="md:text-[110px] text-[30px]">Black Friday Sale</h2>
+                <h3 className="text-[12px] md:text-[16px] font-custom">UP TO 60% OFF ON SELECTED ITEMS</h3>
+                <h2 className="md:text-[110px] text-[30px] font-custom">Black Friday Sale</h2>
                 <h4 className="md:py-10 py-3">
                     <Link to="/allProducts">
-                        <p className="w-[200px] flex justify-center items-center text-white h-[50px] text-[12px] md:text-[16px]  hover:text-[#b1b1b1] bg-black">SHOP NOW</p>
+                        <p className="w-[200px] flex justify-center items-center text-white h-[50px] text-[12px] md:text-[16px]  hover:text-[#b1b1b1] bg-black font-custom">SHOP NOW</p>
                     </Link>
-
                 </h4>
 
             </div>

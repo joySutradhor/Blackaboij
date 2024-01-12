@@ -115,15 +115,15 @@ const NewArivalSection = () => {
             <Toaster
             />
             <div className='flex flex-col'>
-                <h1 className='mb-[10px] md:mb-[20px] text-center'>Just Dropped</h1>
+                <h1 className='mb-[10px] md:mb-[20px] text-center font-custom font-medium'>Just Dropped</h1>
                 <div>
                     <Tabs>
-                        <div className=' mb-[20px] md:mb-[50px] text-center'>
+                        <div className=' mb-[20px] md:mb-[50px] font-custom text-center'>
                             <TabList
                                 className="custom-tab-list"
                             // Remove the default bottom border
                             >
-                                <Tab className="custom-tab ">Men</Tab>
+                                <Tab className="custom-tab  ">Men</Tab>
                                 <Tab className="custom-tab">Women</Tab>
                                 <Tab className="custom-tab">Prince</Tab>
                                 <Tab className="custom-tab">Princess</Tab>
@@ -134,7 +134,7 @@ const NewArivalSection = () => {
                         <TabPanel>
                             <div className="grid md:grid-cols-4 grid-cols-2 gap-[2px] ">
                                 {men.map((product) => (
-                                    <div key={product.id} className="bg-[#B7B7B7] product-card">
+                                    <div key={product.id} className="bg-[#B7B7B7] product-card font-custom">
                                         <img src={product.img} alt={product.productName} className="front-img" />
                                         <img src={product.backImg} alt="" className="back-img " />
                                         <button className='absolute top-1 left-1  text-white bg-[#5A5A5A] md:px-4 md:py-1 md:text-[16px] px-2 py-1 text-[8px] '>New</button>
@@ -149,7 +149,7 @@ const NewArivalSection = () => {
                         <TabPanel>
                             <div className="grid md:grid-cols-4 grid-cols-2 gap-[2px]">
                             {women.map((product) => (
-                                    <div key={product.id} className="bg-[#B7B7B7] product-card">
+                                    <div key={product.id} className="bg-[#B7B7B7] product-card font-custom">
                                         <img src={product.img} alt={product.productName} className="front-img" />
                                         <img src={product.backImg} alt="" className="back-img " />
                                         <button className='absolute top-1 left-1  text-white bg-[#5A5A5A] md:px-4 md:py-1 md:text-[16px] px-2 py-1 text-[8px] '>New</button>
@@ -164,7 +164,7 @@ const NewArivalSection = () => {
                         <TabPanel>
                             <div className="grid md:grid-cols-4 grid-cols-2 gap-[2px]">
                             {prince.map((product) => (
-                                    <div key={product.id} className="bg-[#B7B7B7] product-card">
+                                    <div key={product.id} className="bg-[#B7B7B7] product-card font-custom">
                                         <img src={product.img} alt={product.productName} className="front-img" />
                                         <img src={product.backImg} alt="" className="back-img " />
                                         <button className='absolute top-1 left-1  text-white bg-[#5A5A5A] md:px-4 md:py-1 md:text-[16px] px-2 py-1 text-[8px] '>New</button>
@@ -179,7 +179,7 @@ const NewArivalSection = () => {
                         <TabPanel>
                             <div className="grid md:grid-cols-4 grid-cols-2 gap-[2px]">
                             {princess.map((product) => (
-                                    <div key={product.id} className="bg-[#B7B7B7] product-card">
+                                    <div key={product.id} className="bg-[#B7B7B7] product-card font-custom">
                                         <img src={product.img} alt={product.productName} className="front-img" />
                                         <img src={product.backImg} alt="" className="back-img " />
                                         <button className='absolute top-1 left-1  text-white bg-[#5A5A5A] md:px-4 md:py-1 md:text-[16px] px-2 py-1 text-[8px] '>New</button>
@@ -194,7 +194,7 @@ const NewArivalSection = () => {
                         <TabPanel>
                             <div className="grid md:grid-cols-4 grid-cols-2 gap-[2px]">
                             {accessories.map((product) => (
-                                    <div key={product.id} className="bg-[#B7B7B7] product-card">
+                                    <div key={product.id} className="bg-[#B7B7B7] product-card font-custom">
                                         <img src={product.img} alt={product.productName} className="front-img" />
                                         <img src={product.backImg} alt="" className="back-img " />
                                         <button className='absolute top-1 left-1  text-white bg-[#5A5A5A] md:px-4 md:py-1 md:text-[16px] px-2 py-1 text-[8px] '>New</button>

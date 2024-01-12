@@ -6,7 +6,7 @@ import { Toaster, toast } from 'sonner';
 
 const SingleProduct = () => {
     return (
-        <div className='md:mt-[130px]'>
+        <div className='md:mt-[130px] font-custom'>
             <Toaster
             />
             <div className=''>
@@ -44,7 +44,7 @@ const SingleProduct = () => {
                     <div className=' ml-0 '>
                         <CustomizedAccordions></CustomizedAccordions>
                     </div>
-                    <p className='py-4'><button className='px-[20px] py-2 text-white hover:text-[#686565] hover:border-[#b7b7b7] border bg-black'>Write Review</button></p>
+                    <p className='py-4'><button  className='px-[20px] py-2 text-white hover:text-[#686565] hover:border-[#b7b7b7] border bg-black'>Write Review</button></p>
                 </div>
             </div>
         </div>
