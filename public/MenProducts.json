@@ -30,5 +30,37 @@
       "price": 19.99,
       "productName": "Product 4",
       "category": "Home Decor"
+    },
+    {
+      "id": 5,
+      "img": "https://i.ibb.co/1KP5Lzk/BLACKNOV1154-360x.webp",
+      "backImg": "https://i.ibb.co/W6608r4/BLACKNOV0957-720x.webp",
+      "price": 19.99,
+      "productName": "Product 4",
+      "category": "Home Decor"
+    },
+    {
+      "id": 6,
+      "img": "https://i.ibb.co/1KP5Lzk/BLACKNOV1154-360x.webp",
+      "backImg": "https://i.ibb.co/W6608r4/BLACKNOV0957-720x.webp",
+      "price": 19.99,
+      "productName": "Product 4",
+      "category": "Home Decor"
+    },
+    {
+      "id": 7,
+      "img": "https://i.ibb.co/1KP5Lzk/BLACKNOV1154-360x.webp",
+      "backImg": "https://i.ibb.co/W6608r4/BLACKNOV0957-720x.webp",
+      "price": 19.99,
+      "productName": "Product 4",
+      "category": "Home Decor"
+    },
+    {
+      "id": 8,
+      "img": "https://i.ibb.co/1KP5Lzk/BLACKNOV1154-360x.webp",
+      "backImg": "https://i.ibb.co/W6608r4/BLACKNOV0957-720x.webp",
+      "price": 19.99,
+      "productName": "Product 4",
+      "category": "Home Decor"
     }
   ]

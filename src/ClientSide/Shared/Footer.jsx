@@ -1,5 +1,5 @@
 
-import { FaFacebook, FaInstagram, FaPinterest,  } from "react-icons/fa";
+import { FaFacebook, FaInstagram, FaPinterest, } from "react-icons/fa";
 import { IoLogoYoutube } from "react-icons/io";
 import { Link } from "react-router-dom";
 
@@ -24,6 +24,15 @@ const Footer = () => {
                         <li>Seles</li>
                     </ul>
                 </div>
+                <div className="text-white md:mt-0 mt-[20px]">
+                    <h2 className="py-3 ">MORE</h2>
+                    <ul>
+                        <li>Home</li>
+                        <li>Contact</li>
+                        <li>Blog</li>
+                        <li>About</li>
+                    </ul>
+                </div>
                 <div className="text-white">
                     <h2 className="py-3 ">INFORMATION</h2>
                     <ul>
@@ -34,15 +43,15 @@ const Footer = () => {
                         <li>FAQ</li>
                     </ul>
                 </div>
-                <div className="text-white md:mt-0 mt-[20px]">
-                    <h2 className="py-3 ">MORE</h2>
+                <div className="text-white">
+                    <h2 className="py-3 ">NEWSLATTER</h2>
                     <ul>
-                        <li>Home</li>
-                        <li>Contact</li>
-                        <li>Blog</li>
-                        <li>About</li>
+                        <li className="mb-3">Subscribe to receive updates, access <br></br> to exclusive deals, and more.</li>
+                        <input type="email" placeholder="Email Address" className="border border-[#b1b1b1] p-1 pl-1 bg-transparent focus:outline-none text-[#b1b1b1]"></input> <br />
+                        <button className="text-white my-5 py-1 px-4 border border-[#b1b1b1] hover:bg-white hover:text-black hover:border-black">Subscribe now</button>
                     </ul>
                 </div>
+
                 <div className="text-white">
                     <h2 className="py-3 ">SOCIAL</h2>
                     <p>Stay connected</p>

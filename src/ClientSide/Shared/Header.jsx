@@ -7,10 +7,12 @@ import { HiMiniChevronDown } from "react-icons/hi2";
 import { FaInstagram, FaPinterest, } from "react-icons/fa";
 import { IoLogoYoutube, } from "react-icons/io";
 import { FaFacebook } from "react-icons/fa";
-import { IoSearchSharp } from "react-icons/io5";
 import { AiOutlineShoppingCart } from "react-icons/ai";
+import { IoBagOutline } from "react-icons/io5";
+
 import { FaRegUser } from "react-icons/fa6";
 import { Fade } from "react-awesome-reveal";
+import SearchButton from "../Utilites/SearchButton";
 
 const Header = () => {
     const [isSticky, setIsSticky] = useState(false);
@@ -76,11 +78,11 @@ const Header = () => {
                     }}
                 >
                     <div className={`pt-8 ${isSticky ? 'fixed top-0 left-0 right-0 bg-black text-white transition-colors duration-500 ease-in-out ' : ''}`}>
-                        <div className={`flex justify-between px-[50px] pb-[30px] `}>
+                        <div className={`flex justify-between items-center px-[50px] pb-[30px] `}>
 
                             {/* header desktop icon */}
-                            <div className="flex gap-x-3">
-                                <Link to="https://www.facebook.com/BBOIJ" target="blank">
+                            <div className="flex ">
+                                {/* <Link to="https://www.facebook.com/BBOIJ" target="blank">
                                     <span style={{ fontSize: `${iconSize}px` }} > <FaFacebook className="text-white  " /></span>
                                 </Link >
                                 <Link>
@@ -91,7 +93,8 @@ const Header = () => {
                                 </Link>
                                 <Link>
                                     <span style={{ fontSize: `${iconSize}px` }} > <IoLogoYoutube className="text-white " /></span>
-                                </Link>
+                                </Link> */}
+                                <SearchButton></SearchButton>
                             </div>
 
                             {/* desktop logo */}
@@ -105,10 +108,12 @@ const Header = () => {
                                     <span style={{ fontSize: `${iconSize}px` }} > <FaRegUser className="text-white  " /></span>
                                 </Link>
                                 <Link>
-                                    <span style={{ fontSize: `${iconSize}px` }}  > <IoSearchSharp className="text-white " /></span>
+                                    <span style={{ fontSize: `${iconSize}px` }}  > <IoBagOutline className="text-white " /></span>
                                 </Link>
                                 <Link>
-                                    <span style={{ fontSize: `${iconSize}px` }}  > <AiOutlineShoppingCart className="text-white " /></span></Link>
+                                    <span style={{ fontSize: `${iconSize}px` }}  > <AiOutlineShoppingCart className="text-white " /></span>
+                                </Link>
+                            
 
                             </div>
                         </div>

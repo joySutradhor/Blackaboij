@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import Button from "../../Utilites/Button";
 
 
 const BlackSaleSection = () => {
@@ -17,7 +18,7 @@ const BlackSaleSection = () => {
                 <h2 className="md:text-[110px] text-[30px] font-custom">Black Friday Sale</h2>
                 <h4 className="md:py-10 py-3">
                     <Link to="/allProducts">
-                        <p className="w-[200px] flex justify-center items-center text-white h-[50px] text-[12px] md:text-[16px]  hover:text-[#b1b1b1] bg-black font-custom">SHOP NOW</p>
+                        <Button buttonText='SHOP NOW'></Button>
                     </Link>
                 </h4>
 

@@ -7,6 +7,7 @@ import { MdEuroSymbol } from "react-icons/md";
 import { FaPlus } from "react-icons/fa";
 
 import { Toaster, toast } from 'sonner'
+import Button from '../../Utilites/Button';
 
 
 
@@ -132,19 +133,21 @@ const NewArivalSection = () => {
                         </div>
 
                         <TabPanel>
-                            <div className="grid md:grid-cols-4 grid-cols-2 gap-[2px] ">
+                            <div className="grid md:grid-cols-4 grid-cols-2 gap-[1px] ">
                                 {men.map((product) => (
-                                    <div key={product.id} className="bg-[#B7B7B7] product-card font-custom">
+                                    <div key={product.id} className="bg-[#B7B7B7]  product-card font-custom">
                                         <img src={product.img} alt={product.productName} className="front-img" />
                                         <img src={product.backImg} alt="" className="back-img " />
-                                        <button className='absolute top-1 left-1  text-white bg-[#5A5A5A] md:px-4 md:py-1 md:text-[16px] px-2 py-1 text-[8px] '>New</button>
+                                        <button className='absolute top-2 left-2  text-white bg-[#5A5A5A] md:px-4 md:py-1 md:text-[16px] px-2 py-1 text-[8px] '>New</button>
                                         <button className='absolute md:top-3 top-2 right-3  text-white ' onClick={() => toast.success(`${product.productName} is added`)}><FaPlus></FaPlus></button>
                                         <Link to={`product/${product.id}`}> <button className="details-button">Details</button></Link>
-                                        <h3 className="text-center md:py-4 py-1 md:text-[22px] text-[18px]">{product.productName}</h3>
+                                        <h3 className="text-center md:py-4 py-1 md:text-[22px] text-[18px] border-t-[1px]">{product.productName}</h3>
                                         <p className="pb-3 text-center text-[15px]"> <span className='flex justify-center items-center'><MdEuroSymbol></MdEuroSymbol> {product.price}</span> </p>
+                                    
                                     </div>
                                 ))}
                             </div>
+                                <p  className = "py-[50px] flex justify-end md:mx-[50px] mx-[20px]" ><Button buttonText="Show all"></Button></p>
                         </TabPanel>
                         <TabPanel>
                             <div className="grid md:grid-cols-4 grid-cols-2 gap-[2px]">
