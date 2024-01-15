@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
-import "./NewArivalSection.css"
+import "../NewArivalSection/NewArivalSection.css"
 import { Link } from 'react-router-dom';
 import { MdEuroSymbol } from "react-icons/md";
 import { FaPlus } from "react-icons/fa";
@@ -11,7 +11,7 @@ import Button from '../../Utilites/Button';
 
 
 
-const NewArivalSection = () => {
+const HotSale = () => {
     // men products array
     const [men, setMen] = useState([]);
     const [women, setWomen] = useState([]);
@@ -116,7 +116,7 @@ const NewArivalSection = () => {
             <Toaster
             />
             <div className='flex flex-col'>
-                <h1 className='mb-[10px] md:mb-[20px] text-center font-custom font-medium'>Just Dropped</h1>
+                <h1 className='mb-[10px] md:mb-[20px] text-center font-custom font-medium'>Hot Sale</h1>
                 <div>
                     <Tabs>
                         <div className=' mb-[20px] md:mb-[50px] font-custom text-center'>
@@ -136,21 +136,21 @@ const NewArivalSection = () => {
                             <div className="grid md:grid-cols-3 grid-cols-2 gap-[50px] md:mx-[50px] ">
                                 {men.map((product) => (
                                     <div key={product.id} className="bg-[#B7B7B7]  product-card font-custom">
-                                       <Link to={`product/${product.id}`}> <img src={product.img} alt={product.productName} className="front-img" /></Link>
-                                       <Link to={`product/${product.id}`}> <img src={product.backImg} alt="" className="back-img " /></Link>
-                                        <button className='absolute top-0 right-0  text-white bg-[#000000] md:px-4 md:py-1 md:text-[16px] px-2 py-1 text-[8px] '>New</button>
-                                         <button onClick={() => toast.success(`${product.productName} is added`)} className="details-button">ADD TO CART</button>
+                                        <Link to={`product/${product.id}`}> <img src={product.img} alt={product.productName} className="front-img" /></Link>
+                                        <Link to={`product/${product.id}`}> <img src={product.backImg} alt="" className="back-img " /></Link>
+                                        <button className='absolute top-0 right-0  text-white bg-[#000000] md:px-4 md:py-1 md:text-[16px] px-2 py-1 text-[8px] '>HOT</button>
+                                        <button onClick={() => toast.success(`${product.productName} is added`)} className="details-button">ADD TO CART</button>
                                         <h3 className="text-center md:py-4 py-1 md:text-[22px] bg-black text-[18px] text-white">{product.productName}</h3>
                                         <p className="pb-3 text-center text-[15px] bg-black text-white"> <span className='flex justify-center items-center'><MdEuroSymbol></MdEuroSymbol> {product.price}</span> </p>
-                                    
+
                                     </div>
                                 ))}
                             </div>
-                                <p  className = "py-[50px] flex justify-center md:mx-[50px] mx-[20px]" ><Button buttonText="Show all"></Button></p>
+                            <p className="py-[50px] flex justify-center md:mx-[50px] mx-[20px]" ><Button buttonText="Show all"></Button></p>
                         </TabPanel>
                         <TabPanel>
                             <div className="grid md:grid-cols-4 grid-cols-2 gap-[2px]">
-                            {women.map((product) => (
+                                {women.map((product) => (
                                     <div key={product.id} className="bg-[#B7B7B7] product-card font-custom">
                                         <img src={product.img} alt={product.productName} className="front-img" />
                                         <img src={product.backImg} alt="" className="back-img " />
@@ -165,7 +165,7 @@ const NewArivalSection = () => {
                         </TabPanel>
                         <TabPanel>
                             <div className="grid md:grid-cols-4 grid-cols-2 gap-[2px]">
-                            {prince.map((product) => (
+                                {prince.map((product) => (
                                     <div key={product.id} className="bg-[#B7B7B7] product-card font-custom">
                                         <img src={product.img} alt={product.productName} className="front-img" />
                                         <img src={product.backImg} alt="" className="back-img " />
@@ -180,7 +180,7 @@ const NewArivalSection = () => {
                         </TabPanel>
                         <TabPanel>
                             <div className="grid md:grid-cols-4 grid-cols-2 gap-[2px]">
-                            {princess.map((product) => (
+                                {princess.map((product) => (
                                     <div key={product.id} className="bg-[#B7B7B7] product-card font-custom">
                                         <img src={product.img} alt={product.productName} className="front-img" />
                                         <img src={product.backImg} alt="" className="back-img " />
@@ -195,7 +195,7 @@ const NewArivalSection = () => {
                         </TabPanel>
                         <TabPanel>
                             <div className="grid md:grid-cols-4 grid-cols-2 gap-[2px]">
-                            {accessories.map((product) => (
+                                {accessories.map((product) => (
                                     <div key={product.id} className="bg-[#B7B7B7] product-card font-custom">
                                         <img src={product.img} alt={product.productName} className="front-img" />
                                         <img src={product.backImg} alt="" className="back-img " />
@@ -215,4 +215,4 @@ const NewArivalSection = () => {
     );
 };
 
-export default NewArivalSection;
+export default HotSale;

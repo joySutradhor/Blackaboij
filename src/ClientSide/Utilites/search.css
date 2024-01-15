@@ -29,7 +29,7 @@
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
     border-radius: 5px;
-    color: #fff;
+    border: 1px solid #b1b1b1;
    
     -webkit-transition: width .55s ease;
     -moz-transition: width .55s ease;
