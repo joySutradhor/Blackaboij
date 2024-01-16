@@ -33,11 +33,12 @@
   left: 50%;
   transform: translate(-50%, -50%);
   /* Center the button */
-  background-color: transparent;
+  /* background-color: #B7B7B7; */
   color: #B7B7B7;
+  /* color: red; */
   font-size: small;
   border: 1px solid #B7B7B7;
-  padding: 5px 20px;
+  
   border-radius: 2px;
   cursor: pointer;
   transition: opacity 0.3s ease;
@@ -67,7 +68,7 @@
 }
 
 .custom-tab {
-  padding: 5px 15px;
+
   cursor: pointer;
   margin: 0 0px;
   border: none;
@@ -75,7 +76,7 @@
   outline: none;
   /* Remove the default focus outline */
   color: #646464;
-  font-size: 18px;
+  
   border-bottom: 2px solid transparent;
 
 }

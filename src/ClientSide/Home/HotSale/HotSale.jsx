@@ -4,7 +4,7 @@ import 'react-tabs/style/react-tabs.css';
 import "../NewArivalSection/NewArivalSection.css"
 import { Link } from 'react-router-dom';
 import { MdEuroSymbol } from "react-icons/md";
-import { FaPlus } from "react-icons/fa";
+// import { FaPlus } from "react-icons/fa";
 
 import { Toaster, toast } from 'sonner'
 import Button from '../../Utilites/Button';
@@ -116,12 +116,12 @@ const HotSale = () => {
             <Toaster
             />
             <div className='flex flex-col'>
-                <h1 className='mb-[10px] md:mb-[20px] text-center font-custom font-medium'>Hot Sale</h1>
+                <h1 className='mb-[10px] md:mb-[20px] text-center font-custom font-bold'>Hot Sale</h1>
                 <div>
                     <Tabs>
                         <div className=' mb-[20px] md:mb-[50px] font-custom text-center'>
                             <TabList
-                                className="custom-tab-list"
+                                className="custom-tab-list md:text-[16px] text-[12px] md:gap-3 gap-[10px] "
                             // Remove the default bottom border
                             >
                                 <Tab className="custom-tab  ">Men</Tab>
@@ -133,81 +133,86 @@ const HotSale = () => {
                         </div>
 
                         <TabPanel>
-                            <div className="grid md:grid-cols-3 grid-cols-2 gap-[50px] md:mx-[50px] ">
+                            <div className="grid md:grid-cols-3 grid-cols-2 md:gap-[50px] gap-[10px] md:mx-[50px] mx-[20px] ">
                                 {men.map((product) => (
                                     <div key={product.id} className="bg-[#B7B7B7]  product-card font-custom">
-                                        <Link to={`product/${product.id}`}> <img src={product.img} alt={product.productName} className="front-img" /></Link>
-                                        <Link to={`product/${product.id}`}> <img src={product.backImg} alt="" className="back-img " /></Link>
-                                        <button className='absolute top-0 right-0  text-white bg-[#000000] md:px-4 md:py-1 md:text-[16px] px-2 py-1 text-[8px] '>HOT</button>
-                                        <button onClick={() => toast.success(`${product.productName} is added`)} className="details-button">ADD TO CART</button>
-                                        <h3 className="text-center md:py-4 py-1 md:text-[22px] bg-black text-[18px] text-white">{product.productName}</h3>
-                                        <p className="pb-3 text-center text-[15px] bg-black text-white"> <span className='flex justify-center items-center'><MdEuroSymbol></MdEuroSymbol> {product.price}</span> </p>
-
+                                       <Link to={`product/${product.id}`}> <img src={product.img} alt={product.productName} className="front-img" /></Link>
+                                       <Link to={`product/${product.id}`}> <img src={product.backImg} alt="" className="back-img " /></Link>
+                                        <button className='absolute top-0 right-0  text-white bg-[#000000] md:px-4 md:py-1 md:text-[16px] text-[12px] px-2  py-[2px]  '>New</button>
+                                         <button onClick={() => toast.success(`${product.productName} is added`)} className="details-button md:px-[20px] px-[8px] md:py-[5px] py-[2px] whitespace-nowrap ">ADD TO CART</button>
+                                        <h3 className="text-center md:py-4 py-1 md:text-[22px] bg-black text-[16px] text-white">{product.productName}</h3>
+                                        <p className="md:pb-3 pb-1 text-center md:text-[15px] text-[12px] bg-black text-white"> <span className='flex justify-center items-center'><MdEuroSymbol></MdEuroSymbol> {product.price}</span> </p>
+                                    
                                     </div>
                                 ))}
                             </div>
-                            <p className="py-[50px] flex justify-center md:mx-[50px] mx-[20px]" ><Button buttonText="Show all"></Button></p>
+                                <p  className = "md:py-[50px] py-5 flex justify-center md:mx-[50px] mx-[20px]" ><Button buttonText="Show all"></Button></p>
                         </TabPanel>
                         <TabPanel>
-                            <div className="grid md:grid-cols-4 grid-cols-2 gap-[2px]">
+                            <div className="grid md:grid-cols-3 grid-cols-2 md:gap-[50px] gap-[10px] md:mx-[50px] mx-[20px] ">
                                 {women.map((product) => (
-                                    <div key={product.id} className="bg-[#B7B7B7] product-card font-custom">
-                                        <img src={product.img} alt={product.productName} className="front-img" />
-                                        <img src={product.backImg} alt="" className="back-img " />
-                                        <button className='absolute top-1 left-1  text-white bg-[#5A5A5A] md:px-4 md:py-1 md:text-[16px] px-2 py-1 text-[8px] '>New</button>
-                                        <button className='absolute md:top-3 top-2 right-3  text-white ' onClick={() => toast.success(`${product.productName} is added`)}><FaPlus></FaPlus></button>
-                                        <Link to={`product/${product.id}`}> <button className="details-button">Details</button></Link>
-                                        <h3 className="text-center md:py-4 py-1 md:text-[22px] text-[18px]">{product.productName}</h3>
-                                        <p className="pb-3 text-center text-[15px]"> <span className='flex justify-center items-center'><MdEuroSymbol></MdEuroSymbol> {product.price}</span> </p>
+                                    <div key={product.id} className="bg-[#B7B7B7]  product-card font-custom">
+                                       <Link to={`product/${product.id}`}> <img src={product.img} alt={product.productName} className="front-img" /></Link>
+                                       <Link to={`product/${product.id}`}> <img src={product.backImg} alt="" className="back-img " /></Link>
+                                        <button className='absolute top-0 right-0  text-white bg-[#000000] md:px-4 md:py-1 md:text-[16px] text-[12px] px-2  py-[2px]  '>New</button>
+                                         <button onClick={() => toast.success(`${product.productName} is added`)} className="details-button md:px-[20px] px-[8px] md:py-[5px] py-[2px] whitespace-nowrap ">ADD TO CART</button>
+                                        <h3 className="text-center md:py-4 py-1 md:text-[22px] bg-black text-[16px] text-white">{product.productName}</h3>
+                                        <p className="md:pb-3 pb-1 text-center md:text-[15px] text-[12px] bg-black text-white"> <span className='flex justify-center items-center'><MdEuroSymbol></MdEuroSymbol> {product.price}</span> </p>
+                                    
                                     </div>
                                 ))}
                             </div>
+                                <p  className = "md:py-[50px] py-5 flex justify-center md:mx-[50px] mx-[20px]" ><Button buttonText="Show all"></Button></p>
                         </TabPanel>
                         <TabPanel>
-                            <div className="grid md:grid-cols-4 grid-cols-2 gap-[2px]">
+                            <div className="grid md:grid-cols-3 grid-cols-2 md:gap-[50px] gap-[10px] md:mx-[50px] mx-[20px] ">
                                 {prince.map((product) => (
-                                    <div key={product.id} className="bg-[#B7B7B7] product-card font-custom">
-                                        <img src={product.img} alt={product.productName} className="front-img" />
-                                        <img src={product.backImg} alt="" className="back-img " />
-                                        <button className='absolute top-1 left-1  text-white bg-[#5A5A5A] md:px-4 md:py-1 md:text-[16px] px-2 py-1 text-[8px] '>New</button>
-                                        <button className='absolute md:top-3 top-2 right-3  text-white ' onClick={() => toast.success(`${product.productName} is added`)}><FaPlus></FaPlus></button>
-                                        <Link to={`product/${product.id}`}> <button className="details-button">Details</button></Link>
-                                        <h3 className="text-center md:py-4 py-1 md:text-[22px] text-[18px]">{product.productName}</h3>
-                                        <p className="pb-3 text-center text-[15px]"> <span className='flex justify-center items-center'><MdEuroSymbol></MdEuroSymbol> {product.price}</span> </p>
+                                    <div key={product.id} className="bg-[#B7B7B7]  product-card font-custom">
+                                       <Link to={`product/${product.id}`}> <img src={product.img} alt={product.productName} className="front-img" /></Link>
+                                       <Link to={`product/${product.id}`}> <img src={product.backImg} alt="" className="back-img " /></Link>
+                                        <button className='absolute top-0 right-0  text-white bg-[#000000] md:px-4 md:py-1 md:text-[16px] text-[12px] px-2  py-[2px]  '>New</button>
+                                         <button onClick={() => toast.success(`${product.productName} is added`)} className="details-button md:px-[20px] px-[8px] md:py-[5px] py-[2px] whitespace-nowrap ">ADD TO CART</button>
+                                        <h3 className="text-center md:py-4 py-1 md:text-[22px] bg-black text-[16px] text-white">{product.productName}</h3>
+                                        <p className="md:pb-3 pb-1 text-center md:text-[15px] text-[12px] bg-black text-white"> <span className='flex justify-center items-center'><MdEuroSymbol></MdEuroSymbol> {product.price}</span> </p>
+                                    
                                     </div>
                                 ))}
                             </div>
+                                <p  className = "md:py-[50px] py-5 flex justify-center md:mx-[50px] mx-[20px]" ><Button buttonText="Show all"></Button></p>
                         </TabPanel>
                         <TabPanel>
-                            <div className="grid md:grid-cols-4 grid-cols-2 gap-[2px]">
+                            <div className="grid md:grid-cols-3 grid-cols-2 md:gap-[50px] gap-[10px] md:mx-[50px] mx-[20px] ">
                                 {princess.map((product) => (
-                                    <div key={product.id} className="bg-[#B7B7B7] product-card font-custom">
-                                        <img src={product.img} alt={product.productName} className="front-img" />
-                                        <img src={product.backImg} alt="" className="back-img " />
-                                        <button className='absolute top-1 left-1  text-white bg-[#5A5A5A] md:px-4 md:py-1 md:text-[16px] px-2 py-1 text-[8px] '>New</button>
-                                        <button className='absolute md:top-3 top-2 right-3  text-white ' onClick={() => toast.success(`${product.productName} is added`)}><FaPlus></FaPlus></button>
-                                        <Link to={`product/${product.id}`}> <button className="details-button">Details</button></Link>
-                                        <h3 className="text-center md:py-4 py-1 md:text-[22px] text-[18px]">{product.productName}</h3>
-                                        <p className="pb-3 text-center text-[15px]"> <span className='flex justify-center items-center'><MdEuroSymbol></MdEuroSymbol> {product.price}</span> </p>
+                                    <div key={product.id} className="bg-[#B7B7B7]  product-card font-custom">
+                                       <Link to={`product/${product.id}`}> <img src={product.img} alt={product.productName} className="front-img" /></Link>
+                                       <Link to={`product/${product.id}`}> <img src={product.backImg} alt="" className="back-img " /></Link>
+                                        <button className='absolute top-0 right-0  text-white bg-[#000000] md:px-4 md:py-1 md:text-[16px] text-[12px] px-2  py-[2px]  '>New</button>
+                                         <button onClick={() => toast.success(`${product.productName} is added`)} className="details-button md:px-[20px] px-[8px] md:py-[5px] py-[2px] whitespace-nowrap ">ADD TO CART</button>
+                                        <h3 className="text-center md:py-4 py-1 md:text-[22px] bg-black text-[16px] text-white">{product.productName}</h3>
+                                        <p className="md:pb-3 pb-1 text-center md:text-[15px] text-[12px] bg-black text-white"> <span className='flex justify-center items-center'><MdEuroSymbol></MdEuroSymbol> {product.price}</span> </p>
+                                    
                                     </div>
                                 ))}
                             </div>
+                                <p  className = "md:py-[50px] py-5 flex justify-center md:mx-[50px] mx-[20px]" ><Button buttonText="Show all"></Button></p>
                         </TabPanel>
                         <TabPanel>
-                            <div className="grid md:grid-cols-4 grid-cols-2 gap-[2px]">
+                            <div className="grid md:grid-cols-3 grid-cols-2 md:gap-[50px] gap-[10px] md:mx-[50px] mx-[20px] ">
                                 {accessories.map((product) => (
-                                    <div key={product.id} className="bg-[#B7B7B7] product-card font-custom">
-                                        <img src={product.img} alt={product.productName} className="front-img" />
-                                        <img src={product.backImg} alt="" className="back-img " />
-                                        <button className='absolute top-1 left-1  text-white bg-[#5A5A5A] md:px-4 md:py-1 md:text-[16px] px-2 py-1 text-[8px] '>New</button>
-                                        <button className='absolute md:top-3 top-2 right-3  text-white ' onClick={() => toast.success(`${product.productName} is added`)}><FaPlus></FaPlus></button>
-                                        <Link to={`product/${product.id}`}> <button className="details-button">Details</button></Link>
-                                        <h3 className="text-center md:py-4 py-1 md:text-[22px] text-[18px]">{product.productName}</h3>
-                                        <p className="pb-3 text-center text-[15px]"> <span className='flex justify-center items-center'><MdEuroSymbol></MdEuroSymbol> {product.price}</span> </p>
+                                    <div key={product.id} className="bg-[#B7B7B7]  product-card font-custom">
+                                       <Link to={`product/${product.id}`}> <img src={product.img} alt={product.productName} className="front-img" /></Link>
+                                       <Link to={`product/${product.id}`}> <img src={product.backImg} alt="" className="back-img " /></Link>
+                                        <button className='absolute top-0 right-0  text-white bg-[#000000] md:px-4 md:py-1 md:text-[16px] text-[12px] px-2  py-[2px]  '>New</button>
+                                         <button onClick={() => toast.success(`${product.productName} is added`)} className="details-button md:px-[20px] px-[8px] md:py-[5px] py-[2px] whitespace-nowrap ">ADD TO CART</button>
+                                        <h3 className="text-center md:py-4 py-1 md:text-[22px] bg-black text-[16px] text-white">{product.productName}</h3>
+                                        <p className="md:pb-3 pb-1 text-center md:text-[15px] text-[12px] bg-black text-white"> <span className='flex justify-center items-center'><MdEuroSymbol></MdEuroSymbol> {product.price}</span> </p>
+                                    
                                     </div>
                                 ))}
                             </div>
+                                <p  className = "md:py-[50px] py-5 flex justify-center md:mx-[50px] mx-[20px]" ><Button buttonText="Show all"></Button></p>
                         </TabPanel>
+                        
                     </Tabs>
                 </div>
             </div>

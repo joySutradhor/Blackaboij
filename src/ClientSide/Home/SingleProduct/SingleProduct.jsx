@@ -6,12 +6,12 @@ import { Toaster, toast } from 'sonner';
 
 const SingleProduct = () => {
     return (
-        <div className='md:mt-[130px] font-custom'>
+        <div className=' font-custom'>
             <Toaster
             />
-            <div className=''>
+            {/* <div className=''>
                 <img className="md:mt-[-110px]  md:h-[150px] h-[70px] w-full" src="https://i.ibb.co/hy7jH3N/black.png" alt="" />
-            </div>
+            </div> */}
             <div className='grid md:grid-cols-2  md:mx-[50px] md:gap-[50px] md:mt-[50px]  relative z-10  '>
                 <div>
                     <Carousel

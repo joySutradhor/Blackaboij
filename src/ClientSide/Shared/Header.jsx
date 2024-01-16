@@ -1,5 +1,5 @@
 import { HiMiniChevronUp } from "react-icons/hi2";
-import { useEffect, useState } from "react";
+import {  useState } from "react";
 import { Link } from "react-router-dom";
 import { HiBars3BottomRight } from "react-icons/hi2";
 import { HiMiniXMark } from "react-icons/hi2";
@@ -15,7 +15,7 @@ import { Fade } from "react-awesome-reveal";
 import SearchButton from "../Utilites/SearchButton";
 
 const Header = () => {
-    const [isSticky, setIsSticky] = useState(false);
+    // const [isSticky, setIsSticky] = useState(false);
     const [isMenHovered, setIsMenHovered] = useState(false);
     const [isWomenHovered, setIsWomenHovered] = useState(false);
     const [isPrinceHovered, SetIsPrinceHovered] = useState(false);
@@ -26,18 +26,18 @@ const Header = () => {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
     const [isListMenuOpen, setIsListMenuOpen] = useState(false);
 
-    useEffect(() => {
-        const handleScroll = () => {
-            const scrollPosition = window.scrollY;
-            setIsSticky(scrollPosition > 0);
-        };
+    // useEffect(() => {
+    //     const handleScroll = () => {
+    //         const scrollPosition = window.scrollY;
+    //         setIsSticky(scrollPosition > 0);
+    //     };
 
-        window.addEventListener('scroll', handleScroll);
+    //     window.addEventListener('scroll', handleScroll);
 
-        return () => {
-            window.removeEventListener('scroll', handleScroll);
-        };
-    }, []);
+    //     return () => {
+    //         window.removeEventListener('scroll', handleScroll);
+    //     };
+    // }, []);
 
     const toggleMobileMenu = () => {
         setIsMobileMenuOpen(!isMobileMenuOpen);
@@ -49,8 +49,8 @@ const Header = () => {
     const iconSize = 19;
     return (
         <nav>
-            <div className="md:block hidden absolute top-0 w-full">
-                <header
+            <div className="md:block hidden  w-full">
+                {/* <header
                     className="text-[10px] text-center font-custom md:text-[15px]"
                     style={{
                         transition: 'max-height 0.5s ease-in-out',
@@ -58,7 +58,7 @@ const Header = () => {
                     }}
                 >
                     Up to 60% OFF on selected items. With an additional 20%, code: BLACK WINTER
-                </header>
+                </header> */}
                 {/* Header Section */}
                 <div
                     className=""
@@ -70,60 +70,52 @@ const Header = () => {
                         // height: '100vh',
                         position: 'relative', // Add this line
                         transition: 'border 0.3s ease-in-out', // Add this line for smooth transition
-                        borderTop: isSticky ? '1px solid #383838' : 'none',
-                        borderBottom: isSticky ? '1px solid #383838' : 'none',
-                        zIndex: isSticky ? '9999' : '50', // Add this line
-                        backgroundColor: isMenHovered || isWomenHovered || isPrinceHovered || isPrincesHovered || isStoreHovered || isSelesHovered || isAccessoriesHovered ? 'black' : 'transparent', // Added this line
+                        // borderTop: isSticky ? '1px solid #383838' : 'none',
+                        // borderBottom: isSticky ? '1px solid #383838' : 'none',
+                        // zIndex: isSticky ? '9999' : '50', // Add this line
+                        zIndex:  '50', // Add this line
+
+                        backgroundColor: isMenHovered || isWomenHovered || isPrinceHovered || isPrincesHovered || isStoreHovered || isSelesHovered || isAccessoriesHovered ? 'black' : 'black', // Added this line
 
                     }}
                 >
-                    <div className={`pt-8 ${isSticky ? 'fixed top-0 left-0 right-0 bg-black text-white transition-colors duration-500 ease-in-out ' : ''}`}>
-                        <div className={`flex justify-between items-center px-[50px] pb-[30px] `}>
+                    <div className={`pt-[20px]  fixed top-0 left-0 right-0 bg-black text-white transition-colors duration-500 ease-in-out `}>
+                        <div className={`grid grid-cols-3 justify-between items-center px-[50px] pb-[20px]`}>
 
-                            {/* header desktop icon */}
-                            <div className="flex ">
-                                {/* <Link to="https://www.facebook.com/BBOIJ" target="blank">
-                                    <span style={{ fontSize: `${iconSize}px` }} > <FaFacebook className="text-white  " /></span>
-                                </Link >
-                                <Link>
-                                    <span style={{ fontSize: `${iconSize}px` }}  > <FaPinterest className="text-white " /></span>
-                                </Link>
-                                <Link to="https://www.instagram.com/blackaboij_/">
-                                    <span style={{ fontSize: `${iconSize}px` }}  > <FaInstagram className="text-white " /></span>
-                                </Link>
-                                <Link>
-                                    <span style={{ fontSize: `${iconSize}px` }} > <IoLogoYoutube className="text-white " /></span>
-                                </Link> */}
+                            {/* Search button on the left */}
+                            <div className="col-span-1">
                                 <SearchButton></SearchButton>
                             </div>
 
-                            {/* desktop logo */}
-                            <div>
-                                <Link to="/"> <img src="https://i.ibb.co/3sNL27c/logo.png" className="sm:w-[85px] xl:w-[100px]  md:mr-[26px]" alt="" /></Link>
+                            {/* Logo in the middle */}
+                            <div className="col-span-1 flex items-center justify-center">
+                                <Link to="/">
+                                    <img src="https://i.ibb.co/3sNL27c/logo.png" className="sm:w-[85px] xl:w-[100px]" alt="" />
+                                </Link>
                             </div>
 
-                            {/* destop profile seacrch and cart icons */}
-                            <div className="flex gap-x-3">
+                            {/* Icons on the right */}
+                            <div className="col-span-1 flex justify-end gap-x-3">
                                 <Link>
-                                    <span style={{ fontSize: `${iconSize}px` }} > <FaRegUser className="text-white  " /></span>
+                                    <span style={{ fontSize: `${iconSize}px` }} > <FaRegUser className="text-white" /></span>
                                 </Link>
                                 <Link>
-                                    <span style={{ fontSize: `${iconSize}px` }}  > <IoBagOutline className="text-white " /></span>
+                                    <span style={{ fontSize: `${iconSize}px` }} > <IoBagOutline className="text-white" /></span>
                                 </Link>
                                 <Link>
-                                    <span style={{ fontSize: `${iconSize}px` }}  > <AiOutlineShoppingCart className="text-white " /></span>
+                                    <span style={{ fontSize: `${iconSize}px` }} > <AiOutlineShoppingCart className="text-white" /></span>
                                 </Link>
-                            
-
                             </div>
                         </div>
 
+
+
                         {/* desktop  list items */}
                         <div
-                            className={`flex   justify-center   list-none font-custom text-[#b1b1b1] ${isSticky ? 'border-b border-t border-[#383838]' : ''} ${isMenHovered || isWomenHovered || isPrinceHovered || isPrincesHovered || isStoreHovered || isSelesHovered || isAccessoriesHovered ? "border-b border-t border-[#383838] bg-black" : "bg-transparent border-b-hidden border-t-hidden	"} `}
+                            className={`flex   justify-center   list-none font-custom text-[#b1b1b1]  border-b border-t border-[#383838] bg-black `}
 
                         >
-                            <Link to="/menCollections" className={`relative text-white py-[10px] px-[15px] text-[15px] border-b-2-transparent  group  ${isMenHovered ? 'text-white border-b-2' : ''}`}
+                            <Link to="/menCollections" className={`relative text-white py-[10px] px-[15px] text-[15px] border-b-2 border-transparent  group  ${isMenHovered ? 'text-white border-b-2 border-white' : ''}`}
                                 onMouseEnter={() => setIsMenHovered(true)}
                                 onMouseLeave={() => setIsMenHovered(false)}
                             >
@@ -239,11 +231,11 @@ const Header = () => {
                 </div>
             </div>
             {/* mobile menu */}
-            <div className="md:hidden absolute w-full  ">
-                <div className={`flex justify-between py-[30px] px-[20px] font-custom relative ${isMobileMenuOpen ? "bg-black z-30  " : ""}  `}>
+            <div className="md:hidden absolute z-50  w-full  ">
+                <div className={`flex justify-between py-[30px] px-[20px] font-custom relative ${isMobileMenuOpen ? "bg-black z-100  " : ""}  `}>
                     {/* footer logo */}
                     <div>
-                    <Link to="/"> <img src="https://i.ibb.co/3sNL27c/logo.png" className="w-[85px] h-[15px] " alt="" /></Link>
+                        <Link to="/"> <img src="https://i.ibb.co/3sNL27c/logo.png" className="w-[85px] h-[15px] " alt="" /></Link>
                     </div>
                     <div>
                         {isMobileMenuOpen ? (
@@ -285,7 +277,7 @@ const Header = () => {
                                 <li className="relative">
                                     <Link to="/accessories" className="text-white">Accessories</Link>
                                 </li>
-                               
+
                             </ul>
                             {/* footer icons */}
                             <div className=" flex justify-center items-center space-x-5 pt-[20px]  ">
