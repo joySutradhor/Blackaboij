@@ -9,26 +9,26 @@ import { IoLogoYoutube } from 'react-icons/io';
 const HeroSection = () => {
     const iconSize = 22;
     return (
-        <div 
-        
-       
-        style={{
-            // backgroundImage: "url('https://i.ibb.co/SP1rhKQ/Banner.png')",
-            backgroundImage: "url('https://i.ibb.co/hVdDm87/Desktop-1512x.webp')",
-            backgroundSize: 'cover',
-            backgroundPosition: 'center',
-            backgroundRepeat: "no-repeat",
-            height : "100vh",
-            width: "100wh",
-            position: "relative"
-            // '@media (max-width: 768px)': {
-            //     height: '50vh', // Adjust the height for smaller screens
-            // },
+        <div
+            style={{
+                // backgroundImage: "url('https://i.ibb.co/SP1rhKQ/Banner.png')",
+                backgroundImage: "url('https://i.ibb.co/hVdDm87/Desktop-1512x.webp')",
+                backgroundSize: 'cover',
+                backgroundPosition: 'center',
+                backgroundRepeat: "no-repeat",
+                height: "100vh",
+                backgroundColor: "#00000",
+                position: "relative"
+                // '@media (max-width: 768px)': {
+                //     height: '50vh', // Adjust the height for smaller screens
+                // },
 
-        }}>
+
+            }}>
+
 
             <div
-                className="flex  md:flex-row md:gap-5 gap-2"
+                className="flex justify-center items-center flex-col"
                 style={{
                     position: 'absolute',
                     top: '60%',
@@ -36,12 +36,16 @@ const HeroSection = () => {
                     transform: 'translate(-50%, -50%)',
                     textAlign: 'center',
                 }}>
-               
-                <Link to="/menCollections"> <Button buttonText="SHOP MEN" ></Button></Link>
-                <Link to="/menCollections"> <Button buttonText="SHOP WOMEN" ></Button></Link>
+                    <div>
+                        <h1 className="md:text-[50px] text-[20px] py-6 font-bold font-custom text-white md:py-12">LIFE IS MADE OF CHOICE</h1>
+                    </div>
+                <div className="flex md:gap-5 gap-2">
+                    <Link to="/menCollections"> <Button buttonText="SHOP MEN" ></Button></Link>
+                    <Link to="/menCollections"> <Button buttonText="SHOP WOMEN" ></Button></Link>
+                </div>
             </div>
 
-            <div className='absolute top-[50%] md:right-[50px] right-2' >
+            <div className='absolute top-[50%] md:right-[50px] right-5' >
                 <div className='flex flex-col gap-3 justify-end items-center'>
                     <Link to="https://www.facebook.com/BBOIJ" target="blank">
                         <span style={{ fontSize: `${iconSize}px` }} > <FaFacebook className="text-[#b1b1b1] hover:text-white  " /></span>

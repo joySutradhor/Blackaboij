@@ -43,12 +43,13 @@ const Footer = () => {
                         <li>FAQ</li>
                     </ul>
                 </div>
+
                 <div >
                     <h2 className="py-3 text-white ">NEWSLATTER</h2>
                     <ul className="text-[12px] text-[#646464] hover:text-white">
                         <li className="mb-3">Subscribe to receive updates, access <br></br> to exclusive deals, and more.</li>
-                        <input type="email" placeholder="Email Address" className="border border-[#b1b1b1] p-1 pl-1 bg-transparent focus:outline-none text-[#b1b1b1]"></input> <br />
-                        <button className="text-white my-5 py-1 px-4 border border-[#b1b1b1] hover:bg-white hover:text-black hover:border-black">Subscribe now</button>
+                        <input type="email" placeholder="Email Address" className="border border-[#383838] p-1 pl-1 bg-transparent focus:outline-none text-[#646464]"></input> <br />
+                        <button className="text-white my-3 py-1 px-4 border border-[#383838] hover:bg-white hover:text-black hover:border-black">Subscribe now</button>
                     </ul>
                 </div>
 
@@ -63,6 +64,8 @@ const Footer = () => {
                     </div>
 
                 </div>
+
+
             </div>
             <p className="text-white text-center text-[14px] md:pt-8 pt-4  pb-2">Copyright © 2024 <Link className="text-slate-300" to='https://ethicalden.com/'>Ethical Den.</Link></p>
 

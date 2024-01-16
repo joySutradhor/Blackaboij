@@ -133,7 +133,7 @@ const HotSale = () => {
                         </div>
 
                         <TabPanel>
-                            <div className="grid md:grid-cols-3 grid-cols-2 md:gap-[50px] gap-[10px] md:mx-[50px] mx-[20px] ">
+                            <div className="grid md:grid-cols-3 grid-cols-2 md:gap-[50px] gap-[5px] md:mx-[50px] mx-[20px] ">
                                 {men.map((product) => (
                                     <div key={product.id} className="bg-[#B7B7B7]  product-card font-custom">
                                        <Link to={`product/${product.id}`}> <img src={product.img} alt={product.productName} className="front-img" /></Link>

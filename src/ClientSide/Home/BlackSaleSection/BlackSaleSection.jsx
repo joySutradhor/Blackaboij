@@ -18,7 +18,7 @@ const BlackSaleSection = () => {
                 <h2 className="md:text-[110px] text-[30px] font-custom">Black Friday Sale</h2>
                 <h4 className="md:py-10 py-3">
                     <Link to="/allProducts">
-                        <Button buttonText='SHOP NOW'></Button>
+                        <Button buttonText='SHOP NOW' ></Button>
                     </Link>
                 </h4>
 
