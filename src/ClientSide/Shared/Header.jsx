@@ -1,5 +1,5 @@
 import { HiMiniChevronUp } from "react-icons/hi2";
-import {  useState } from "react";
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { HiBars3BottomRight } from "react-icons/hi2";
 import { HiMiniXMark } from "react-icons/hi2";
@@ -13,9 +13,10 @@ import { IoBagOutline } from "react-icons/io5";
 import { FaRegUser } from "react-icons/fa6";
 import { Fade } from "react-awesome-reveal";
 import SearchButton from "../Utilites/SearchButton";
+import Marquee from "react-fast-marquee";
 
 const Header = () => {
-    // const [isSticky, setIsSticky] = useState(false);
+    const [isSticky, setIsSticky] = useState(false);
     const [isMenHovered, setIsMenHovered] = useState(false);
     const [isWomenHovered, setIsWomenHovered] = useState(false);
     const [isPrinceHovered, SetIsPrinceHovered] = useState(false);
@@ -26,18 +27,18 @@ const Header = () => {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
     const [isListMenuOpen, setIsListMenuOpen] = useState(false);
 
-    // useEffect(() => {
-    //     const handleScroll = () => {
-    //         const scrollPosition = window.scrollY;
-    //         setIsSticky(scrollPosition > 0);
-    //     };
+    useEffect(() => {
+        const handleScroll = () => {
+            const scrollPosition = window.scrollY;
+            setIsSticky(scrollPosition > 0);
+        };
 
-    //     window.addEventListener('scroll', handleScroll);
+        window.addEventListener('scroll', handleScroll);
 
-    //     return () => {
-    //         window.removeEventListener('scroll', handleScroll);
-    //     };
-    // }, []);
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, []);
 
     const toggleMobileMenu = () => {
         setIsMobileMenuOpen(!isMobileMenuOpen);
@@ -49,17 +50,16 @@ const Header = () => {
     const iconSize = 19;
     return (
         <nav>
-            <div className="md:block hidden  w-full">
-                {/* <header
-                    className="text-[10px] text-center font-custom md:text-[15px]"
-                    style={{
-                        transition: 'max-height 0.5s ease-in-out',
-                        maxHeight: isSticky ? '0' : '100px',
-                    }}
-                >
-                    Up to 60% OFF on selected items. With an additional 20%, code: BLACK WINTER
-                </header> */}
-                {/* Header Section */}
+
+            {/* Header Section */}
+            <div className="md:block hidden bg-black  w-full">
+                <div className="w-full flex justify-center">
+                    <div className="max-w-xl">
+                        <Marquee className="text-center" delay={2}>
+                            <p className="text-white">Up to 60% OFF on selected items. With an additional 20%, code: BLACK WINTER</p>
+                        </Marquee>
+                    </div>
+                </div>
                 <div
                     className=""
                     style={{
@@ -69,17 +69,18 @@ const Header = () => {
                         // backgroundRepeat: "no-repeat",
                         // height: '100vh',
                         position: 'relative', // Add this line
-                        transition: 'border 0.3s ease-in-out', // Add this line for smooth transition
+                        transition: 'border 0.5s ease-in-out', // Add this line for smooth transition
                         // borderTop: isSticky ? '1px solid #383838' : 'none',
                         // borderBottom: isSticky ? '1px solid #383838' : 'none',
                         // zIndex: isSticky ? '9999' : '50', // Add this line
-                        zIndex:  '50', // Add this line
+                        zIndex: '50', // Add this line
 
                         backgroundColor: isMenHovered || isWomenHovered || isPrinceHovered || isPrincesHovered || isStoreHovered || isSelesHovered || isAccessoriesHovered ? 'black' : 'black', // Added this line
 
                     }}
                 >
-                    <div className={`pt-[20px]  fixed top-0 left-0 right-0 bg-black text-white transition-colors duration-500 ease-in-out `}>
+                    <div className={`pt-[20px]  fixed w-full ${isSticky ? "top-0" : ""} bg-black text-white transition-colors duration-500 ease-in-out `}>
+
                         <div className={`grid grid-cols-3 justify-between items-center px-[50px] pb-[20px]`}>
 
                             {/* Search button on the left */}

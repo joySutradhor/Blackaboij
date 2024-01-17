@@ -2,7 +2,7 @@
 
 // eslint-disable-next-line react/prop-types
 const Button = ({ buttonText }) => {
-    console.log(buttonText)
+   
     return (
         <div>
             <a href="#_" className="relative inline-flex items-center justify-center md:px-10  md:py-3 px-6 py-2 hover:text-black overflow-hidden font-custom font-medium tracking-tighter text-white bg-black  group">

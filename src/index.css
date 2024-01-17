@@ -10,7 +10,7 @@
 
 @layer components {
   .section-gap {
-    @apply pt-[50px]  ;
+    @apply pt-[100px]  ;
   }
   .btn {
     @apply  px-[8px] py-[5px] bg-slate-100 text-black  ;
@@ -23,7 +23,7 @@
     @apply md:text-4xl text-2xl font-serif text-center ;
   }
   header {
-    @apply text-[#b1b1b1] text-[13px]  bg-[#1b1b1b] h-[45px] flex justify-center items-center;
+    @apply text-[#b1b1b1] text-[13px] bg-black  h-[45px] flex justify-center items-center;
   }
   li{
     @apply text-white  

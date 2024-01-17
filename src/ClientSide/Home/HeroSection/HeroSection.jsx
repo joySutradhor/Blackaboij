@@ -7,7 +7,7 @@ import { IoLogoYoutube } from 'react-icons/io';
 
 
 const HeroSection = () => {
-    const iconSize = 22;
+    const iconSize = 25;
     return (
         <div
             style={{
@@ -31,13 +31,13 @@ const HeroSection = () => {
                 className="flex justify-center items-center flex-col"
                 style={{
                     position: 'absolute',
-                    top: '60%',
+                    top: '50%',
                     left: '50%',
                     transform: 'translate(-50%, -50%)',
                     textAlign: 'center',
                 }}>
                     <div>
-                        <h1 className="md:text-[50px] text-[20px] py-6 font-bold font-custom text-white md:py-12">LIFE IS MADE OF CHOICE</h1>
+                        <h1 className="md:text-[80px] text-[30px] font-custom whitespace-nowrap md:py-12 text-white">LIFE IS MADE OF CHOICE</h1>
                     </div>
                 <div className="flex md:gap-5 gap-2">
                     <Link to="/menCollections"> <Button buttonText="SHOP MEN" ></Button></Link>
@@ -45,7 +45,7 @@ const HeroSection = () => {
                 </div>
             </div>
 
-            <div className='absolute top-[50%] md:right-[50px] right-5' >
+            <div className='absolute md:bottom-8 bottom-4 md:right-[50px] right-5' >
                 <div className='flex flex-col gap-3 justify-end items-center'>
                     <Link to="https://www.facebook.com/BBOIJ" target="blank">
                         <span style={{ fontSize: `${iconSize}px` }} > <FaFacebook className="text-[#b1b1b1] hover:text-white  " /></span>

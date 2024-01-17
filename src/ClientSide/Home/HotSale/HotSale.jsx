@@ -36,7 +36,7 @@ const HotSale = () => {
             })
             .then(data => {
                 setMen(data);
-                console.log(data);
+                
             })
             .catch(error => {
                 console.error('Fetch error:', error);
@@ -53,7 +53,7 @@ const HotSale = () => {
             })
             .then(data => {
                 setWomen(data);
-                console.log(data);
+                
             })
             .catch(error => {
                 console.error('Fetch error:', error);
@@ -70,7 +70,7 @@ const HotSale = () => {
             })
             .then(data => {
                 setAccessories(data);
-                console.log(data);
+                
             })
             .catch(error => {
                 console.error('Fetch error:', error);
@@ -87,7 +87,7 @@ const HotSale = () => {
             })
             .then(data => {
                 setPrince(data);
-                console.log(data);
+                
             })
             .catch(error => {
                 console.error('Fetch error:', error);
@@ -104,7 +104,7 @@ const HotSale = () => {
             })
             .then(data => {
                 setPrincess(data);
-                console.log(data);
+              
             })
             .catch(error => {
                 console.error('Fetch error:', error);
@@ -121,7 +121,7 @@ const HotSale = () => {
                     <Tabs>
                         <div className=' mb-[20px] md:mb-[50px] font-custom text-center'>
                             <TabList
-                                className="custom-tab-list md:text-[16px] text-[12px] md:gap-3 gap-[10px] "
+                                className="custom-tab-list md:text-[16px] text-[12px] md:gap-6 gap-[10px] "
                             // Remove the default bottom border
                             >
                                 <Tab className="custom-tab  ">Men</Tab>
@@ -133,12 +133,12 @@ const HotSale = () => {
                         </div>
 
                         <TabPanel>
-                            <div className="grid md:grid-cols-3 grid-cols-2 md:gap-[50px] gap-[5px] md:mx-[50px] mx-[20px] ">
+                            <div className="grid md:grid-cols-3 grid-cols-2 md:gap-[25px] gap-[5px] md:mx-[50px] mx-[20px] ">
                                 {men.map((product) => (
                                     <div key={product.id} className="bg-[#B7B7B7]  product-card font-custom">
                                        <Link to={`product/${product.id}`}> <img src={product.img} alt={product.productName} className="front-img" /></Link>
                                        <Link to={`product/${product.id}`}> <img src={product.backImg} alt="" className="back-img " /></Link>
-                                        <button className='absolute top-0 right-0  text-white bg-[#000000] md:px-4 md:py-1 md:text-[16px] text-[12px] px-2  py-[2px]  '>New</button>
+                                        <button className='absolute top-0 right-0  text-white bg-[#000000] md:px-4 md:py-1 md:text-[16px] text-[12px] px-2  py-[2px]  '>HOT</button>
                                          <button onClick={() => toast.success(`${product.productName} is added`)} className="details-button md:px-[20px] px-[8px] md:py-[5px] py-[2px] whitespace-nowrap ">ADD TO CART</button>
                                         <h3 className="text-center md:py-4 py-1 md:text-[22px] bg-black text-[16px] text-white">{product.productName}</h3>
                                         <p className="md:pb-3 pb-1 text-center md:text-[15px] text-[12px] bg-black text-white"> <span className='flex justify-center items-center'><MdEuroSymbol></MdEuroSymbol> {product.price}</span> </p>
@@ -146,7 +146,7 @@ const HotSale = () => {
                                     </div>
                                 ))}
                             </div>
-                                <p  className = "md:py-[50px] py-5 flex justify-center md:mx-[50px] mx-[20px]" ><Button buttonText="Show all"></Button></p>
+                                <p  className = "md:pt-[50px] flex justify-center md:mx-[50px] mx-[20px]" ><Button buttonText="SHOW ALL"></Button></p>
                         </TabPanel>
                         <TabPanel>
                             <div className="grid md:grid-cols-3 grid-cols-2 md:gap-[50px] gap-[10px] md:mx-[50px] mx-[20px] ">
@@ -162,7 +162,7 @@ const HotSale = () => {
                                     </div>
                                 ))}
                             </div>
-                                <p  className = "md:py-[50px] py-5 flex justify-center md:mx-[50px] mx-[20px]" ><Button buttonText="Show all"></Button></p>
+                                <p  className = "md:pt-[50px] py-5 flex justify-center md:mx-[50px] mx-[20px]" ><Button buttonText="SHOW ALL"></Button></p>
                         </TabPanel>
                         <TabPanel>
                             <div className="grid md:grid-cols-3 grid-cols-2 md:gap-[50px] gap-[10px] md:mx-[50px] mx-[20px] ">
@@ -178,7 +178,7 @@ const HotSale = () => {
                                     </div>
                                 ))}
                             </div>
-                                <p  className = "md:py-[50px] py-5 flex justify-center md:mx-[50px] mx-[20px]" ><Button buttonText="Show all"></Button></p>
+                                <p  className = "md:py-[50px] py-5 flex justify-center md:mx-[50px] mx-[20px]" ><Button buttonText="SHOW ALL"></Button></p>
                         </TabPanel>
                         <TabPanel>
                             <div className="grid md:grid-cols-3 grid-cols-2 md:gap-[50px] gap-[10px] md:mx-[50px] mx-[20px] ">
@@ -194,7 +194,7 @@ const HotSale = () => {
                                     </div>
                                 ))}
                             </div>
-                                <p  className = "md:py-[50px] py-5 flex justify-center md:mx-[50px] mx-[20px]" ><Button buttonText="Show all"></Button></p>
+                                <p  className = "md:py-[50px] py-5 flex justify-center md:mx-[50px] mx-[20px]" ><Button buttonText="SHOW ALL"></Button></p>
                         </TabPanel>
                         <TabPanel>
                             <div className="grid md:grid-cols-3 grid-cols-2 md:gap-[50px] gap-[10px] md:mx-[50px] mx-[20px] ">
@@ -210,7 +210,7 @@ const HotSale = () => {
                                     </div>
                                 ))}
                             </div>
-                                <p  className = "md:py-[50px] py-5 flex justify-center md:mx-[50px] mx-[20px]" ><Button buttonText="Show all"></Button></p>
+                                <p  className = "md:pt-[50px] py-5 flex justify-center md:mx-[50px] mx-[20px]" ><Button buttonText="SHOW ALL"></Button></p>
                         </TabPanel>
                         
                     </Tabs>

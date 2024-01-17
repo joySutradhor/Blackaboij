@@ -22,6 +22,7 @@ import WomensTees from './ClientSide/Pages/WomensCollections/WomensTees/WomensTe
 import WomenHoodies from './ClientSide/Pages/WomensCollections/WomenHoodies/WomenHoodies';
 import WomenPants from './ClientSide/Pages/WomensCollections/WomenPants/WomenPants';
 import WomenOutwear from './ClientSide/Pages/WomensCollections/WomenOutwear/WomenOutwear';
+// import AllProductSearch from './ClientSide/Pages/AllProductSearch/AllProductSearch';
 // all routes
 const router = createBrowserRouter([
   {
@@ -95,7 +96,11 @@ const router = createBrowserRouter([
       {
         path : "/womenOutwear",
         element : <WomenOutwear></WomenOutwear>
-      }
+      },
+      // {
+      //   path : "/allProductSearch",
+      //   element : <AllProductSearch></AllProductSearch>
+      // }
     ]
   },
 ]);

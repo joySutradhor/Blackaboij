@@ -11,7 +11,7 @@ const ShadesSection = () => {
     };
 
     return (
-        <div style={sectionStyle} className="md:h-[500px] h-[300px]">
+        <div style={sectionStyle} className="md:h-[500px] h-[300px] md:mb-[100px]">
             <div className="flex flex-col text-white justify-center items-center h-full">
                 <h2 className="md:text-[100px] text-[30px] font-custom text-center">All shades of black available.</h2>
                 <h4 className="md:py-10 py-3">
