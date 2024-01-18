@@ -61,7 +61,7 @@ const Tees = () => {
                     position: "relative"
                 }}
             >
-                <Zoom><h2 className="md:text-6xl text-xl text-white font-custom font-bold whitespace-nowrap"
+                <Zoom><h2 className="md:text-6xl text-[20px] text-white font-custom font-bold whitespace-nowrap"
                 >
                     TEES NEW COLLECTIONS
                 </h2></Zoom>

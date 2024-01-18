@@ -197,7 +197,7 @@ const router = createBrowserRouter([
         
       },
       {
-        path : "/hoodiesAndSweeters",
+        path : "/princeHoodiesAndSweeters",
         element : <PrinceHoodies></PrinceHoodies>
       },
       {

@@ -26,9 +26,12 @@ const Header = () => {
     const [isAccessoriesHovered, SetIsAccessoriesHovered] = useState(false);
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
     const [isListMenuOpen, setIsListMenuOpen] = useState(false);
+    const [isListMenuOpenWomen, setIsListMenuOpenWomen] = useState(false);
+    const [isListMenuOpenPrince, setIsListMenuOpenPrince] = useState(false);
+    const [isListMenuOpenPrincess, setIsListMenuOpenPrincess] = useState(false);
     const [cart, setCart] = useState([]);
     // const [listItem , setListItem] = useState(false);
-    
+
 
     useEffect(() => {
 
@@ -51,6 +54,16 @@ const Header = () => {
         setIsListMenuOpen(!isListMenuOpen);
     };
 
+    const toggleListMenuWomen = () => {
+        setIsListMenuOpenWomen(!isListMenuOpenWomen);
+    };
+    const toggleListMenuPrince = () => {
+        setIsListMenuOpenPrince(!isListMenuOpenPrince);
+    };
+    const toggleListMenuPrincess = () => {
+        setIsListMenuOpenPrincess(!isListMenuOpenPrincess);
+    };
+
     // const toggleListWomen = () => {
 
     // }
@@ -59,14 +72,14 @@ const Header = () => {
 
     const closeMobileMenu = () => {
         setIsMobileMenuOpen(false);
-      };
+    };
     useEffect(() => {
         // Retrieve cart items from local storage on component mount
         const storedCart = JSON.parse(localStorage.getItem('cart')) || [];
         setCart(storedCart);
-      }, []);
+    }, []);
 
-          
+
 
     const iconSize = 19;
     return (
@@ -129,8 +142,6 @@ const Header = () => {
                                 </Link>
                             </div>
                         </div>
-
-
 
                         {/* desktop  list items */}
                         <div
@@ -201,7 +212,7 @@ const Header = () => {
                                     <ul className={`absolute pl-6 pr-[250px] text-[12px] top-[46px] whitespace-nowrap   ${isPrinceHovered ? 'block bg-black' : 'hidden'}`}>
                                         <ul className="py-[15px] font-semibold"><Link to="/princeCollections">PRINCE NEW ARRIVALS</Link></ul>
                                         <li className="pt-[5px]"><Link to="/princeTeesCollections">TEES</Link></li>
-                                        <li className="pt-[5px]"><Link to="/hoodiesAndSweeters">HOODIES AND SWEATERS</Link></li>
+                                        <li className="pt-[5px]"><Link to="/princeHoodiesAndSweeters">HOODIES AND SWEATERS</Link></li>
                                         <li className="pt-[5px]"><Link to="/princePants">PANTS</Link></li>
                                         <li className="pt-[5px]"><Link to="/princeOutwear">OUTWEAR</Link></li>
                                         <li className="pt-[5px]" ><Link to="#">SHOES</Link></li>
@@ -277,38 +288,76 @@ const Header = () => {
                                     </div>
                                     {
                                         isListMenuOpen ? <ul className={`pl-[5px] text-[11px] space-y-[5px] `}>
-                                            <li  className="mt-[10px]" ><Link  onClick={closeMobileMenu} to='/menCollections'>NEW COLLECTIONS</Link></li>
-                                            <li><Link  onClick={closeMobileMenu} to='/tees'>TEES</Link></li>
-                                            <li><Link  onClick={closeMobileMenu} to='/hoodiesAndSweeters'>HOODIES AND SWEATERS</Link></li>
-                                            <li><Link  onClick={closeMobileMenu} to='/pants'>PANTS</Link></li>
-                                            <li><Link  onClick={closeMobileMenu} to='/outwear'>OUTWEARS</Link></li>
-                                            <li><Link  onClick={closeMobileMenu} to='/menCollections'>SHOES</Link></li>
-                                            <li><Link  onClick={closeMobileMenu} to='/accessories'>ACCESSORIES</Link></li>
+                                            <li className="mt-[10px]" ><Link onClick={closeMobileMenu} to='/menCollections'>NEW COLLECTIONS</Link></li>
+                                            <li><Link onClick={closeMobileMenu} to='/tees'>TEES</Link></li>
+                                            <li><Link onClick={closeMobileMenu} to='/hoodiesAndSweeters'>HOODIES AND SWEATERS</Link></li>
+                                            <li><Link onClick={closeMobileMenu} to='/pants'>PANTS</Link></li>
+                                            <li><Link onClick={closeMobileMenu} to='/outwear'>OUTWEARS</Link></li>
+                                            <li><Link onClick={closeMobileMenu} to='/'>SHOES</Link></li>
+                                            <li><Link onClick={closeMobileMenu} to='/accessories'>ACCESSORIES</Link></li>
                                         </ul> : ""
                                     }
                                 </li>
                                 <li>
-                                    <div
-                                        className={`flex justify-between items-center `}
-                                    >
+                                    <div className={`flex justify-between items-center `}>
                                         <p>WOMEN</p>
-                                        <p>{isListMenuOpen ? <HiMiniChevronUp onClick={toggleListMenu} className=" text-[20px] text-white" /> : <HiMiniChevronDown onClick={toggleListMenu} className=" text-[20px] text-white" />}</p>
+                                        <p>{isListMenuOpenWomen ? <HiMiniChevronUp onClick={toggleListMenuWomen} className=" text-[20px] text-white" /> : <HiMiniChevronDown onClick={toggleListMenuWomen} className=" text-[20px] text-white" />}</p>
                                     </div>
                                     {
-                                        isListMenuOpen ? <ul className={`pl-[5px] text-[11px] space-y-[5px] `}>
-                                            <li  className="mt-[10px]" ><Link  onClick={closeMobileMenu} to='/menCollections'>NEW COLLECTIONS</Link></li>
-                                            <li><Link  onClick={closeMobileMenu} to='/tees'>TEES</Link></li>
-                                            <li><Link  onClick={closeMobileMenu} to='/hoodiesAndSweeters'>HOODIES AND SWEATERS</Link></li>
-                                            <li><Link  onClick={closeMobileMenu} to='/pants'>PANTS</Link></li>
-                                            <li><Link  onClick={closeMobileMenu} to='/outwear'>OUTWEARS</Link></li>
-                                            <li><Link  onClick={closeMobileMenu} to='/menCollections'>SHOES</Link></li>
-                                            <li><Link  onClick={closeMobileMenu} to='/accessories'>ACCESSORIES</Link></li>
+                                        isListMenuOpenWomen ? <ul className={`pl-[5px] text-[11px] space-y-[5px] `}>
+                                            <li className="mt-[10px]"><Link onClick={closeMobileMenu} to='/womens'>NEW COLLECTIONS</Link></li>
+                                            <li><Link onClick={closeMobileMenu} to='/womenTees'>TEES</Link></li>
+                                            <li><Link onClick={closeMobileMenu} to='/womensHoodies'>HOODIES AND SWEATERS</Link></li>
+                                            <li><Link onClick={closeMobileMenu} to='/womenPants'>PANTS</Link></li>
+                                            <li><Link onClick={closeMobileMenu} to='/womenOutwear'>OUTWEARS</Link></li>
+                                            <li><Link onClick={closeMobileMenu} to='/'>SHOES</Link></li>
+                                            <li><Link onClick={closeMobileMenu} to='/accessories'>ACCESSORIES</Link></li>
                                         </ul> : ""
                                     }
                                 </li>
-                                
+                                <li>
+                                    <div className={`flex justify-between items-center `}>
+                                        <p>PRINCE</p>
+                                        <p>{isListMenuOpenPrince ? <HiMiniChevronUp onClick={toggleListMenuPrince} className=" text-[20px] text-white" /> : <HiMiniChevronDown onClick={toggleListMenuPrince} className=" text-[20px] text-white" />}</p>
+                                    </div>
+                                    {
+                                        isListMenuOpenPrince ? <ul className={`pl-[5px] text-[11px] space-y-[5px] `}>
+                                            <li className="mt-[10px]"><Link onClick={closeMobileMenu} to='/princeCollections'>NEW COLLECTIONS</Link></li>
+                                            <li><Link onClick={closeMobileMenu} to='/princeTeesCollections'>TEES</Link></li>
+                                            <li><Link onClick={closeMobileMenu} to='/princeHoodiesAndSweeters'>HOODIES AND SWEATERS</Link></li>
+                                            <li><Link onClick={closeMobileMenu} to='/princePants'>PANTS</Link></li>
+                                            <li><Link onClick={closeMobileMenu} to='/princeOutwear'>OUTWEARS</Link></li>
+                                            <li><Link onClick={closeMobileMenu} to='/'>SHOES</Link></li>
+                                            <li><Link onClick={closeMobileMenu} to='/accessories'>ACCESSORIES</Link></li>
+                                        </ul> : ""
+                                    }
+                                </li>
+                                <li>
+                                    <div className={`flex justify-between items-center `}>
+                                        <p>PRINCESS</p>
+                                        <p>{isListMenuOpenPrincess ? <HiMiniChevronUp onClick={toggleListMenuPrincess} className=" text-[20px] text-white" /> : <HiMiniChevronDown onClick={toggleListMenuPrincess} className=" text-[20px] text-white" />}</p>
+                                    </div>
+                                    {
+                                        isListMenuOpenPrincess ? <ul className={`pl-[5px] text-[11px] space-y-[5px] `}>
+                                            <li className="mt-[10px]"><Link onClick={closeMobileMenu} to='/princessCollections'>NEW COLLECTIONS</Link></li>
+                                            <li><Link onClick={closeMobileMenu} to='/princessTees'>TEES</Link></li>
+                                            <li><Link onClick={closeMobileMenu} to='/princessHoodies'>HOODIES AND SWEATERS</Link></li>
+                                            <li><Link onClick={closeMobileMenu} to='/princessPants'>PANTS</Link></li>
+                                            <li><Link onClick={closeMobileMenu} to='/princessOutwear'>OUTWEARS</Link></li>
+                                            <li><Link onClick={closeMobileMenu} to='/'>SHOES</Link></li>
+                                            <li><Link onClick={closeMobileMenu} to='/accessories'>ACCESSORIES</Link></li>
+                                        </ul> : ""
+                                    }
+                                </li>
+
                                 <li className="relative">
-                                    <Link to="/accessories" className="text-white">Accessories</Link>
+                                    <Link to="/allProducts" className="text-white">SALES</Link>
+                                </li>
+                                <li className="relative">
+                                    <Link to="/store" className="text-white">STORE</Link>
+                                </li>
+                                <li className="relative">
+                                    <Link to="/accessories" className="text-white">ACCESSORIES</Link>
                                 </li>
 
                             </ul>

@@ -61,7 +61,7 @@ const Accessories = () => {
                     position: "relative"
                 }}
             >
-                <Zoom><h2 className="md:md:text-6xl text-xl text-2xl text-white font-custom font-bold whitespace-nowrap"
+                <Zoom><h2 className="md:md:text-6xl text-[20px] text-2xl text-white font-custom font-bold whitespace-nowrap"
                 >
                 ACCESSORIES NEW COLLECTIONS
                 </h2></Zoom>
