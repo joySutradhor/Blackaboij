@@ -133,14 +133,5 @@
         "productName": "Product 15",
         "category": "Home Decor",
         "starRating": 3.7
-    },
-    {
-        "id": 16,
-        "img": "https://i.ibb.co/9qsKMmJ/01-b3325c8b-c525-4272-a22a-980825f6bef7-360x.webp",
-        "backImg": "https://i.ibb.co/TPYNfgY/Bandana-Hoodie-360x.webp",
-        "price": 19.99,
-        "productName": "Product 16",
-        "category": "Home Decor",
-        "starRating": 4.4
     }
 ]

@@ -22,6 +22,16 @@ import WomensTees from './ClientSide/Pages/WomensCollections/WomensTees/WomensTe
 import WomenHoodies from './ClientSide/Pages/WomensCollections/WomenHoodies/WomenHoodies';
 import WomenPants from './ClientSide/Pages/WomensCollections/WomenPants/WomenPants';
 import WomenOutwear from './ClientSide/Pages/WomensCollections/WomenOutwear/WomenOutwear';
+import Prince from './ClientSide/Pages/PrinceCollections/Prince';
+import PrinceTees from './ClientSide/Pages/PrinceCollections/PrinceTees';
+import PrincePants from './ClientSide/Pages/PrinceCollections/PrincePants';
+import PrinceHoodies from './ClientSide/Pages/PrinceCollections/PrinceHoodies';
+import PrinceOutwear from './ClientSide/Pages/PrinceCollections/PrinceOutwear';
+import Princess from './ClientSide/Pages/PrincessCollection/Princess';
+import PrincessTees from './ClientSide/Pages/PrincessCollection/PrincessTees';
+import PrincessHoodies from './ClientSide/Pages/PrincessCollection/PrincessHoodies';
+import PrincessPants from './ClientSide/Pages/PrincessCollection/PrincessPants';
+import PrincessOutwear from './ClientSide/Pages/PrincessCollection/PrincessOutwear';
 // import AllProductSearch from './ClientSide/Pages/AllProductSearch/AllProductSearch';
 // all routes
 const router = createBrowserRouter([
@@ -97,6 +107,47 @@ const router = createBrowserRouter([
         path : "/womenOutwear",
         element : <WomenOutwear></WomenOutwear>
       },
+      {
+        path : "/princeCollections",
+        element : <Prince></Prince>
+      },
+      {
+        path : "/princeTeesCollections",
+        element : <PrinceTees></PrinceTees>
+      },
+      {
+        path : "/princePants" ,
+        element : <PrincePants></PrincePants>
+        
+      },
+      {
+        path : "/hoodiesAndSweeters",
+        element : <PrinceHoodies></PrinceHoodies>
+      },
+      {
+        path : "/princeOutwear",
+        element : <PrinceOutwear></PrinceOutwear>
+      },
+      {
+        path : "/princessCollections",
+        element : <Princess></Princess>
+      },
+      {
+        path : "/princessTees",
+        element : <PrincessTees></PrincessTees>
+      },
+      {
+        path : "/princessHoodies",
+        element : <PrincessHoodies></PrincessHoodies>
+      },
+      {
+        path : "/princessPants",
+        element : <PrincessPants></PrincessPants>
+      },
+      {
+        path : "/princessOutwear",
+        element : <PrincessOutwear></PrincessOutwear>
+      }
       // {
       //   path : "/allProductSearch",
       //   element : <AllProductSearch></AllProductSearch>

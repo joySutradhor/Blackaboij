@@ -1,5 +1,3 @@
-
-
 import { useEffect, useState } from "react";
 import { MdEuroSymbol } from "react-icons/md";
 import { Link } from "react-router-dom";
@@ -28,14 +26,14 @@ const Star = ({ rating }) => {
     return <div>{stars}</div>;
 };
 
-const HoodiesAndSweeters = () => {
-    const [hoodiesAndSweetersCollections, setHoodiesAndSweetersCollections] = useState([]);
+const PrinceTees = () => {
+    const [princeTeesCollections, setPrinceTeesCollections] = useState([]);
 
-    const hoodiesAndSweetersCollectionsProducts = "/hoodiesAndSweeters.json";
+    const princeTeesCollectionsProducts = "/teesCollections.json";
 
     useEffect(() => {
         // Fetch the JSON data
-        fetch(hoodiesAndSweetersCollectionsProducts)
+        fetch(princeTeesCollectionsProducts)
             .then(response => {
                 if (!response.ok) {
                     throw new Error(`HTTP error! Status: ${response.status}`);
@@ -43,12 +41,13 @@ const HoodiesAndSweeters = () => {
                 return response.json();
             })
             .then(data => {
-                setHoodiesAndSweetersCollections(data);
+                setPrinceTeesCollections(data);
+                console.log(data);
             })
             .catch(error => {
                 console.error('Fetch error:', error);
             });
-    }, [hoodiesAndSweetersCollectionsProducts]);
+    }, [princeTeesCollectionsProducts]);
 
     return (
         <div>
@@ -64,11 +63,11 @@ const HoodiesAndSweeters = () => {
             >
                 <Zoom><h2 className="text-6xl text-white font-custom font-bold whitespace-nowrap"
                 >
-                    HOODIES NEW COLLECTIONS
+                    PRINCE TEES NEW COLLECTIONS
                 </h2></Zoom>
             </div>
             <div className="grid md:grid-cols-3 grid-cols-2 gap-[10px] md:gap-[25px] md:mt-[25px]">
-                {hoodiesAndSweetersCollections.map((product) => (
+                {princeTeesCollections.map((product) => (
 
 
                     <div key={product.id} className="bg-[#B7B7B7]  product-card font-custom">
@@ -95,6 +94,4 @@ const HoodiesAndSweeters = () => {
     );
 };
 
-export default HoodiesAndSweeters;
-
-
+export default PrinceTees;

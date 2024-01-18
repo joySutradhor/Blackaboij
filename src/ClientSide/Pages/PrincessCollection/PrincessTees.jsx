@@ -1,5 +1,3 @@
-
-
 import { useEffect, useState } from "react";
 import { MdEuroSymbol } from "react-icons/md";
 import { Link } from "react-router-dom";
@@ -28,14 +26,14 @@ const Star = ({ rating }) => {
     return <div>{stars}</div>;
 };
 
-const HoodiesAndSweeters = () => {
-    const [hoodiesAndSweetersCollections, setHoodiesAndSweetersCollections] = useState([]);
+const PrincessTees = () => {
+    const [princessTeesCollections, setPrincessTeesCollections] = useState([]);
 
-    const hoodiesAndSweetersCollectionsProducts = "/hoodiesAndSweeters.json";
+    const princessTeesCollectionsProducts = "/Womens/womenTees.json";
 
     useEffect(() => {
         // Fetch the JSON data
-        fetch(hoodiesAndSweetersCollectionsProducts)
+        fetch(princessTeesCollectionsProducts)
             .then(response => {
                 if (!response.ok) {
                     throw new Error(`HTTP error! Status: ${response.status}`);
@@ -43,18 +41,19 @@ const HoodiesAndSweeters = () => {
                 return response.json();
             })
             .then(data => {
-                setHoodiesAndSweetersCollections(data);
+                setPrincessTeesCollections(data);
+                console.log(data);
             })
             .catch(error => {
                 console.error('Fetch error:', error);
             });
-    }, [hoodiesAndSweetersCollectionsProducts]);
+    }, [princessTeesCollectionsProducts]);
 
     return (
         <div>
             <div className="relative md:h-[450px] h-[150px] flex items-center justify-center"
                 style={{
-                    backgroundImage: "url('https://i.ibb.co/CnLjN4P/img-ph-collection-hero-1512x.webp')",
+                    backgroundImage: "url('https://i.ibb.co/QpsmcTv/women-2b-2700x.webp')",
                     backgroundSize: 'cover',
                     backgroundPosition: 'cover',
                     backgroundRepeat: "no-repeat",
@@ -64,11 +63,11 @@ const HoodiesAndSweeters = () => {
             >
                 <Zoom><h2 className="text-6xl text-white font-custom font-bold whitespace-nowrap"
                 >
-                    HOODIES NEW COLLECTIONS
+                    PRINCESS TEES COLLECTIONS
                 </h2></Zoom>
             </div>
             <div className="grid md:grid-cols-3 grid-cols-2 gap-[10px] md:gap-[25px] md:mt-[25px]">
-                {hoodiesAndSweetersCollections.map((product) => (
+                {princessTeesCollections.map((product) => (
 
 
                     <div key={product.id} className="bg-[#B7B7B7]  product-card font-custom">
@@ -95,6 +94,4 @@ const HoodiesAndSweeters = () => {
     );
 };
 
-export default HoodiesAndSweeters;
-
-
+export default PrincessTees;

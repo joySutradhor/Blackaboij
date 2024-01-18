@@ -133,14 +133,5 @@
         "productName": "Product 15",
         "category": "Home Decor",
         "starRating": 3.7
-    },
-    {
-        "id": 16,
-        "img": "https://i.ibb.co/syRXtpH/AJ8-A4154copie2-360x.webp",
-        "backImg": "https://i.ibb.co/TKfn17f/AJ8-A4154copie-7a2663d4-d0e2-4663-b3f0-2f6d6bd60097-360x.webp",
-        "price": 19.99,
-        "productName": "Product 16",
-        "category": "Home Decor",
-        "starRating": 4.4
     }
 ]

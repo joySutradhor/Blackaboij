@@ -26,6 +26,7 @@ const Header = () => {
     const [isAccessoriesHovered, SetIsAccessoriesHovered] = useState(false);
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
     const [isListMenuOpen, setIsListMenuOpen] = useState(false);
+    const [cart, setCart] = useState([]);
 
     useEffect(() => {
         const handleScroll = () => {
@@ -46,6 +47,13 @@ const Header = () => {
     const toggleListMenu = () => {
         setIsListMenuOpen(!isListMenuOpen);
     };
+    useEffect(() => {
+        // Retrieve cart items from local storage on component mount
+        const storedCart = JSON.parse(localStorage.getItem('cart')) || [];
+        setCart(storedCart);
+      }, []);
+
+      console.log(cart)
 
     const iconSize = 19;
     return (
@@ -56,7 +64,7 @@ const Header = () => {
                 <div className="w-full flex justify-center">
                     <div className="max-w-xl">
                         <Marquee className="text-center" delay={2}>
-                            <p className="text-white">Up to 60% OFF on selected items. With an additional 20%, code: BLACK WINTER</p>
+                            <p className="text-white py-2">Up to 60% OFF on selected items. With an additional 20%, code: BLACK WINTER</p>
                         </Marquee>
                     </div>
                 </div>
@@ -79,7 +87,7 @@ const Header = () => {
 
                     }}
                 >
-                    <div className={`pt-[20px]  fixed w-full ${isSticky ? "top-0" : ""} bg-black text-white transition-colors duration-500 ease-in-out `}>
+                    <div className={`pt-[20px]   w-full ${isSticky ? "fixed top-0" : ""} bg-black text-white transition-colors duration-500 ease-in-out `}>
 
                         <div className={`grid grid-cols-3 justify-between items-center px-[50px] pb-[20px]`}>
 
@@ -96,7 +104,7 @@ const Header = () => {
                             </div>
 
                             {/* Icons on the right */}
-                            <div className="col-span-1 flex justify-end gap-x-3">
+                            <div className="col-span-1 flex justify-end gap-x-3 relative">
                                 <Link>
                                     <span style={{ fontSize: `${iconSize}px` }} > <FaRegUser className="text-white" /></span>
                                 </Link>
@@ -104,7 +112,7 @@ const Header = () => {
                                     <span style={{ fontSize: `${iconSize}px` }} > <IoBagOutline className="text-white" /></span>
                                 </Link>
                                 <Link>
-                                    <span style={{ fontSize: `${iconSize}px` }} > <AiOutlineShoppingCart className="text-white" /></span>
+                                    <span style={{ fontSize: `${iconSize}px` }} > <AiOutlineShoppingCart className="text-white" /><span className="text-[9px] font-bold absolute top-[-4px] text-black px-[4px] bg-white rounded-full right-[-3px]">{cart.length}</span></span>
                                 </Link>
                             </div>
                         </div>
@@ -170,7 +178,7 @@ const Header = () => {
 
 
                             </Link>
-                            <Link className={`relative text-white px-[15px] py-[10px] text-[15px]  border-b-2-transparent group  ${isPrinceHovered ? 'text-white border-b-2 ' : ''}`}
+                            <Link to="/princeCollections" className={`relative text-white px-[15px] py-[10px] text-[15px]  border-b-2-transparent group  ${isPrinceHovered ? 'text-white border-b-2 ' : ''}`}
                                 onMouseEnter={() => SetIsPrinceHovered(true)}
                                 onMouseLeave={() => SetIsPrinceHovered(false)}
                             >
@@ -178,19 +186,19 @@ const Header = () => {
 
                                 <Fade direction="left">
                                     <ul className={`absolute pl-6 pr-[250px] text-[12px] top-[46px] whitespace-nowrap   ${isPrinceHovered ? 'block bg-black' : 'hidden'}`}>
-                                        <ul className="py-[15px] font-semibold"><Link to="/">PRINCE NEW ARRIVALS</Link></ul>
-                                        <li className="pt-[5px]"><Link to="#">TEES</Link></li>
-                                        <li className="pt-[5px]"><Link to="#">HOODIES AND SWEATERS</Link></li>
-                                        <li className="pt-[5px]"><Link to="#">PANTS</Link></li>
-                                        <li className="pt-[5px]"><Link to="#">OUTWEAR</Link></li>
+                                        <ul className="py-[15px] font-semibold"><Link to="/princeCollections">PRINCE NEW ARRIVALS</Link></ul>
+                                        <li className="pt-[5px]"><Link to="/princeTeesCollections">TEES</Link></li>
+                                        <li className="pt-[5px]"><Link to="/hoodiesAndSweeters">HOODIES AND SWEATERS</Link></li>
+                                        <li className="pt-[5px]"><Link to="/princePants">PANTS</Link></li>
+                                        <li className="pt-[5px]"><Link to="/princeOutwear">OUTWEAR</Link></li>
                                         <li className="pt-[5px]" ><Link to="#">SHOES</Link></li>
-                                        <li className="pt-[15px] pb-10 font-semibold"><Link to="#">ACCESORIES</Link></li>
+                                        <li className="pt-[15px] pb-10 font-semibold"><Link to="/accessories">ACCESORIES</Link></li>
                                     </ul>
                                 </Fade>
 
 
                             </Link>
-                            <Link className={`relative text-white px-[15px] py-[10px] text-[15px] border-b-2-transparent group  ${isPrincesHovered ? 'text-white  border-b-2' : ''}`}
+                            <Link to="/princessCollections" className={`relative text-white px-[15px] py-[10px] text-[15px] border-b-2-transparent group  ${isPrincesHovered ? 'text-white  border-b-2' : ''}`}
                                 onMouseEnter={() => SetIsPrincesHovered(true)}
                                 onMouseLeave={() => SetIsPrincesHovered(false)}
                             >
@@ -198,13 +206,13 @@ const Header = () => {
 
                                 <Fade direction="left">
                                     <ul className={`absolute pl-6 pr-[250px] text-[12px] top-[46px] whitespace-nowrap   ${isPrincesHovered ? 'block bg-black' : 'hidden'}`}>
-                                        <ul className="py-[15px] font-semibold"><Link to="/">PRINCESS NEW ARRIVALS</Link></ul>
-                                        <li className="pt-[5px]"><Link to="#">TEES</Link></li>
-                                        <li className="pt-[5px]"><Link to="#">HOODIES AND SWEATERS</Link></li>
-                                        <li className="pt-[5px]"><Link to="#">PANTS</Link></li>
-                                        <li className="pt-[5px]"><Link to="#">OUTWEAR</Link></li>
+                                        <ul className="py-[15px] font-semibold"><Link to="/princessCollections">PRINCESS NEW ARRIVALS</Link></ul>
+                                        <li className="pt-[5px]"><Link to="/princessTees">TEES</Link></li>
+                                        <li className="pt-[5px]"><Link to="/princessHoodies">HOODIES AND SWEATERS</Link></li>
+                                        <li className="pt-[5px]"><Link to="/princessPants">PANTS</Link></li>
+                                        <li className="pt-[5px]"><Link to="/princessOutwear">OUTWEAR</Link></li>
                                         <li className="pt-[5px]" ><Link to="#">SHOES</Link></li>
-                                        <li className="pt-[15px] pb-10 font-semibold"><Link to="#">ACCESORIES</Link></li>
+                                        <li className="pt-[15px] pb-10 font-semibold"><Link to="/accessories">ACCESORIES</Link></li>
                                     </ul>
                                 </Fade>
                             </Link>
@@ -213,7 +221,7 @@ const Header = () => {
                                 <li className={`relative px-[15px] py-[10px] text-[15px] border-b-2-transparent group  ${isSelesHovered ? 'text-white  border-b-2' : ''}`}
                                     onMouseEnter={() => SetIsSelesHovered(true)}
                                     onMouseLeave={() => SetIsSelesHovered(false)}
-                                >SELES</li>
+                                >SALES</li>
                             </Link>
                             <Link to="/store">
                                 <li className={`relative px-[15px] py-[10px] text-[15px] border-b-2-transparent group  ${isStoreHovered ? 'text-white  border-b-2' : ''}`}

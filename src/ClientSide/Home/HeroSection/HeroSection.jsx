@@ -16,7 +16,7 @@ const HeroSection = () => {
                 backgroundSize: 'cover',
                 backgroundPosition: 'center',
                 backgroundRepeat: "no-repeat",
-                height: "100vh",
+                height: "80vh",
                 backgroundColor: "#00000",
                 position: "relative"
                 // '@media (max-width: 768px)': {
@@ -37,7 +37,7 @@ const HeroSection = () => {
                     textAlign: 'center',
                 }}>
                     <div>
-                        <h1 className="md:text-[80px] text-[30px] font-custom whitespace-nowrap md:py-12 text-white">LIFE IS MADE OF CHOICE</h1>
+                        <h1 className="md:text-[80px] text-[30px] font-custom whitespace-nowrap md:py-12 py-6 text-white">LIFE IS MADE OF CHOICE</h1>
                     </div>
                 <div className="flex md:gap-5 gap-2">
                     <Link to="/menCollections"> <Button buttonText="SHOP MEN" ></Button></Link>
@@ -45,7 +45,7 @@ const HeroSection = () => {
                 </div>
             </div>
 
-            <div className='absolute md:bottom-8 bottom-4 md:right-[50px] right-5' >
+            <div className='absolute md:bottom-[50px] bottom-4 md:right-[50px] right-5' >
                 <div className='flex flex-col gap-3 justify-end items-center'>
                     <Link to="https://www.facebook.com/BBOIJ" target="blank">
                         <span style={{ fontSize: `${iconSize}px` }} > <FaFacebook className="text-[#b1b1b1] hover:text-white  " /></span>
