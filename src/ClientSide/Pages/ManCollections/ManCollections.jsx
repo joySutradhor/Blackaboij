@@ -51,7 +51,7 @@ const ManCollections = () => {
 
     return (
         <div>
-            <div className="relative md:h-[450px] h-[150px] flex items-center justify-center"
+            <div className="relative md:h-[450px] h-[250px] flex items-center justify-center"
                 style={{
                     backgroundImage: "url('https://i.ibb.co/CnLjN4P/img-ph-collection-hero-1512x.webp')",
                     backgroundSize: 'cover',
@@ -61,7 +61,7 @@ const ManCollections = () => {
                     position: "relative"
                 }}
             >
-                <Zoom><h2 className="text-6xl text-white font-custom font-bold whitespace-nowrap"
+                <Zoom><h2 className="md:md:text-6xl text-xl text-2xl text-white font-custom font-bold whitespace-nowrap"
                 >
                     MEN NEW COLLECTIONS
                 </h2></Zoom>
@@ -89,7 +89,7 @@ const ManCollections = () => {
                     </div>
                 ))}
             </div>
-            <p className="md:py-[50px]  flex justify-center md:mx-[50px] mx-[20px]" ><Button buttonText="SHOW ALL"></Button></p>
+            <p className="md:py-[50px] py-[25px] flex justify-center md:mx-[50px] mx-[20px]" ><Button buttonText="SHOW ALL"></Button></p>
         </div>
     );
 };

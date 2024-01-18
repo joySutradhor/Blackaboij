@@ -52,6 +52,82 @@ const router = createBrowserRouter([
         element: <SingleProduct></SingleProduct>
       },
       {
+        path : "tees/product/:id",
+        element: <SingleProduct></SingleProduct>
+      },
+      {
+        path : "hoodiesAndSweeters/product/:id",
+        element: <SingleProduct></SingleProduct>
+      },
+      {
+        path : "pants/product/:id",
+        element: <SingleProduct></SingleProduct>
+      },
+      {
+        path : "outwear/product/:id",
+        element: <SingleProduct></SingleProduct>
+      },
+      {
+        path : "accessories/product/:id",
+        element: <SingleProduct></SingleProduct>
+      },
+      {
+        path : "womens/product/:id",
+        element: <SingleProduct></SingleProduct>
+      },
+      {
+        path : "womenTees/product/:id",
+        element: <SingleProduct></SingleProduct>
+      },
+      {
+        path : "womensHoodies/product/:id",
+        element: <SingleProduct></SingleProduct>
+      },
+      {
+        path : "womenPants/product/:id",
+        element: <SingleProduct></SingleProduct>
+      },
+      {
+        path : "womenOutwear/product/:id",
+        element: <SingleProduct></SingleProduct>
+      },
+      {
+        path : "princeCollections/product/:id",
+        element: <SingleProduct></SingleProduct>
+      },
+      {
+        path : "princeTeesCollections/product/:id",
+        element: <SingleProduct></SingleProduct>
+      },
+      {
+        path : "princePants/product/:id",
+        element: <SingleProduct></SingleProduct>
+      },
+      {
+        path : "princeOutwear/product/:id",
+        element: <SingleProduct></SingleProduct>
+      },
+      {
+        path : "princessCollections/product/:id",
+        element: <SingleProduct></SingleProduct>
+      },
+      {
+        path : "princessTees/product/:id",
+        element: <SingleProduct></SingleProduct>
+      },
+      {
+        path : "princessHoodies/product/:id",
+        element: <SingleProduct></SingleProduct>
+      },
+      {
+        path : "princessPants/product/:id",
+        element: <SingleProduct></SingleProduct>
+      },
+      {
+        path : "princessOutwear/product/:id",
+        element: <SingleProduct></SingleProduct>
+      },
+      {
         path : "menCollections/product/:id",
         element: <SingleProduct></SingleProduct>
       },

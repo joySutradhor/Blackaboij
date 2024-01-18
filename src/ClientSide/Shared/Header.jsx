@@ -27,8 +27,11 @@ const Header = () => {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
     const [isListMenuOpen, setIsListMenuOpen] = useState(false);
     const [cart, setCart] = useState([]);
+    // const [listItem , setListItem] = useState(false);
+    
 
     useEffect(() => {
+
         const handleScroll = () => {
             const scrollPosition = window.scrollY;
             setIsSticky(scrollPosition > 0);
@@ -47,13 +50,23 @@ const Header = () => {
     const toggleListMenu = () => {
         setIsListMenuOpen(!isListMenuOpen);
     };
+
+    // const toggleListWomen = () => {
+
+    // }
+
+
+
+    const closeMobileMenu = () => {
+        setIsMobileMenuOpen(false);
+      };
     useEffect(() => {
         // Retrieve cart items from local storage on component mount
         const storedCart = JSON.parse(localStorage.getItem('cart')) || [];
         setCart(storedCart);
       }, []);
 
-      console.log(cart)
+          
 
     const iconSize = 19;
     return (
@@ -241,8 +254,7 @@ const Header = () => {
             </div>
             {/* mobile menu */}
             <div className="md:hidden absolute z-50  w-full  ">
-                <div className={`flex justify-between py-[30px] px-[20px] font-custom relative ${isMobileMenuOpen ? "bg-black z-100  " : ""}  `}>
-                    {/* footer logo */}
+                <div className={`flex justify-between py-[30px] px-[20px] font-custom  relative ${isMobileMenuOpen ? "bg-black z-100  " : ""}  `}>
                     <div>
                         <Link to="/"> <img src="https://i.ibb.co/3sNL27c/logo.png" className="w-[85px] h-[15px] " alt="" /></Link>
                     </div>
@@ -254,35 +266,47 @@ const Header = () => {
                         )}
                     </div>
                     {isMobileMenuOpen && (
-                        <div className="bg-black  text-white absolute left-0 top-16 w-full  h-screen px-5 ">
+                        <div className={`bg-black  text-white absolute left-0 top-16 w-full  h-screen px-5 `}>
                             <ul className="flex flex-col   py-4 space-y-4">
                                 <li>
                                     <div
                                         className={`flex justify-between items-center `}
                                     >
-                                        <p>Men</p>
+                                        <p>MEN</p>
                                         <p>{isListMenuOpen ? <HiMiniChevronUp onClick={toggleListMenu} className=" text-[20px] text-white" /> : <HiMiniChevronDown onClick={toggleListMenu} className=" text-[20px] text-white" />}</p>
                                     </div>
                                     {
-                                        isListMenuOpen ? <ul className={`pl-[5px]  `}>
-                                            <Link to='/menCollections'><li>New collections</li></Link>
-                                            <li>dummy1</li>
-                                            <li>dummy1</li>
-                                            <li>dummy1</li>
-                                            <li>dummy1</li>
-                                            <li>dummy1</li>
+                                        isListMenuOpen ? <ul className={`pl-[5px] text-[11px] space-y-[5px] `}>
+                                            <li  className="mt-[10px]" ><Link  onClick={closeMobileMenu} to='/menCollections'>NEW COLLECTIONS</Link></li>
+                                            <li><Link  onClick={closeMobileMenu} to='/tees'>TEES</Link></li>
+                                            <li><Link  onClick={closeMobileMenu} to='/hoodiesAndSweeters'>HOODIES AND SWEATERS</Link></li>
+                                            <li><Link  onClick={closeMobileMenu} to='/pants'>PANTS</Link></li>
+                                            <li><Link  onClick={closeMobileMenu} to='/outwear'>OUTWEARS</Link></li>
+                                            <li><Link  onClick={closeMobileMenu} to='/menCollections'>SHOES</Link></li>
+                                            <li><Link  onClick={closeMobileMenu} to='/accessories'>ACCESSORIES</Link></li>
                                         </ul> : ""
                                     }
                                 </li>
                                 <li>
-                                    <Link to="/" className="text-white">Home</Link>
+                                    <div
+                                        className={`flex justify-between items-center `}
+                                    >
+                                        <p>WOMEN</p>
+                                        <p>{isListMenuOpen ? <HiMiniChevronUp onClick={toggleListMenu} className=" text-[20px] text-white" /> : <HiMiniChevronDown onClick={toggleListMenu} className=" text-[20px] text-white" />}</p>
+                                    </div>
+                                    {
+                                        isListMenuOpen ? <ul className={`pl-[5px] text-[11px] space-y-[5px] `}>
+                                            <li  className="mt-[10px]" ><Link  onClick={closeMobileMenu} to='/menCollections'>NEW COLLECTIONS</Link></li>
+                                            <li><Link  onClick={closeMobileMenu} to='/tees'>TEES</Link></li>
+                                            <li><Link  onClick={closeMobileMenu} to='/hoodiesAndSweeters'>HOODIES AND SWEATERS</Link></li>
+                                            <li><Link  onClick={closeMobileMenu} to='/pants'>PANTS</Link></li>
+                                            <li><Link  onClick={closeMobileMenu} to='/outwear'>OUTWEARS</Link></li>
+                                            <li><Link  onClick={closeMobileMenu} to='/menCollections'>SHOES</Link></li>
+                                            <li><Link  onClick={closeMobileMenu} to='/accessories'>ACCESSORIES</Link></li>
+                                        </ul> : ""
+                                    }
                                 </li>
-                                <li>
-                                    <Link to="/men" className="text-white">Men</Link>
-                                </li>
-                                <li>
-                                    <Link to="/women" className="text-white">Women</Link>
-                                </li>
+                                
                                 <li className="relative">
                                     <Link to="/accessories" className="text-white">Accessories</Link>
                                 </li>

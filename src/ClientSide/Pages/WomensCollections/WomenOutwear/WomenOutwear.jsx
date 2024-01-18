@@ -53,7 +53,7 @@ const WomenOutwear = () => {
 
     return (
         <div>
-            <div className="relative md:h-[450px] h-[150px] flex items-center justify-center"
+            <div className="relative md:h-[450px] h-[250px] flex items-center justify-center"
                 style={{
                     backgroundImage: "url('https://i.ibb.co/QpsmcTv/women-2b-2700x.webp')",
                     backgroundSize: 'cover',
@@ -63,7 +63,7 @@ const WomenOutwear = () => {
                     position: "relative"
                 }}
             >
-                <Zoom><h2 className="text-6xl text-white font-custom font-bold whitespace-nowrap"
+                <Zoom><h2 className="md:text-6xl text-xl text-white font-custom font-bold whitespace-nowrap"
                 >
                     WOMENS OUTWEAR NEW COLLECTIONS
                 </h2></Zoom>
@@ -91,7 +91,7 @@ const WomenOutwear = () => {
                     </div>
                 ))}
             </div>
-            <p className="md:py-[50px]  flex justify-center md:mx-[50px] mx-[20px]" ><Button buttonText="SHOW ALL"></Button></p>
+            <p className="md:py-[50px] py-[25px] flex justify-center md:mx-[50px] mx-[20px]" ><Button buttonText="SHOW ALL"></Button></p>
         </div>
     );
 };
