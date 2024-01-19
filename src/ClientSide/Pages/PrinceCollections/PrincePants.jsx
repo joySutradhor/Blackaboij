@@ -66,7 +66,7 @@ const PrincePants = () => {
                     PRINCE PANTS NEW COLLECTIONS
                 </h2></Zoom>
             </div>
-            <div className="grid md:grid-cols-3 grid-cols-2 gap-[10px] md:gap-[25px] md:mt-[25px]">
+            <div className="grid md:grid-cols-3 grid-cols-2 gap-[10px] md:gap-[25px] md:mt-[25px] md:mx-[50px] mx-[20px]">
                 {princePantsCollections.map((product) => (
 
 
@@ -89,7 +89,7 @@ const PrincePants = () => {
                     </div>
                 ))}
             </div>
-            <p className="md:py-[50px] py-[25px] flex justify-center md:mx-[50px] mx-[20px]" ><Button buttonText="SHOW ALL"></Button></p>
+            <p className="md:pt-[50px] pt-[25px] md:pb-[100px] pb-[50px] flex justify-center md:mx-[50px] mx-[20px]" ><Button buttonText="SHOW ALL"></Button></p>
         </div>
     );
 };

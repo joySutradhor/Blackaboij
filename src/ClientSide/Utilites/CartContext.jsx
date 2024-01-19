@@ -1,5 +1,6 @@
-// CartContext.js
+// CartContext.jsx
 import { createContext, useContext, useState, useEffect } from 'react';
+import { Toaster, toast } from 'sonner'
 
 const CartContext = createContext();
 
@@ -10,6 +11,7 @@ export const useCart = () => {
 // eslint-disable-next-line react/prop-types
 export const CartProvider = ({ children }) => {
   const [cart, setCart] = useState([]);
+
 
   useEffect(() => {
     const storedCart = JSON.parse(localStorage.getItem('cart')) || [];
@@ -23,7 +25,9 @@ export const CartProvider = ({ children }) => {
       const newCart = [...cart, product];
       setCart(newCart);
       localStorage.setItem('cart', JSON.stringify(newCart));
+      toast.success(`${product.productName} is added in the cart`)
     } else {
+      toast.error(`${product.productName} is already in the cart`)
       // Handle the case where the product is already in the cart
       console.log(`${product.productName} is already in the cart`);
     }
@@ -42,6 +46,7 @@ export const CartProvider = ({ children }) => {
 
   return (
     <CartContext.Provider value={{ cart, addToCart, removeFromCart, clearCart }}>
+      <Toaster></Toaster>
       {children}
     </CartContext.Provider>
   );

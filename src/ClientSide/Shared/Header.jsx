@@ -9,11 +9,12 @@ import { IoLogoYoutube, } from "react-icons/io";
 import { FaFacebook } from "react-icons/fa";
 import { AiOutlineShoppingCart } from "react-icons/ai";
 import { IoBagOutline } from "react-icons/io5";
-
 import { FaRegUser } from "react-icons/fa6";
 import { Fade } from "react-awesome-reveal";
 import SearchButton from "../Utilites/SearchButton";
 import Marquee from "react-fast-marquee";
+import CartItems from "../Utilites/CartItems";
+
 
 const Header = () => {
     const [isSticky, setIsSticky] = useState(false);
@@ -30,6 +31,7 @@ const Header = () => {
     const [isListMenuOpenPrince, setIsListMenuOpenPrince] = useState(false);
     const [isListMenuOpenPrincess, setIsListMenuOpenPrincess] = useState(false);
     const [cart, setCart] = useState([]);
+    const [isCartOpen, setIsCartOpen] = useState(false);
     // const [listItem , setListItem] = useState(false);
 
 
@@ -63,13 +65,6 @@ const Header = () => {
     const toggleListMenuPrincess = () => {
         setIsListMenuOpenPrincess(!isListMenuOpenPrincess);
     };
-
-    // const toggleListWomen = () => {
-
-    // }
-
-
-
     const closeMobileMenu = () => {
         setIsMobileMenuOpen(false);
     };
@@ -77,11 +72,21 @@ const Header = () => {
         // Retrieve cart items from local storage on component mount
         const storedCart = JSON.parse(localStorage.getItem('cart')) || [];
         setCart(storedCart);
-    }, []);
-
-
+    }, [cart]);
 
     const iconSize = 19;
+   
+
+    // Function to toggle the cart visibility
+    const toggleCart = () => {
+      setIsCartOpen(!isCartOpen);
+    };
+  
+    // Function to close the cart
+    const closeCart = () => {
+      setIsCartOpen(false);
+    };
+   
     return (
         <nav>
 
@@ -90,7 +95,7 @@ const Header = () => {
                 <div className="w-full flex justify-center">
                     <div className="max-w-xl">
                         <Marquee className="text-center" delay={2}>
-                            <p className="text-white py-2">Up to 60% OFF on selected items. With an additional 20%, code: BLACK WINTER</p>
+                            <p className="text-[#b1b1b1] py-2">Up to 60% OFF on selected items. With an additional 20%, code: BLACK WINTER</p>
                         </Marquee>
                     </div>
                 </div>
@@ -137,10 +142,12 @@ const Header = () => {
                                 <Link>
                                     <span style={{ fontSize: `${iconSize}px` }} > <IoBagOutline className="text-white" /></span>
                                 </Link>
-                                <Link>
+                                <Link onClick={toggleCart}>
                                     <span style={{ fontSize: `${iconSize}px` }} > <AiOutlineShoppingCart className="text-white" /><span className="text-[9px] font-bold absolute top-[-4px] text-black px-[4px] bg-white rounded-full right-[-3px]">{cart.length}</span></span>
                                 </Link>
+                                
                             </div>
+                            {isCartOpen && <CartItems cart={cart} closeCart={closeCart} />}
                         </div>
 
                         {/* desktop  list items */}

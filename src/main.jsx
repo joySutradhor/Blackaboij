@@ -32,197 +32,198 @@ import PrincessTees from './ClientSide/Pages/PrincessCollection/PrincessTees';
 import PrincessHoodies from './ClientSide/Pages/PrincessCollection/PrincessHoodies';
 import PrincessPants from './ClientSide/Pages/PrincessCollection/PrincessPants';
 import PrincessOutwear from './ClientSide/Pages/PrincessCollection/PrincessOutwear';
+import { CartProvider } from './ClientSide/Utilites/CartContext';
 // import AllProductSearch from './ClientSide/Pages/AllProductSearch/AllProductSearch';
 // all routes
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Main></Main>,
-    children : [
+    children: [
       {
-        path : "/",
+        path: "/",
         element: <Home></Home>
       },
       {
-        path : "/product/:id",
+        path: "/product/:id",
         element: <SingleProduct></SingleProduct>
       },
       {
-        path : "allProducts/product/:id",
+        path: "allProducts/product/:id",
         element: <SingleProduct></SingleProduct>
       },
       {
-        path : "tees/product/:id",
+        path: "tees/product/:id",
         element: <SingleProduct></SingleProduct>
       },
       {
-        path : "hoodiesAndSweeters/product/:id",
+        path: "hoodiesAndSweeters/product/:id",
         element: <SingleProduct></SingleProduct>
       },
       {
-        path : "pants/product/:id",
+        path: "pants/product/:id",
         element: <SingleProduct></SingleProduct>
       },
       {
-        path : "outwear/product/:id",
+        path: "outwear/product/:id",
         element: <SingleProduct></SingleProduct>
       },
       {
-        path : "accessories/product/:id",
+        path: "accessories/product/:id",
         element: <SingleProduct></SingleProduct>
       },
       {
-        path : "womens/product/:id",
+        path: "womens/product/:id",
         element: <SingleProduct></SingleProduct>
       },
       {
-        path : "womenTees/product/:id",
+        path: "womenTees/product/:id",
         element: <SingleProduct></SingleProduct>
       },
       {
-        path : "womensHoodies/product/:id",
+        path: "womensHoodies/product/:id",
         element: <SingleProduct></SingleProduct>
       },
       {
-        path : "womenPants/product/:id",
+        path: "womenPants/product/:id",
         element: <SingleProduct></SingleProduct>
       },
       {
-        path : "womenOutwear/product/:id",
+        path: "womenOutwear/product/:id",
         element: <SingleProduct></SingleProduct>
       },
       {
-        path : "princeCollections/product/:id",
+        path: "princeCollections/product/:id",
         element: <SingleProduct></SingleProduct>
       },
       {
-        path : "princeTeesCollections/product/:id",
+        path: "princeTeesCollections/product/:id",
         element: <SingleProduct></SingleProduct>
       },
       {
-        path : "princePants/product/:id",
+        path: "princePants/product/:id",
         element: <SingleProduct></SingleProduct>
       },
       {
-        path : "princeOutwear/product/:id",
+        path: "princeOutwear/product/:id",
         element: <SingleProduct></SingleProduct>
       },
       {
-        path : "princessCollections/product/:id",
+        path: "princessCollections/product/:id",
         element: <SingleProduct></SingleProduct>
       },
       {
-        path : "princessTees/product/:id",
+        path: "princessTees/product/:id",
         element: <SingleProduct></SingleProduct>
       },
       {
-        path : "princessHoodies/product/:id",
+        path: "princessHoodies/product/:id",
         element: <SingleProduct></SingleProduct>
       },
       {
-        path : "princessPants/product/:id",
+        path: "princessPants/product/:id",
         element: <SingleProduct></SingleProduct>
       },
       {
-        path : "princessOutwear/product/:id",
+        path: "princessOutwear/product/:id",
         element: <SingleProduct></SingleProduct>
       },
       {
-        path : "menCollections/product/:id",
+        path: "menCollections/product/:id",
         element: <SingleProduct></SingleProduct>
       },
       {
-        path : "/menCollections",
-        element : <ManCollections></ManCollections>
+        path: "/menCollections",
+        element: <ManCollections></ManCollections>
       },
       {
-        path : "/store",
+        path: "/store",
         element: <Store></Store>
       },
       {
-        path : "/allProducts",
-        element : <AllProducts></AllProducts>
+        path: "/allProducts",
+        element: <AllProducts></AllProducts>
       },
       {
-        path : "/tees",
-        element : <Tees></Tees>
+        path: "/tees",
+        element: <Tees></Tees>
       },
       {
-        path : "/hoodiesAndSweeters" ,
-        element : <HoodiesAndSweeters></HoodiesAndSweeters>
+        path: "/hoodiesAndSweeters",
+        element: <HoodiesAndSweeters></HoodiesAndSweeters>
       },
       {
-        path : "/pants",
-        element : <Pants></Pants>
+        path: "/pants",
+        element: <Pants></Pants>
       },
       {
-        path : "/outwear",
-        element : <Outwear></Outwear>
+        path: "/outwear",
+        element: <Outwear></Outwear>
       },
       {
-        path : "/accessories",
-        element : <Accessories></Accessories>
+        path: "/accessories",
+        element: <Accessories></Accessories>
       },
       {
-        path : "/womens",
-        element : <Womens></Womens>
+        path: "/womens",
+        element: <Womens></Womens>
       },
       {
-        path : "/womenTees",
-        element : <WomensTees></WomensTees>
+        path: "/womenTees",
+        element: <WomensTees></WomensTees>
       },
       {
-        path : "/womensHoodies",
-        element : <WomenHoodies></WomenHoodies>
+        path: "/womensHoodies",
+        element: <WomenHoodies></WomenHoodies>
       },
       {
-        path : "/womenPants",
-        element : <WomenPants></WomenPants>
+        path: "/womenPants",
+        element: <WomenPants></WomenPants>
       },
       {
-        path : "/womenOutwear",
-        element : <WomenOutwear></WomenOutwear>
+        path: "/womenOutwear",
+        element: <WomenOutwear></WomenOutwear>
       },
       {
-        path : "/princeCollections",
-        element : <Prince></Prince>
+        path: "/princeCollections",
+        element: <Prince></Prince>
       },
       {
-        path : "/princeTeesCollections",
-        element : <PrinceTees></PrinceTees>
+        path: "/princeTeesCollections",
+        element: <PrinceTees></PrinceTees>
       },
       {
-        path : "/princePants" ,
-        element : <PrincePants></PrincePants>
-        
+        path: "/princePants",
+        element: <PrincePants></PrincePants>
+
       },
       {
-        path : "/princeHoodiesAndSweeters",
-        element : <PrinceHoodies></PrinceHoodies>
+        path: "/princeHoodiesAndSweeters",
+        element: <PrinceHoodies></PrinceHoodies>
       },
       {
-        path : "/princeOutwear",
-        element : <PrinceOutwear></PrinceOutwear>
+        path: "/princeOutwear",
+        element: <PrinceOutwear></PrinceOutwear>
       },
       {
-        path : "/princessCollections",
-        element : <Princess></Princess>
+        path: "/princessCollections",
+        element: <Princess></Princess>
       },
       {
-        path : "/princessTees",
-        element : <PrincessTees></PrincessTees>
+        path: "/princessTees",
+        element: <PrincessTees></PrincessTees>
       },
       {
-        path : "/princessHoodies",
-        element : <PrincessHoodies></PrincessHoodies>
+        path: "/princessHoodies",
+        element: <PrincessHoodies></PrincessHoodies>
       },
       {
-        path : "/princessPants",
-        element : <PrincessPants></PrincessPants>
+        path: "/princessPants",
+        element: <PrincessPants></PrincessPants>
       },
       {
-        path : "/princessOutwear",
-        element : <PrincessOutwear></PrincessOutwear>
+        path: "/princessOutwear",
+        element: <PrincessOutwear></PrincessOutwear>
       }
       // {
       //   path : "/allProductSearch",
@@ -234,6 +235,8 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-     <RouterProvider router={router} />
+    <CartProvider>
+      <RouterProvider router={router} />
+    </CartProvider>
   </React.StrictMode>,
 )

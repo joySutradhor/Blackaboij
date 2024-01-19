@@ -66,10 +66,8 @@ const ManCollections = () => {
                     MEN NEW COLLECTIONS
                 </h2></Zoom>
             </div>
-            <div className="grid md:grid-cols-3 grid-cols-2 gap-[10px] md:gap-[25px] md:mt-[25px]">
+            <div className="grid md:grid-cols-3 grid-cols-2 gap-[10px] md:gap-[25px] md:mt-[25px] md:mx-[50px] mx-[20px] ">
                 {menCollections.map((product) => (
-
-
                     <div key={product.id} className="bg-[#B7B7B7]  product-card font-custom">
                         <Link to={`product/${product.id}`}> <img src={product.img} alt={product.productName} className="front-img" /></Link>
                         <Link to={`product/${product.id}`}> <img src={product.backImg} alt="" className="back-img " /></Link>
@@ -89,7 +87,7 @@ const ManCollections = () => {
                     </div>
                 ))}
             </div>
-            <p className="md:py-[50px] py-[25px] flex justify-center md:mx-[50px] mx-[20px]" ><Button buttonText="SHOW ALL"></Button></p>
+            <p className="md:pt-[50px] pt-[25px] md:pb-[100px] pb-[50px] flex justify-center md:mx-[50px] mx-[20px]" ><Button buttonText="SHOW ALL"></Button></p>
         </div>
     );
 };
