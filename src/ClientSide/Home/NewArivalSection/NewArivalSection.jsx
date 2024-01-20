@@ -173,7 +173,7 @@ const NewArivalSection = () => {
                                             onClick={() => {
                                                 addToFav(product);
                                             }}
-                                            style={{ fontSize: '30px', color: fav.some((item) => item.id === product.id) ? 'black' : 'black' }}
+                                            style={{ fontSize: '30px', color: fav.some((item) => item.id === product.id) ? 'red' : 'black' }}
                                             className='absolute top-0 left-0 text-white md:px-4 md:py-1 md:text-[20px] text-[12px] px-2 py-[2px]'
                                         >
                                             {fav.some((item) => item.id === product.id) ? <IoIosHeart /> : <IoIosHeartEmpty />}
