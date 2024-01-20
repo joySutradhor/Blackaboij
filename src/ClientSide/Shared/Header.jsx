@@ -14,6 +14,7 @@ import { Fade } from "react-awesome-reveal";
 import SearchButton from "../Utilites/SearchButton";
 import Marquee from "react-fast-marquee";
 import CartItems from "../Utilites/CartItems";
+import FavItems from "../Utilites/FavItems";
 
 
 const Header = () => {
@@ -31,7 +32,9 @@ const Header = () => {
     const [isListMenuOpenPrince, setIsListMenuOpenPrince] = useState(false);
     const [isListMenuOpenPrincess, setIsListMenuOpenPrincess] = useState(false);
     const [cart, setCart] = useState([]);
+    const [fav, setFav] = useState([]);
     const [isCartOpen, setIsCartOpen] = useState(false);
+    const [isFavOpen, setIsFavOpen] = useState(false);
     // const [listItem , setListItem] = useState(false);
 
 
@@ -74,6 +77,12 @@ const Header = () => {
         setCart(storedCart);
     }, [cart]);
 
+    useEffect(() => {
+        // Retrieve cart items from local storage on component mount
+        const storedFav = JSON.parse(localStorage.getItem('fav')) || [];
+        setFav(storedFav);
+    }, [fav]);
+
     const iconSize = 19;
    
 
@@ -85,6 +94,14 @@ const Header = () => {
     // Function to close the cart
     const closeCart = () => {
       setIsCartOpen(false);
+    };
+    const toggleFav = () => {
+      setIsFavOpen(!isCartOpen);
+    };
+  
+    // Function to close the cart
+    const closeFav = () => {
+      setIsFavOpen(false);
     };
    
     return (
@@ -139,8 +156,8 @@ const Header = () => {
                                 <Link>
                                     <span style={{ fontSize: `${iconSize}px` }} > <FaRegUser className="text-white" /></span>
                                 </Link>
-                                <Link>
-                                    <span style={{ fontSize: `${iconSize}px` }} > <IoBagOutline className="text-white" /></span>
+                                <Link onClick={toggleFav}>
+                                    <span style={{ fontSize: `${iconSize}px` }} > <IoBagOutline className="text-white" /><span className="text-[9px] font-bold absolute top-[-3px] text-black px-[4px] bg-white rounded-full right-[25px]">{fav.length}</span></span>
                                 </Link>
                                 <Link onClick={toggleCart}>
                                     <span style={{ fontSize: `${iconSize}px` }} > <AiOutlineShoppingCart className="text-white" /><span className="text-[9px] font-bold absolute top-[-4px] text-black px-[4px] bg-white rounded-full right-[-3px]">{cart.length}</span></span>
@@ -148,6 +165,7 @@ const Header = () => {
                                 
                             </div>
                             {isCartOpen && <CartItems cart={cart} closeCart={closeCart} />}
+                            {isFavOpen && <FavItems fav={fav} close={closeFav} />}
                         </div>
 
                         {/* desktop  list items */}

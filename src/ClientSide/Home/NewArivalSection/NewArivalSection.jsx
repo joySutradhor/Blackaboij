@@ -9,6 +9,7 @@ import { MdEuroSymbol } from "react-icons/md";
 import { Toaster } from 'sonner'
 import Button from '../../Utilites/Button';
 import { useCart } from '../../Utilites/CartContext';
+import { IoIosHeart, IoIosHeartEmpty } from 'react-icons/io';
 
 
 
@@ -134,7 +135,7 @@ const NewArivalSection = () => {
         return <div>{stars}</div>;
     };
 
-    const { addToCart  } = useCart();
+    const { addToCart, addToFav , fav  } = useCart();
 
 
 
@@ -168,6 +169,15 @@ const NewArivalSection = () => {
                                         <Link to={`product/${product.id}`}> <img src={product.img} alt={product.productName} className="front-img" /></Link>
                                         <Link to={`product/${product.id}`}> <img src={product.backImg} alt="" className="back-img " /></Link>
                                         <button className='absolute top-0 right-0  text-white bg-[#000000] md:px-4 md:py-1 md:text-[16px] text-[12px] px-2  py-[2px]  '>New</button>
+                                        <button
+                                            onClick={() => {
+                                                addToFav(product);
+                                            }}
+                                            style={{ fontSize: '30px', color: fav.some((item) => item.id === product.id) ? 'black' : 'black' }}
+                                            className='absolute top-0 left-0 text-white md:px-4 md:py-1 md:text-[20px] text-[12px] px-2 py-[2px]'
+                                        >
+                                            {fav.some((item) => item.id === product.id) ? <IoIosHeart /> : <IoIosHeartEmpty />}
+                                        </button>
                                         <button onClick={() => {
                                             addToCart(product);
                                         }} className="details-button md:px-[20px] px-[8px] md:py-[5px] py-[2px] whitespace-nowrap ">ADD TO CART</button>
@@ -190,7 +200,7 @@ const NewArivalSection = () => {
                         <TabPanel>
                             <div className="grid md:grid-cols-3 grid-cols-2 md:gap-[25px] gap-[5px] md:mx-[50px] mx-[20px] ">
                                 {women.map((product) => (
-                                    
+
                                     <div key={product.id} className="bg-[#B7B7B7]   product-card font-custom">
                                         <Link to={`product/${product.id}`}> <img src={product.img} alt={product.productName} className="front-img" /></Link>
                                         <Link to={`product/${product.id}`}> <img src={product.backImg} alt="" className="back-img " /></Link>

@@ -5,6 +5,7 @@ import { MdEuroSymbol } from "react-icons/md";
 import { Link } from "react-router-dom";
 import Button from "../../Utilites/Button";
 import { Zoom } from "react-awesome-reveal";
+import { IoIosHeartEmpty } from "react-icons/io";
 
 // Reusable Star component
 // eslint-disable-next-line react/prop-types
@@ -75,6 +76,7 @@ const Pants = () => {
                         <Link to={`product/${product.id}`}> <img src={product.img} alt={product.productName} className="front-img" /></Link>
                         <Link to={`product/${product.id}`}> <img src={product.backImg} alt="" className="back-img " /></Link>
                         <button className='absolute top-0 right-0  text-white bg-[#000000] md:px-4 md:py-1 md:text-[16px] text-[12px] px-2  py-[2px]  '>NEW</button>
+                        <button style={{ fontSize: '30px' , color:"black" }} className='absolute top-0 left-0  text-white  md:px-4 md:py-1 md:text-[20px] text-[12px] px-2  py-[2px]   '><IoIosHeartEmpty></IoIosHeartEmpty></button>
                         <button className="details-button md:px-[20px] px-[8px] md:py-[5px] py-[2px] whitespace-nowrap ">ADD TO CART</button>
                         <h3 className="text-center md:py-3 py-1 md:text-[22px] bg-black text-[16px] text-white">{product.productName}</h3>
                         <div className="text-center bg-[#000000] text-white md:pb-2 pb-2 flex justify-center items-center">
