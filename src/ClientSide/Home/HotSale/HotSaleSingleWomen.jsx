@@ -5,7 +5,7 @@ import { MdEuroSymbol } from 'react-icons/md';
 import { Toaster, toast } from 'sonner';
 import { useLoaderData } from 'react-router-dom';
 
-const SingleProductWomen = () => {
+const HotSaleSingleWomen = () => {
     const singleData = useLoaderData();
     console.log(singleData)
     const {img , backImg , price , productName} = singleData.product ;
@@ -53,4 +53,4 @@ const SingleProductWomen = () => {
     );
 };
 
-export default SingleProductWomen;
+export default HotSaleSingleWomen;

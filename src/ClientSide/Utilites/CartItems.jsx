@@ -36,7 +36,7 @@ const CartItems = ({ cart, closeCart }) => {
     };
 
     return (
-        <div className="absolute top-[75px] z-50 font-custom right-0 bg-black text-white px-5 pb-5  pt-[6px] h-screen w-[28%] overflow-auto ">
+        <div className="absolute md:top-[75px] top-0 z-50 font-custom right-0  bg-black text-white px-5 pb-5  pt-[6px] md:h-screen md:w-[28%] w-full overflow-auto ">
             <div className="flex justify-between">
                 <h2 className="text-lg font-semibold mb-2">YOUR CART ({cart.length})</h2>
                 <button onClick={closeCart} className="text-lg font-semibold mb-2">

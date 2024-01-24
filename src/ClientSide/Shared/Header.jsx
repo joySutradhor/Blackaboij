@@ -84,26 +84,26 @@ const Header = () => {
     }, [fav]);
 
     const iconSize = 19;
-   
+
 
     // Function to toggle the cart visibility
     const toggleCart = () => {
-      setIsCartOpen(!isCartOpen);
+        setIsCartOpen(!isCartOpen);
     };
-  
+
     // Function to close the cart
     const closeCart = () => {
-      setIsCartOpen(false);
+        setIsCartOpen(false);
     };
     const toggleFav = () => {
-      setIsFavOpen(!isCartOpen);
+        setIsFavOpen(!isCartOpen);
     };
-  
+
     // Function to close the cart
     const closeFav = () => {
-      setIsFavOpen(false);
+        setIsFavOpen(false);
     };
-   
+
     return (
         <nav>
 
@@ -162,7 +162,7 @@ const Header = () => {
                                 <Link onClick={toggleCart}>
                                     <span style={{ fontSize: `${iconSize}px` }} > <AiOutlineShoppingCart className="text-white" /><span className="text-[9px] font-bold absolute top-[-4px] text-black px-[4px] bg-white rounded-full right-[-3px]">{cart.length}</span></span>
                                 </Link>
-                                
+
                             </div>
                             {isCartOpen && <CartItems cart={cart} closeCart={closeCart} />}
                             {isFavOpen && <FavItems fav={fav} close={closeFav} />}
@@ -266,12 +266,12 @@ const Header = () => {
                                 </Fade>
                             </Link>
 
-                            <Link to="/allProducts">
+                            {/* <Link to="/allProducts">
                                 <li className={`relative px-[15px] py-[10px] text-[15px] border-b-2-transparent group  ${isSelesHovered ? 'text-white  border-b-2' : ''}`}
                                     onMouseEnter={() => SetIsSelesHovered(true)}
                                     onMouseLeave={() => SetIsSelesHovered(false)}
                                 >SALES</li>
-                            </Link>
+                            </Link> */}
                             <Link to="/store">
                                 <li className={`relative px-[15px] py-[10px] text-[15px] border-b-2-transparent group  ${isStoreHovered ? 'text-white  border-b-2' : ''}`}
                                     onMouseEnter={() => SetIsStoreHovered(true)}
@@ -291,6 +291,21 @@ const Header = () => {
             {/* mobile menu */}
             <div className="md:hidden absolute z-50  w-full  ">
                 <div className={`flex justify-between py-[30px] px-[20px] font-custom  relative ${isMobileMenuOpen ? "bg-black z-100  " : ""}  `}>
+                    <div className=" flex justify-end  relative">
+                        <Link className="pr-[8px]">
+                            <span style={{ fontSize: `16px` }} > <FaRegUser className="text-white" /></span>
+                        </Link>
+                        <Link className="pr-[8px]" onClick={toggleFav}>
+                            <span style={{ fontSize: `16px` }} > <IoBagOutline className="text-white" /><span className="text-[9px] font-bold absolute md:top-[-3px] top-[-4px] text-black px-[4px] bg-white rounded-full right-[17px]">{fav.length}</span></span>
+                        </Link>
+                        <Link onClick={toggleCart}>
+                            <span style={{ fontSize: `16px` }} > <AiOutlineShoppingCart className="text-white" /><span className="text-[9px] font-bold absolute top-[-4px] text-black px-[4px] bg-white rounded-full right-[-3px]">{cart.length}</span></span>
+                        </Link>
+
+                    </div>
+                    {isCartOpen && <CartItems cart={cart} closeCart={closeCart} />}
+                    {isFavOpen && <FavItems fav={fav} close={closeFav} />}
+
                     <div>
                         <Link to="/"> <img src="https://i.ibb.co/3sNL27c/logo.png" className="w-[85px] h-[15px] " alt="" /></Link>
                     </div>

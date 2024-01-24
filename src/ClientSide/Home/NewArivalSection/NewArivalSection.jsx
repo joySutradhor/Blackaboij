@@ -1,5 +1,4 @@
 
-
 import { useState, useEffect } from 'react';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
@@ -245,7 +244,7 @@ const NewArivalSection = () => {
 
                                         <div className="details-button absolute top-[200px] left-0 w- flex flex-col  items-center w-full   bg-white p-3   ">
                                             <Fade direction=''>
-                                                <div className='space-x-3'>
+                                                <div className='md:space-x-3 space-x-[2px] space-y-1 md:space-y-0'>
                                                     <button
                                                         className={`size-button ${sizeByProduct[product.id] === 'S' ? 'bg-gray-500 text-white' : ''}`}
                                                         onClick={() => handleSizeChange(product.id, 'S')}
@@ -279,7 +278,7 @@ const NewArivalSection = () => {
 
                                                 </div>
                                             </Fade>
-                                            <div className='pt-3 space-x-[7px]'>
+                                            <div className='md:pt-3 pt-1 md:space-x-[7px] md:flex-none flex    space-x-[2px]'>
                                                 <button
                                                     className={`size-button ${colorByProduct[product.id] === 'Black' ? 'bg-gray-500 text-white' : ''}`}
                                                     onClick={() => handleColorChange(product.id, 'Black')}
@@ -293,7 +292,7 @@ const NewArivalSection = () => {
                                                     White
                                                 </button>
                                                 <button
-                                                    className={`size-button ${selectedSize[product.id] && selectedColor[product.id] ? 'bg-gray-500 text-white' : 'hidden'}`}
+                                                    className={`size-button md:text-[14px] text-[12px] mt-2 md:mt-[0px] ${selectedSize[product.id] && selectedColor[product.id] ? 'bg-gray-500 text-white' : 'hidden'}`}
                                                     onClick={() => {
                                                         if (selectedSize[product.id] && selectedColor[product.id]) {
 

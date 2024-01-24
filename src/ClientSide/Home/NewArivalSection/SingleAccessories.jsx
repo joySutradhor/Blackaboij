@@ -39,7 +39,7 @@ const SingleProductAccessories = () => {
                     <h2><span className='flex  items-center md:text-[23px] text-[16px]'><MdEuroSymbol></MdEuroSymbol> {price}</span></h2>
                     <div className='grid grid-cols-2 items-center md:my-[30px] my-[15px] md:gap-2 gap-1'>
                         <button className='bg-black text-white md:py-[14px] md:px-[20px] py-[7px] px-[10px] text-[14px]'  onClick={() => toast.success(`Product is added`)}>ADD TO CART</button>
-                        <button className='bg-[#B7B7B7] hover:bg-black hover:text-white text-black md:py-[14px] md:px-[20px] py-[7px] px-[10px] text-[14px]'>ADD TO WHITELIST</button>
+                        <button className='bg-[#B7B7B7] hover:bg-black hover:text-white text-black md:py-[14px] md:px-[20px] py-[7px] px-[10px] text-[14px]'>ADD WHITELIST</button>
                     </div>
 
                     <div className=' ml-0 '>
