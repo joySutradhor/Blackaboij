@@ -1,5 +1,5 @@
 // CartContext.jsx
-import  { createContext, useContext, useState, useEffect } from 'react';
+import { createContext, useContext, useState, useEffect } from 'react';
 import { Toaster, toast } from 'sonner';
 
 const CartContext = createContext();
@@ -22,19 +22,12 @@ export const CartProvider = ({ children }) => {
   }, []);
 
   const addToCart = (product) => {
-    const isInCart = cart.some((item) => item.id === product.id);
-
-    if (!isInCart) {
-      const newCart = [...cart, product];
-      setCart(newCart);
-      localStorage.setItem('cart', JSON.stringify(newCart));
-      toast.success(`${product.productName} is added to the cart`);
-    } else {
-      toast.error(`${product.productName} is already in the cart`);
-      // Handle the case where the product is already in the cart
-      console.log(`${product.productName} is already in the cart`);
-    }
+    const newCart = [...cart, product];
+    setCart(newCart);
+    localStorage.setItem('cart', JSON.stringify(newCart));
+    toast.success(`${product.name} is added to the cart`);
   };
+
 
   const removeFromCart = (productId) => {
     const updatedCart = cart.filter((item) => item.id !== productId);
@@ -48,18 +41,11 @@ export const CartProvider = ({ children }) => {
   };
 
   const addToFav = (product) => {
-    const isInFav = fav.some((item) => item.id === product.id);
 
-    if (!isInFav) {
-      const newFav = [...fav, product];
-      setFav(newFav);
-      localStorage.setItem('fav', JSON.stringify(newFav));
-      toast.success(`${product.productName} is added to favorites`);
-    } else {
-      toast.error(`${product.productName} is already in favorites`);
-      // Handle the case where the product is already in favorites
-      console.log(`${product.productName} is already in favorites`);
-    }
+    const newFav = [...fav, product];
+    setFav(newFav);
+    localStorage.setItem('fav', JSON.stringify(newFav));
+    toast.success(`${product.productName} is added to favorites`);
   };
 
   const removeFromFav = (productId) => {

@@ -15,6 +15,9 @@
   .btn {
     @apply  px-[8px] py-[5px] bg-slate-100 text-black  ;
   }
+  .size-button{
+    @apply border border-[#b1b1b1] px-3   text-[#B1B1B1]
+  }
   
 }
 

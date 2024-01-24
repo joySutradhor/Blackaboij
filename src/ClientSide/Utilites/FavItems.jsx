@@ -4,10 +4,12 @@ import { AiOutlineClose } from 'react-icons/ai';
 import { FaMinus } from 'react-icons/fa6';
 import { Fade } from 'react-awesome-reveal';
 import { useCart } from './CartContext';
+import { Link } from 'react-router-dom';
 
 const FavItems = ({ fav, close }) => {
+
     const [removedItems, setRemovedItems] = useState([]);
-    const { removeFromFav , addToCart } = useCart();
+    const { removeFromFav } = useCart();
 
     const handleRemoveFromFavorites = (productId) => {
         setRemovedItems((prevRemovedItems) => [...prevRemovedItems, productId]);
@@ -39,17 +41,19 @@ const FavItems = ({ fav, close }) => {
                                         <img className="h-[80px] w-[80px]" src={item.img} alt="" />
                                     </div>
                                     <div>
-                                        <p>{item.productName}</p>
+                                        <p>{item.name}</p>
                                         <p className="text-[15px] text-[#b7b7b7] hover:text-white">${item.price}</p>
                                         <div className="flex items-center border text-[15px] space-x-3 px-[8px] mt-2 border-[#383838]">
-                                            <button onClick={()=> addToCart(item)} >
-                                                ADD TO CART
-                                            </button>
+                                            <Link to={`${item.route}/${item.mainId}`}>
+                                                <button  >
+                                                    ADD TO CART
+                                                </button>
+                                            </Link>
 
                                         </div>
                                     </div>
                                     <div>
-                                      
+
                                     </div>
                                 </div>
                                 <div>

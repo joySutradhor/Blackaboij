@@ -73,7 +73,7 @@ const Header = () => {
     };
     useEffect(() => {
         // Retrieve cart items from local storage on component mount
-        const storedCart = JSON.parse(localStorage.getItem('cart')) || [];
+        const storedCart = JSON.parse(localStorage.getItem('cart')) || {};
         setCart(storedCart);
     }, [cart]);
 
@@ -111,9 +111,9 @@ const Header = () => {
             <div className="md:block hidden bg-black  w-full">
                 <div className="w-full flex justify-center">
                     <div className="max-w-xl">
-                        <Marquee className="text-center" delay={2}>
+                        {/* <Marquee className="text-center" delay={2}>
                             <p className="text-[#b1b1b1] py-2">Up to 60% OFF on selected items. With an additional 20%, code: BLACK WINTER</p>
-                        </Marquee>
+                        </Marquee> */}
                     </div>
                 </div>
                 <div

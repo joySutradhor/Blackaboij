@@ -1,11 +1,11 @@
 import { Carousel } from 'react-responsive-carousel';
 import "react-responsive-carousel/lib/styles/carousel.min.css";
+import CustomizedAccordions from './CustomizedAccordions';
 import { MdEuroSymbol } from 'react-icons/md';
 import { Toaster, toast } from 'sonner';
 import { useLoaderData } from 'react-router-dom';
-import CustomizedAccordions from './CustomizedAccordions.jsx';
 
-const SingleProduct = () => {
+const SingleProductMen = () => {
     const singleData = useLoaderData();
     console.log(singleData.product)
     const {img , backImg , price , productName} = singleData.product ;
@@ -52,4 +52,4 @@ const SingleProduct = () => {
     );
 };
 
-export default SingleProduct;
+export default SingleProductMen;

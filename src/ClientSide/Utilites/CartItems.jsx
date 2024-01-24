@@ -7,6 +7,7 @@ import { FiPlus } from 'react-icons/fi';
 import { Fade } from 'react-awesome-reveal';
 
 const CartItems = ({ cart, closeCart }) => {
+    console.log(cart)
     const { removeFromCart } = useCart();
     const [quantities, setQuantities] = useState(
         cart.reduce((acc, item) => ({ ...acc, [item.id]: 1 }), {})
@@ -51,12 +52,16 @@ const CartItems = ({ cart, closeCart }) => {
                             <div className="flex justify-between border-b-[1px] border-[#383838] py-5">
                                 <div className="flex gap-[20px]">
                                     <div>
-                                        <img className="h-[80px] w-[80px]" src={item.img} alt="" />
+                                        <img className="h-[100px] w-[100px]" src={item.img} alt="" />
                                     </div>
                                     <div>
-                                        <p>{item.productName}</p>
+                                        <p>{item.name}</p>
                                         <p className="text-[15px] text-[#b7b7b7] hover:text-white">${item.price}</p>
-                                        <div className="flex items-center border text-[15px] space-x-3 px-[8px] mt-2 border-[#383838]">
+                                        <div className='flex gap-2'>
+                                            <p className="text-[12px] text-[#b7b7b7] hover:text-white">Size : {item.size}</p>
+                                            <p className="text-[12px] text-[#b7b7b7] hover:text-white" >Color : {item.color}</p>
+                                        </div>
+                                        <div className="flex items-center justify-center border text-[15px] space-x-5 px-[8px] mt-2 border-[#383838]">
                                             <button onClick={() => decreaseQuantity(item.id)}>
                                                 <FaMinus />
                                             </button>

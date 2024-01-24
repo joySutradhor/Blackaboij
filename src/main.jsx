@@ -33,8 +33,14 @@ import PrincessHoodies from './ClientSide/Pages/PrincessCollection/PrincessHoodi
 import PrincessPants from './ClientSide/Pages/PrincessCollection/PrincessPants';
 import PrincessOutwear from './ClientSide/Pages/PrincessCollection/PrincessOutwear';
 import { CartProvider } from './ClientSide/Utilites/CartContext';
+import SingleProductMen from './ClientSide/Home/NewArivalSection/SingleMen';
+import SingleProductWomen from './ClientSide/Home/NewArivalSection/SingleWomen';
+import SingleProductPrince from './ClientSide/Home/NewArivalSection/SinglePrince';
+import SingleProductAccessories from './ClientSide/Home/NewArivalSection/SingleAccessories';
+
 // import AllProductSearch from './ClientSide/Pages/AllProductSearch/AllProductSearch';
-// all routes
+// import SingleProductWomen from './ClientSide/Home/NewArivalSection/SingleWomen';
+
 const router = createBrowserRouter([
   {
     path: "/",
@@ -45,8 +51,69 @@ const router = createBrowserRouter([
         element: <Home></Home>
       },
       {
-        path: "/product/:id",
-        element: <SingleProduct></SingleProduct>
+        path: "/productMen/:id",
+        element: <SingleProductMen></SingleProductMen>,
+        loader: async ({params}) => {
+          const response = await fetch(`/MenProducts.json`);
+          const data = await response.json();
+    
+          // Find the specific product based on the provided id
+          const product = data.find(product => product.id === parseInt(params.id));
+    
+          return { product };
+        }
+      },
+      {
+        path: "/productPrince/:id",
+        element: <SingleProductPrince></SingleProductPrince>,
+        loader: async ({params}) => {
+          const response = await fetch(`/prince.json`);
+          const data = await response.json();
+    
+          // Find the specific product based on the provided id
+          const product = data.find(product => product.id === parseInt(params.id));
+    
+          return { product };
+        }
+      },
+      {
+        path: "/productPrincess/:id",
+        element: <SingleProductPrince></SingleProductPrince>,
+        loader: async ({params}) => {
+          const response = await fetch(`/princess.json`);
+          const data = await response.json();
+    
+          // Find the specific product based on the provided id
+          const product = data.find(product => product.id === parseInt(params.id));
+    
+          return { product };
+        }
+      },
+      {
+        path: "/productWomen/:id",
+        element: <SingleProductWomen></SingleProductWomen>,
+        loader: async ({params}) => {
+          const response = await fetch(`./womenProducts.json`);
+          const data = await response.json();
+    
+          // Find the specific product based on the provided id
+          const product = data.find(product => product.id === parseInt(params.id));
+    
+          return { product };
+        }
+      },
+      {
+        path: "/accessories/:id",
+        element: <SingleProductAccessories></SingleProductAccessories>,
+        loader: async ({params}) => {
+          const response = await fetch(`./accessories.json`);
+          const data = await response.json();
+    
+          // Find the specific product based on the provided id
+          const product = data.find(product => product.id === parseInt(params.id));
+    
+          return { product };
+        }
       },
       {
         path: "allProducts/product/:id",
@@ -68,10 +135,7 @@ const router = createBrowserRouter([
         path: "outwear/product/:id",
         element: <SingleProduct></SingleProduct>
       },
-      {
-        path: "accessories/product/:id",
-        element: <SingleProduct></SingleProduct>
-      },
+     
       {
         path: "womens/product/:id",
         element: <SingleProduct></SingleProduct>
