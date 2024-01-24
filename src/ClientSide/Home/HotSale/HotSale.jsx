@@ -242,7 +242,7 @@ const HotSale = () => {
                                             {fav.some((item) => item.mainId === product.id) ? <IoIosHeart /> : <IoIosHeartEmpty />}
                                         </button>
 
-                                        <div className="details-button absolute top-[200px] left-0 w- flex flex-col  items-center w-full   bg-white p-3   ">
+                                        <div className="details-button md:flex justify-center items-center flex-col hidden md:block w-full bg-white p-3">
                                             <Fade direction=''>
                                                 <div className='space-x-3'>
                                                     <button
@@ -332,15 +332,15 @@ const HotSale = () => {
                                             </div>
                                         </div>
                                         <h3 className="text-center md:py-4 py-1 md:text-[22px] bg-black text-[16px] text-white">{product.productName}</h3>
+                                        <p className="md:pb-3 pb-1 text-center md:text-[15px] text-[12px] bg-black text-white"> <span className='flex justify-center items-center'><MdEuroSymbol></MdEuroSymbol> {product.price}</span> </p>
                                         <div className="text-center bg-[#000000] text-white md:pb-2 pb-2 flex justify-center items-center">
                                             <span className="md:mr-2 mr-1">
                                                 <Star rating={product.starRating} />
                                             </span>
-                                            <span>
+                                            <span className='text-[12px] md:text-base'>
                                                 {product.starRating} Reviews
                                             </span>
                                         </div>
-                                        <p className="md:pb-3 pb-1 text-center md:text-[15px] text-[12px] bg-black text-white"> <span className='flex justify-center items-center'><MdEuroSymbol></MdEuroSymbol> {product.price}</span> </p>
                                     </div>
                                 ))}
                             </div>
@@ -372,7 +372,7 @@ const HotSale = () => {
                                             {fav.some((item) => item.mainId === product.id) ? <IoIosHeart /> : <IoIosHeartEmpty />}
                                         </button>
 
-                                        <div className="details-button absolute top-[200px] left-0 w- flex flex-col  items-center w-full   bg-white p-3   ">
+                                        <div className="details-button md:flex justify-center items-center flex-col hidden md:block w-full bg-white p-3">
                                             <Fade direction=''>
                                                 <div className='space-x-3'>
                                                     <button
@@ -462,15 +462,15 @@ const HotSale = () => {
                                             </div>
                                         </div>
                                         <h3 className="text-center md:py-4 py-1 md:text-[22px] bg-black text-[16px] text-white">{product.productName}</h3>
+                                        <p className="md:pb-3 pb-1 text-center md:text-[15px] text-[12px] bg-black text-white"> <span className='flex justify-center items-center'><MdEuroSymbol></MdEuroSymbol> {product.price}</span> </p>
                                         <div className="text-center bg-[#000000] text-white md:pb-2 pb-2 flex justify-center items-center">
                                             <span className="md:mr-2 mr-1">
                                                 <Star rating={product.starRating} />
                                             </span>
-                                            <span>
+                                            <span className='text-[12px] md:text-base'>
                                                 {product.starRating} Reviews
                                             </span>
                                         </div>
-                                        <p className="md:pb-3 pb-1 text-center md:text-[15px] text-[12px] bg-black text-white"> <span className='flex justify-center items-center'><MdEuroSymbol></MdEuroSymbol> {product.price}</span> </p>
                                     </div>
                                 ))}
                             </div>
@@ -502,7 +502,7 @@ const HotSale = () => {
                                             {fav.some((item) => item.mainId === product.id) ? <IoIosHeart /> : <IoIosHeartEmpty />}
                                         </button>
 
-                                        <div className="details-button absolute top-[200px] left-0 w- flex flex-col  items-center w-full   bg-white p-3   ">
+                                        <div className="details-button md:flex justify-center items-center flex-col hidden md:block w-full bg-white p-3">
                                             <Fade direction=''>
                                                 <div className='space-x-3'>
                                                     <button
@@ -592,15 +592,15 @@ const HotSale = () => {
                                             </div>
                                         </div>
                                         <h3 className="text-center md:py-4 py-1 md:text-[22px] bg-black text-[16px] text-white">{product.productName}</h3>
+                                        <p className="md:pb-3 pb-1 text-center md:text-[15px] text-[12px] bg-black text-white"> <span className='flex justify-center items-center'><MdEuroSymbol></MdEuroSymbol> {product.price}</span> </p>
                                         <div className="text-center bg-[#000000] text-white md:pb-2 pb-2 flex justify-center items-center">
                                             <span className="md:mr-2 mr-1">
                                                 <Star rating={product.starRating} />
                                             </span>
-                                            <span>
+                                            <span className='text-[12px] md:text-base'>
                                                 {product.starRating} Reviews
                                             </span>
                                         </div>
-                                        <p className="md:pb-3 pb-1 text-center md:text-[15px] text-[12px] bg-black text-white"> <span className='flex justify-center items-center'><MdEuroSymbol></MdEuroSymbol> {product.price}</span> </p>
                                     </div>
                                 ))}
                             </div>
@@ -632,7 +632,7 @@ const HotSale = () => {
                                             {fav.some((item) => item.mainId === product.id) ? <IoIosHeart /> : <IoIosHeartEmpty />}
                                         </button>
 
-                                        <div className="details-button absolute top-[200px] left-0 w- flex flex-col  items-center w-full   bg-white p-3   ">
+                                        <div className="details-button md:flex justify-center items-center flex-col hidden md:block w-full bg-white p-3">
                                             <Fade direction=''>
                                                 <div className='space-x-3'>
                                                     <button
@@ -722,15 +722,15 @@ const HotSale = () => {
                                             </div>
                                         </div>
                                         <h3 className="text-center md:py-4 py-1 md:text-[22px] bg-black text-[16px] text-white">{product.productName}</h3>
+                                        <p className="md:pb-3 pb-1 text-center md:text-[15px] text-[12px] bg-black text-white"> <span className='flex justify-center items-center'><MdEuroSymbol></MdEuroSymbol> {product.price}</span> </p>
                                         <div className="text-center bg-[#000000] text-white md:pb-2 pb-2 flex justify-center items-center">
                                             <span className="md:mr-2 mr-1">
                                                 <Star rating={product.starRating} />
                                             </span>
-                                            <span>
+                                            <span className='text-[12px] md:text-base'>
                                                 {product.starRating} Reviews
                                             </span>
                                         </div>
-                                        <p className="md:pb-3 pb-1 text-center md:text-[15px] text-[12px] bg-black text-white"> <span className='flex justify-center items-center'><MdEuroSymbol></MdEuroSymbol> {product.price}</span> </p>
                                     </div>
                                 ))}
                             </div>
@@ -762,7 +762,7 @@ const HotSale = () => {
                                             {fav.some((item) => item.mainId === product.id) ? <IoIosHeart /> : <IoIosHeartEmpty />}
                                         </button>
 
-                                        <div className="details-button absolute top-[200px] left-0 w- flex flex-col  items-center w-full   bg-white p-3   ">
+                                        <div className="details-button md:flex justify-center items-center flex-col hidden md:block w-full bg-white p-3">
                                             <Fade direction=''>
                                                 <div className='space-x-3'>
                                                     <button
@@ -852,15 +852,15 @@ const HotSale = () => {
                                             </div>
                                         </div>
                                         <h3 className="text-center md:py-4 py-1 md:text-[22px] bg-black text-[16px] text-white">{product.productName}</h3>
+                                        <p className="md:pb-3 pb-1 text-center md:text-[15px] text-[12px] bg-black text-white"> <span className='flex justify-center items-center'><MdEuroSymbol></MdEuroSymbol> {product.price}</span> </p>
                                         <div className="text-center bg-[#000000] text-white md:pb-2 pb-2 flex justify-center items-center">
                                             <span className="md:mr-2 mr-1">
                                                 <Star rating={product.starRating} />
                                             </span>
-                                            <span>
+                                            <span className='text-[12px] md:text-base'>
                                                 {product.starRating} Reviews
                                             </span>
                                         </div>
-                                        <p className="md:pb-3 pb-1 text-center md:text-[15px] text-[12px] bg-black text-white"> <span className='flex justify-center items-center'><MdEuroSymbol></MdEuroSymbol> {product.price}</span> </p>
                                     </div>
                                 ))}
                             </div>

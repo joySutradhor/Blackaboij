@@ -38,6 +38,9 @@
   /* color: red; */
   font-size: small;
   border: 1px solid #B7B7B7;
+  display:  flex;
+  justify-content: center;
+  align-items: center;
   
   border-radius: 2px;
   cursor: pointer;

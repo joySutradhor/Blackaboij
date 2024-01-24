@@ -189,15 +189,15 @@ const AllProducts = () => {
                                         <button className='absolute top-0 right-0  text-white bg-[#000000] md:px-4 md:py-1 md:text-[16px] text-[12px] px-2  py-[2px]  '>New</button>
                                         <button className="details-button md:px-[20px] px-[8px] md:py-[5px] py-[2px] whitespace-nowrap ">ADD TO CART</button>
                                         <h3 className="text-center md:py-4 py-1 md:text-[22px] bg-black text-[16px] text-white">{product.productName}</h3>
+                                        <p className="md:pb-3 pb-1 text-center md:text-[15px] text-[12px] bg-black text-white"> <span className='flex justify-center items-center'><MdEuroSymbol></MdEuroSymbol> {product.price}</span> </p>
                                         <div className="text-center bg-[#000000] text-white md:pb-2 pb-2 flex justify-center items-center">
                                             <span className="md:mr-2 mr-1">
                                                 <Star rating={product.starRating} />
                                             </span>
-                                            <span>
+                                            <span className='text-[12px] md:text-base'>
                                                 {product.starRating} Reviews
                                             </span>
                                         </div>
-                                        <p className="md:pb-3 pb-1 text-center md:text-[15px] text-[12px] bg-black text-white"> <span className='flex justify-center items-center'><MdEuroSymbol></MdEuroSymbol> {product.price}</span> </p>
 
                                     </div>
                                 ))}
@@ -214,15 +214,15 @@ const AllProducts = () => {
                                         <button className='absolute top-0 right-0  text-white bg-[#000000] md:px-4 md:py-1 md:text-[16px] text-[12px] px-2  py-[2px]  '>New</button>
                                         <button className="details-button md:px-[20px] px-[8px] md:py-[5px] py-[2px] whitespace-nowrap ">ADD TO CART</button>
                                         <h3 className="text-center md:py-4 py-1 md:text-[22px] bg-black text-[16px] text-white">{product.productName}</h3>
+                                        <p className="md:pb-3 pb-1 text-center md:text-[15px] text-[12px] bg-black text-white"> <span className='flex justify-center items-center'><MdEuroSymbol></MdEuroSymbol> {product.price}</span> </p>
                                         <div className="text-center bg-[#000000] text-white md:pb-2 pb-2 flex justify-center items-center">
                                             <span className="md:mr-2 mr-1">
                                                 <Star rating={product.starRating} />
                                             </span>
-                                            <span>
+                                            <span className='text-[12px] md:text-base'>
                                                 {product.starRating} Reviews
                                             </span>
                                         </div>
-                                        <p className="md:pb-3 pb-1 text-center md:text-[15px] text-[12px] bg-black text-white"> <span className='flex justify-center items-center'><MdEuroSymbol></MdEuroSymbol> {product.price}</span> </p>
 
                                     </div>
                                 ))}
@@ -238,15 +238,15 @@ const AllProducts = () => {
                                         <button className='absolute top-0 right-0  text-white bg-[#000000] md:px-4 md:py-1 md:text-[16px] text-[12px] px-2  py-[2px]  '>New</button>
                                         <button className="details-button md:px-[20px] px-[8px] md:py-[5px] py-[2px] whitespace-nowrap ">ADD TO CART</button>
                                         <h3 className="text-center md:py-4 py-1 md:text-[22px] bg-black text-[16px] text-white">{product.productName}</h3>
+                                        <p className="md:pb-3 pb-1 text-center md:text-[15px] text-[12px] bg-black text-white"> <span className='flex justify-center items-center'><MdEuroSymbol></MdEuroSymbol> {product.price}</span> </p>
                                         <div className="text-center bg-[#000000] text-white md:pb-2 pb-2 flex justify-center items-center">
                                             <span className="md:mr-2 mr-1">
                                                 <Star rating={product.starRating} />
                                             </span>
-                                            <span>
+                                            <span className='text-[12px] md:text-base'>
                                                 {product.starRating} Reviews
                                             </span>
                                         </div>
-                                        <p className="md:pb-3 pb-1 text-center md:text-[15px] text-[12px] bg-black text-white"> <span className='flex justify-center items-center'><MdEuroSymbol></MdEuroSymbol> {product.price}</span> </p>
 
                                     </div>
                                 ))}
@@ -263,15 +263,15 @@ const AllProducts = () => {
                                         <button className='absolute top-0 right-0  text-white bg-[#000000] md:px-4 md:py-1 md:text-[16px] text-[12px] px-2  py-[2px]  '>New</button>
                                         <button className="details-button md:px-[20px] px-[8px] md:py-[5px] py-[2px] whitespace-nowrap ">ADD TO CART</button>
                                         <h3 className="text-center md:py-4 py-1 md:text-[22px] bg-black text-[16px] text-white">{product.productName}</h3>
+                                        <p className="md:pb-3 pb-1 text-center md:text-[15px] text-[12px] bg-black text-white"> <span className='flex justify-center items-center'><MdEuroSymbol></MdEuroSymbol> {product.price}</span> </p>
                                         <div className="text-center bg-[#000000] text-white md:pb-2 pb-2 flex justify-center items-center">
                                             <span className="md:mr-2 mr-1">
                                                 <Star rating={product.starRating} />
                                             </span>
-                                            <span>
+                                            <span className='text-[12px] md:text-base'>
                                                 {product.starRating} Reviews
                                             </span>
                                         </div>
-                                        <p className="md:pb-3 pb-1 text-center md:text-[15px] text-[12px] bg-black text-white"> <span className='flex justify-center items-center'><MdEuroSymbol></MdEuroSymbol> {product.price}</span> </p>
 
                                     </div>
                                 ))}
@@ -287,15 +287,15 @@ const AllProducts = () => {
                                         <button className='absolute top-0 right-0  text-white bg-[#000000] md:px-4 md:py-1 md:text-[16px] text-[12px] px-2  py-[2px]  '>New</button>
                                         <button className="details-button md:px-[20px] px-[8px] md:py-[5px] py-[2px] whitespace-nowrap ">ADD TO CART</button>
                                         <h3 className="text-center md:py-4 py-1 md:text-[22px] bg-black text-[16px] text-white">{product.productName}</h3>
+                                        <p className="md:pb-3 pb-1 text-center md:text-[15px] text-[12px] bg-black text-white"> <span className='flex justify-center items-center'><MdEuroSymbol></MdEuroSymbol> {product.price}</span> </p>
                                         <div className="text-center bg-[#000000] text-white md:pb-2 pb-2 flex justify-center items-center">
                                             <span className="md:mr-2 mr-1">
                                                 <Star rating={product.starRating} />
                                             </span>
-                                            <span>
+                                            <span className='text-[12px] md:text-base'>
                                                 {product.starRating} Reviews
                                             </span>
                                         </div>
-                                        <p className="md:pb-3 pb-1 text-center md:text-[15px] text-[12px] bg-black text-white"> <span className='flex justify-center items-center'><MdEuroSymbol></MdEuroSymbol> {product.price}</span> </p>
 
                                     </div>
                                 ))}

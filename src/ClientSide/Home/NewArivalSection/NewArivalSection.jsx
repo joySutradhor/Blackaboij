@@ -125,14 +125,14 @@ const NewArivalSection = () => {
         const numberOfFullStars = Math.floor(rating);
         const hasHalfStar = rating % 1 !== 0;
         const stars = Array.from({ length: numberOfFullStars }, (_, index) => (
-            <span key={index} className="text-white md:text-2xl  inline-block -ml-[2px]">
+            <span key={index} className="text-white md:text-2xl  text-[12px] inline-block -ml-[2px]">
                 &#9733; {/* Unicode for a solid star */}
             </span>
         ));
 
         if (hasHalfStar) {
             stars.push(
-                <span key="half" className="text-white md:text-2xl text- inline-block -ml-[2px]">
+                <span key="half" className="text-white md:text-2xl text-[12px] inline-block -ml-[2px]">
                     &#9734; {/* Unicode for an empty star */}
                 </span>
             );
@@ -242,7 +242,7 @@ const NewArivalSection = () => {
                                             {fav.some((item) => item.mainId === product.id) ? <IoIosHeart /> : <IoIosHeartEmpty />}
                                         </button>
 
-                                        <div className="details-button absolute top-[200px] left-0 w- flex flex-col  items-center w-full   bg-white p-3   ">
+                                        <div  className="details-button md:flex justify-center items-center flex-col hidden md:block w-full bg-white p-3">
                                             <Fade direction=''>
                                                 <div className='md:space-x-3 space-x-[2px] space-y-1 md:space-y-0'>
                                                     <button
@@ -332,15 +332,15 @@ const NewArivalSection = () => {
                                             </div>
                                         </div>
                                         <h3 className="text-center md:py-4 py-1 md:text-[22px] bg-black text-[16px] text-white">{product.productName}</h3>
+                                        <p className="md:pb-3 pb-1 text-center md:text-[15px] text-[12px] bg-black text-white"> <span className='flex justify-center items-center'><MdEuroSymbol></MdEuroSymbol> {product.price}</span> </p>
                                         <div className="text-center bg-[#000000] text-white md:pb-2 pb-2 flex justify-center items-center">
                                             <span className="md:mr-2 mr-1">
                                                 <Star rating={product.starRating} />
                                             </span>
-                                            <span>
+                                            <span className='text-[12px] md:text-base'>
                                                 {product.starRating} Reviews
                                             </span>
                                         </div>
-                                        <p className="md:pb-3 pb-1 text-center md:text-[15px] text-[12px] bg-black text-white"> <span className='flex justify-center items-center'><MdEuroSymbol></MdEuroSymbol> {product.price}</span> </p>
                                     </div>
                                 ))}
                             </div>
@@ -372,7 +372,7 @@ const NewArivalSection = () => {
                                             {fav.some((item) => item.mainId === product.id) ? <IoIosHeart /> : <IoIosHeartEmpty />}
                                         </button>
 
-                                        <div className="details-button absolute top-[200px] left-0 w- flex flex-col  items-center w-full   bg-white p-3   ">
+                                        <div className="details-button md:flex justify-center items-center flex-col hidden md:block w-full bg-white p-3">
                                             <Fade direction=''>
                                                 <div className='space-x-3'>
                                                     <button
@@ -462,11 +462,11 @@ const NewArivalSection = () => {
                                             </div>
                                         </div>
                                         <h3 className="text-center md:py-4 py-1 md:text-[22px] bg-black text-[16px] text-white">{product.productName}</h3>
-                                        <div className="text-center bg-[#000000] text-white md:pb-2 pb-2 flex justify-center items-center">
-                                            <span className="md:mr-2 mr-1">
+                                        <div className="text-center bg-[#000000] text-white  md:pb-2 pb-2 flex justify-center items-center">
+                                            <span className="md:mr-2 mr-1 ">
                                                 <Star rating={product.starRating} />
                                             </span>
-                                            <span>
+                                            <span className='text-[12px] md:text-base'>
                                                 {product.starRating} Reviews
                                             </span>
                                         </div>
@@ -502,7 +502,7 @@ const NewArivalSection = () => {
                                             {fav.some((item) => item.mainId === product.id) ? <IoIosHeart /> : <IoIosHeartEmpty />}
                                         </button>
 
-                                        <div className="details-button absolute top-[200px] left-0 w- flex flex-col  items-center w-full   bg-white p-3   ">
+                                        <div className="details-button md:flex justify-center items-center flex-col hidden md:block w-full bg-white p-3">
                                             <Fade direction=''>
                                                 <div className='space-x-3'>
                                                     <button
@@ -592,15 +592,15 @@ const NewArivalSection = () => {
                                             </div>
                                         </div>
                                         <h3 className="text-center md:py-4 py-1 md:text-[22px] bg-black text-[16px] text-white">{product.productName}</h3>
+                                        <p className="md:pb-3 pb-1 text-center md:text-[15px] text-[12px] bg-black text-white"> <span className='flex justify-center items-center'><MdEuroSymbol></MdEuroSymbol> {product.price}</span> </p>
                                         <div className="text-center bg-[#000000] text-white md:pb-2 pb-2 flex justify-center items-center">
                                             <span className="md:mr-2 mr-1">
                                                 <Star rating={product.starRating} />
                                             </span>
-                                            <span>
+                                            <span className='text-[12px] md:text-base'>
                                                 {product.starRating} Reviews
                                             </span>
                                         </div>
-                                        <p className="md:pb-3 pb-1 text-center md:text-[15px] text-[12px] bg-black text-white"> <span className='flex justify-center items-center'><MdEuroSymbol></MdEuroSymbol> {product.price}</span> </p>
                                     </div>
                                 ))}
                             </div>
@@ -632,7 +632,7 @@ const NewArivalSection = () => {
                                             {fav.some((item) => item.mainId === product.id) ? <IoIosHeart /> : <IoIosHeartEmpty />}
                                         </button>
 
-                                        <div className="details-button absolute top-[200px] left-0 w- flex flex-col  items-center w-full   bg-white p-3   ">
+                                        <div className="details-button md:flex justify-center items-center flex-col hidden md:block w-full bg-white p-3">
                                             <Fade direction=''>
                                                 <div className='space-x-3'>
                                                     <button
@@ -722,15 +722,15 @@ const NewArivalSection = () => {
                                             </div>
                                         </div>
                                         <h3 className="text-center md:py-4 py-1 md:text-[22px] bg-black text-[16px] text-white">{product.productName}</h3>
+                                        <p className="md:pb-3 pb-1 text-center md:text-[15px] text-[12px] bg-black text-white"> <span className='flex justify-center items-center'><MdEuroSymbol></MdEuroSymbol> {product.price}</span> </p>
                                         <div className="text-center bg-[#000000] text-white md:pb-2 pb-2 flex justify-center items-center">
                                             <span className="md:mr-2 mr-1">
                                                 <Star rating={product.starRating} />
                                             </span>
-                                            <span>
+                                            <span className='text-[12px] md:text-base'>
                                                 {product.starRating} Reviews
                                             </span>
                                         </div>
-                                        <p className="md:pb-3 pb-1 text-center md:text-[15px] text-[12px] bg-black text-white"> <span className='flex justify-center items-center'><MdEuroSymbol></MdEuroSymbol> {product.price}</span> </p>
                                     </div>
                                 ))}
                             </div>
@@ -762,7 +762,7 @@ const NewArivalSection = () => {
                                             {fav.some((item) => item.mainId === product.id) ? <IoIosHeart /> : <IoIosHeartEmpty />}
                                         </button>
 
-                                        <div className="details-button absolute top-[200px] left-0 w- flex flex-col  items-center w-full   bg-white p-3   ">
+                                        <div className="details-button md:flex justify-center items-center flex-col hidden md:block w-full bg-white p-3">
                                             <Fade direction=''>
                                                 <div className='space-x-3'>
                                                     <button
@@ -852,15 +852,15 @@ const NewArivalSection = () => {
                                             </div>
                                         </div>
                                         <h3 className="text-center md:py-4 py-1 md:text-[22px] bg-black text-[16px] text-white">{product.productName}</h3>
+                                        <p className="md:pb-3 pb-1 text-center md:text-[15px] text-[12px] bg-black text-white"> <span className='flex justify-center items-center'><MdEuroSymbol></MdEuroSymbol> {product.price}</span> </p>
                                         <div className="text-center bg-[#000000] text-white md:pb-2 pb-2 flex justify-center items-center">
                                             <span className="md:mr-2 mr-1">
                                                 <Star rating={product.starRating} />
                                             </span>
-                                            <span>
+                                            <span className='text-[12px] md:text-base'>
                                                 {product.starRating} Reviews
                                             </span>
                                         </div>
-                                        <p className="md:pb-3 pb-1 text-center md:text-[15px] text-[12px] bg-black text-white"> <span className='flex justify-center items-center'><MdEuroSymbol></MdEuroSymbol> {product.price}</span> </p>
                                     </div>
                                 ))}
                             </div>

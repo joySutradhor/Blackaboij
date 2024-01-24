@@ -24,6 +24,7 @@ const Header = () => {
     const [isPrinceHovered, SetIsPrinceHovered] = useState(false);
     const [isPrincesHovered, SetIsPrincesHovered] = useState(false);
     const [isStoreHovered, SetIsStoreHovered] = useState(false);
+    // eslint-disable-next-line no-unused-vars
     const [isSelesHovered, SetIsSelesHovered] = useState(false);
     const [isAccessoriesHovered, SetIsAccessoriesHovered] = useState(false);
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -111,9 +112,9 @@ const Header = () => {
             <div className="md:block hidden bg-black  w-full">
                 <div className="w-full flex justify-center">
                     <div className="max-w-xl">
-                        {/* <Marquee className="text-center" delay={2}>
+                        <Marquee className="text-center" delay={2}>
                             <p className="text-[#b1b1b1] py-2">Up to 60% OFF on selected items. With an additional 20%, code: BLACK WINTER</p>
-                        </Marquee> */}
+                        </Marquee>
                     </div>
                 </div>
                 <div
@@ -289,27 +290,27 @@ const Header = () => {
                 </div>
             </div>
             {/* mobile menu */}
-            <div className="md:hidden absolute z-50  w-full  ">
-                <div className={`flex justify-between py-[30px] px-[20px] font-custom  relative ${isMobileMenuOpen ? "bg-black z-100  " : ""}  `}>
-                    <div className=" flex justify-end  relative">
-                        <Link className="pr-[8px]">
-                            <span style={{ fontSize: `16px` }} > <FaRegUser className="text-white" /></span>
+            <div className={`header md:hidden  block w-full ${isSticky ? "fixed top-0 z-50" : ""} bg-black text-white transition-colors duration-500 ease-in-out z-50 `}>
+                <div className={`grid grid-cols-3 items-center  py-[18px]   px-[20px] font-custom  relative ${isMobileMenuOpen ? "bg-black z-100  " : ""}  `}>
+                    <div className="   flex  relative">
+                        <Link className="pr-[6px]">
+                            <span style={{ fontSize: `18px` }} > <FaRegUser className="text-white " /></span>
                         </Link>
-                        <Link className="pr-[8px]" onClick={toggleFav}>
-                            <span style={{ fontSize: `16px` }} > <IoBagOutline className="text-white" /><span className="text-[9px] font-bold absolute md:top-[-3px] top-[-4px] text-black px-[4px] bg-white rounded-full right-[17px]">{fav.length}</span></span>
+                        <Link className="pr-[6px] relative" onClick={toggleFav}>
+                            <span style={{ fontSize: `18px` }} > <IoBagOutline className="text-white " /><span className="text-[9px] font-bold absolute md:top-[-3px] top-[-4px] text-black px-[4px] bg-white rounded-full right-[1px]">{fav.length}</span></span>
                         </Link>
-                        <Link onClick={toggleCart}>
-                            <span style={{ fontSize: `16px` }} > <AiOutlineShoppingCart className="text-white" /><span className="text-[9px] font-bold absolute top-[-4px] text-black px-[4px] bg-white rounded-full right-[-3px]">{cart.length}</span></span>
+                        <Link className="relative" onClick={toggleCart}>
+                            <span style={{ fontSize: `18px` }} > <AiOutlineShoppingCart className="text-white " /><span className="text-[9px] font-bold absolute top-[-4px] text-black px-[4px] bg-white rounded-full right-[-3px]">{cart.length}</span></span>
                         </Link>
 
                     </div>
-                    {isCartOpen && <CartItems cart={cart} closeCart={closeCart} />}
                     {isFavOpen && <FavItems fav={fav} close={closeFav} />}
+                    {isCartOpen && <CartItems cart={cart} closeCart={closeCart} />}
 
-                    <div>
+                    <div className="flex items-center justify-center">
                         <Link to="/"> <img src="https://i.ibb.co/3sNL27c/logo.png" className="w-[85px] h-[15px] " alt="" /></Link>
                     </div>
-                    <div>
+                    <div className="menu-icon flex items-center justify-end">
                         {isMobileMenuOpen ? (
                             <HiMiniXMark onClick={toggleMobileMenu} className=" text-[20px] text-white"></HiMiniXMark>
                         ) : (

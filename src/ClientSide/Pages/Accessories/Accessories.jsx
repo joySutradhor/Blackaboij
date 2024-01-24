@@ -124,7 +124,7 @@ const Accessories = () => {
                         PRINCESS NEW COLLECTIONS
                 </h2></Zoom>
             </div>
-            <div className="grid md:grid-cols-3 grid-cols-2 gap-[10px] md:gap-[25px] md:mt-[25px] md:mx-[50px] mx-[20px] ">
+            <div className="grid md:grid-cols-3 grid-cols-2 gap-[10px] md:gap-[25px] mt-[50px]  md:mx-[50px] mx-[20px] ">
                 {accessoriesCollections.map((product) => (
                     <div key={product.id} className={`bg-[#B7B7B7] product-card font-custom ${isHovered === product.id && !isScrolling ? 'fade' : ''}`} onMouseEnter={() => handleMouseEnter(product.id)} onMouseLeave={handleMouseLeave}>
                         <Link to={`productaccessories/${product.id}`}> <img src={product.img} alt={product.productName} className="front-img" /></Link>
@@ -152,7 +152,7 @@ const Accessories = () => {
                             {fav.some((item) => item.mainId === product.id) ? <IoIosHeart /> : <IoIosHeartEmpty />}
                         </button>
 
-                        <div className="details-button absolute top-[200px] left-0 w- flex flex-col  items-center w-full   bg-white p-3   ">
+                        <div className="details-button md:flex justify-center items-center flex-col hidden md:block w-full bg-white p-3">
                             <Fade direction=''>
                                 <div className='space-x-3'>
                                     <button

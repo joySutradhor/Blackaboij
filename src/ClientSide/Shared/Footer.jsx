@@ -7,9 +7,9 @@ import { Link } from "react-router-dom";
 const Footer = () => {
     const iconSize = 19;
     return (
-        <div className=" md:pb-[10px] bg-black text-[15px] md:text-[16px] font-custom">
-            <div className="flex justify-center items-center md:py-10 py-5">
-                <img src="https://i.ibb.co/3sNL27c/logo.png" className="w-[85px] md:w-[85px] xl:w-[100px]" alt="" />
+        <div className=" md:pb-[10px] bg-black text-[15px] md:text-[16px] font-custom ">
+            <div className="flex justify-center items-center md:py-10 py-5 ">
+                <img src="https://i.ibb.co/3sNL27c/logo.png" className="  w-[85px]  h-[15px] md:h-[20] xl:h-[25px] md:w-[85px] xl:w-[100px] " alt="" />
             </div>
 
             <div className="md:flex md:justify-between  grid grid-cols-2 mx-[20px] md:mx-[50px] ">
