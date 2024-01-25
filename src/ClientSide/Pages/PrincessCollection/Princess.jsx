@@ -16,7 +16,7 @@ import Button from "../../Utilites/Button";
 // eslint-disable-next-line react/prop-types
 
 
-const Prince = () => {
+const Princess = () => {
     const { addToCart, addToFav, fav } = useCart();
     const [sizeByProduct, setSizeByProduct] = useState({});
     const [colorByProduct, setColorByProduct] = useState({});
@@ -259,4 +259,4 @@ const Prince = () => {
     );
 };
 
-export default Prince;
+export default Princess;

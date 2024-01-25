@@ -149,7 +149,7 @@ const ManCollections = () => {
                             {fav.some((item) => item.mainId === product.id) ? <IoIosHeart /> : <IoIosHeartEmpty />}
                         </button>
 
-                        <div className="details-button absolute top-[200px] left-0  flex flex-col  justify-center items-center w-full   bg-white p-3 hidden md:block   ">
+                        <div className="details-button md:flex justify-center items-center flex-col hidden md:block w-full bg-white p-3">
                             <Fade direction=''>
                                 <div className='md:space-x-3 '>
                                     <button

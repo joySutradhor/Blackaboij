@@ -6,9 +6,10 @@ import { Fade, Zoom } from "react-awesome-reveal";
 import { IoIosHeart, IoIosHeartEmpty } from "react-icons/io";
 
 import { toast } from "sonner";
+
+
 import { useCart } from "../../Utilites/CartContext";
 import Button from "../../Utilites/Button";
-
 
 
 
@@ -27,11 +28,11 @@ const Prince = () => {
     const [isScrolling, setIsScrolling] = useState(false);
 
     const [princeCollections, setPrinceCollections] = useState([]);
-    const PrinceCollectionsProducts = "/prince.json";
+    const princeCollectionsProducts = "/prince.json";
 
     useEffect(() => {
         // Fetch the JSON data
-        fetch(PrinceCollectionsProducts)
+        fetch(princeCollectionsProducts)
             .then(response => {
                 if (!response.ok) {
                     throw new Error(`HTTP error! Status: ${response.status}`);
@@ -45,7 +46,7 @@ const Prince = () => {
             .catch(error => {
                 console.error('Fetch error:', error);
             });
-    }, [PrinceCollectionsProducts]);
+    }, [princeCollectionsProducts]);
     // eslint-disable-next-line react/prop-types
     const Star = ({ rating }) => {
         const numberOfFullStars = Math.floor(rating);
@@ -142,7 +143,7 @@ const Prince = () => {
                                         price: product.price,
                                         size: "S",
                                         color: "Black",
-                                        route: "productPrince"
+                                        route: "princeCollections/productPrince"
                                     });
                                 }
                             }}

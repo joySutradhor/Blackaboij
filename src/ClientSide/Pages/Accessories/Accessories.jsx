@@ -27,7 +27,7 @@ const Accessories = () => {
     const [isScrolling, setIsScrolling] = useState(false);
 
     const [accessoriesCollections, setAccessoriesCollections] = useState([]);
-    const accessoriesCollectionsProducts = "/accessories.json";
+    const accessoriesCollectionsProducts = "/accessoriesCollectionsMen.json";
 
     useEffect(() => {
         // Fetch the JSON data
@@ -121,7 +121,7 @@ const Accessories = () => {
             >
                 <Zoom><h2 className="md:md:text-6xl text-[20px] text-2xl text-white font-custom font-bold whitespace-nowrap"
                 >
-                        PRINCESS NEW COLLECTIONS
+                        ACCESSORIES NEW COLLECTIONS
                 </h2></Zoom>
             </div>
             <div className="grid md:grid-cols-3 grid-cols-2 gap-[10px] md:gap-[25px] mt-[50px]  md:mx-[50px] mx-[20px] ">

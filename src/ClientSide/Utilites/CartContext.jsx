@@ -22,11 +22,27 @@ export const CartProvider = ({ children }) => {
   }, []);
 
   const addToCart = (product) => {
+    // Check if the product with the same mainId, size, and color already exists
+    const isDuplicate = cart.some(
+      (cartProduct) =>
+        cartProduct.mainId === product.mainId &&
+        cartProduct.size === product.size &&
+        cartProduct.color === product.color
+    );
+
+    if (isDuplicate) {
+      // Display a message or handle duplicate case accordingly
+      toast.warning(`${product.name} is already in the cart`);
+      return;
+    }
+
+    // If not a duplicate, add the product to the cart
     const newCart = [...cart, product];
     setCart(newCart);
     localStorage.setItem('cart', JSON.stringify(newCart));
     toast.success(`${product.name} is added to the cart`);
   };
+
 
 
   const removeFromCart = (productId) => {
@@ -41,12 +57,22 @@ export const CartProvider = ({ children }) => {
   };
 
   const addToFav = (product) => {
+    // Check if the product with the same mainId already exists
+    const isDuplicate = fav.some((favProduct) => favProduct.mainId === product.mainId);
 
+    if (isDuplicate) {
+      // Display a message or handle duplicate case accordingly
+      toast.warning(`${product.name} is already in favorites`);
+      return;
+    }
+
+    // If not a duplicate, add the product to favorites
     const newFav = [...fav, product];
     setFav(newFav);
     localStorage.setItem('fav', JSON.stringify(newFav));
-    toast.success(`${product.productName} is added to favorites`);
+    toast.success(`${product.name} is added to favorites`);
   };
+
 
   const removeFromFav = (productId) => {
     const updatedFav = fav.filter((item) => item.id !== productId);
