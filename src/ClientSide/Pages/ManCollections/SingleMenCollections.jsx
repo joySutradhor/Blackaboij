@@ -17,7 +17,7 @@ const SingleMenCollections = () => {
     const [selectedColor, setSelectedColor] = useState({});
     const { addToCart, addToFav, fav } = useCart();
     console.log(singleData.product)
-    const { img, backImg, price, productName, id } = singleData.product;
+    const { price, id , image, name  } = singleData.product;
 
     const handleSizeChange = (productId, size) => {
         setSizeByProduct((prevSizeByProduct) => ({
@@ -63,19 +63,19 @@ const SingleMenCollections = () => {
                         dynamicHeight={false}
                     >
                         <div>
-                            <img src={img} />
+                            <img src={image} />
 
                         </div>
                         <div>
-                            <img src={backImg} />
+                            <img src={image} />
 
                         </div>
 
                     </Carousel>
                 </div>
                 <div className='px-[20px] md:px-[0px]'>
-                    <p className='text-[14px] text-[#212121]'>Home . {productName}</p>
-                    <h2 className='md:my-[20px] md:text-[39px] my-[5px] text-[20px] text-[#212121] '>{productName}</h2>
+                    <p className='text-[14px] text-[#212121]'>Home . {name}</p>
+                    <h2 className='md:my-[20px] md:text-[39px] my-[5px] text-[20px] text-[#212121] '>{name}</h2>
                     <h2><span className='flex  items-center md:text-[23px] md:mb-0 mb-2  text-[16px]'><MdEuroSymbol></MdEuroSymbol> {price}</span></h2>
                     <div className='md:pt-2 space-x-3'>
                         <button
@@ -138,8 +138,8 @@ const SingleMenCollections = () => {
                                     addToCart({
                                         mainId: id,
                                         id: uniqueId,
-                                        name: productName,
-                                        img: img,
+                                        name: name,
+                                        img: image,
                                         price: price,
                                         size: selectedSize[id],
                                         color: selectedColor[id],
@@ -171,8 +171,8 @@ const SingleMenCollections = () => {
                                     addToFav({
                                         mainId: id,
                                         id: uniqueId,
-                                        name: productName,
-                                        img: img,
+                                        name: name,
+                                        img: image,
                                         price: price,
                                         size: selectedSize[id],
                                         color: selectedColor[id],

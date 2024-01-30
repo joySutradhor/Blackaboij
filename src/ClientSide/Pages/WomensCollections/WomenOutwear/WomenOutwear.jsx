@@ -26,7 +26,7 @@ const WomenOutwear = () => {
     const [isScrolling, setIsScrolling] = useState(false);
 
     const [womenOutwearCollections, setWomenOutwearCollections] = useState([]);
-    const womenOutwearCollectionsProducts = "/Womens/womenOutwear.json";
+    const womenOutwearCollectionsProducts = "http://localhost:9000/v1/products/?sortBy=name&limit=10&page=0&max=500&min=0&categoryId=2&subCategoryId=4";
 
     useEffect(() => {
         // Fetch the JSON data
@@ -126,8 +126,8 @@ const WomenOutwear = () => {
             <div className="grid md:grid-cols-3 grid-cols-2 gap-[10px] md:gap-[25px] mt-[50px]  md:mx-[50px] mx-[20px] ">
                 {womenOutwearCollections.map((product) => (
                     <div key={product.id} className={`bg-[#B7B7B7] product-card font-custom ${isHovered === product.id && !isScrolling ? 'fade' : ''}`} onMouseEnter={() => handleMouseEnter(product.id)} onMouseLeave={handleMouseLeave}>
-                        <Link to={`productWomenOutwear/${product.id}`}> <img src={product.img} alt={product.productName} className="front-img" /></Link>
-                        <Link to={`productWomenOutwear/${product.id}`}> <img src={product.backImg} alt="" className="back-img " /></Link>
+                        <Link to={`productWomenOutwear/${product.id}`}> <img src={product.image} alt={product.name} className="front-img" /></Link>
+                        <Link to={`productWomenOutwear/${product.id}`}> <img src={product.image} alt="" className="back-img " /></Link>
                         <button className='absolute top-0 right-0  text-white bg-[#000000] md:px-4 md:py-1 md:text-[16px] text-[12px] px-2  py-[2px]  '>New</button>
                         <button
                             onClick={() => {
@@ -136,8 +136,8 @@ const WomenOutwear = () => {
                                     addToFav({
                                         mainId: product.id,
                                         id: uniqueId,
-                                        name: product.productName,
-                                        img: product.img,
+                                        name: product.name,
+                                        img: product.image,
                                         price: product.price,
                                         size: "S",
                                         color: "Black",
@@ -211,8 +211,8 @@ const WomenOutwear = () => {
                                             addToCart({
                                                 mainId: product.id,
                                                 id: uniqueId,
-                                                name: product.productName,
-                                                img: product.img,
+                                                name: product.name,
+                                                img: product.image,
                                                 price: product.price,
                                                 size: selectedSize[product.id],
                                                 color: selectedColor[product.id],
@@ -240,7 +240,7 @@ const WomenOutwear = () => {
 
                             </div>
                         </div>
-                        <h3 className="text-center md:py-4 py-1 md:text-[22px] bg-black text-[16px] text-white">{product.productName}</h3>
+                        <h3 className="text-center md:py-4 py-1 md:text-[22px] bg-black text-[16px] text-white">{product.name}</h3>
                         <div className="text-center bg-[#000000] text-white md:pb-2 pb-2 flex justify-center items-center">
                             <span className="md:mr-2 mr-1">
                                 <Star rating={product.starRating} />

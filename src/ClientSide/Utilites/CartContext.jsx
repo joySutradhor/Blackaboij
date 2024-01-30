@@ -1,6 +1,8 @@
 // CartContext.jsx
 import { createContext, useContext, useState, useEffect } from 'react';
+// import { useNavigate } from 'react-router-dom';
 import { Toaster, toast } from 'sonner';
+
 
 const CartContext = createContext();
 
@@ -10,6 +12,7 @@ export const useCart = () => {
 
 // eslint-disable-next-line react/prop-types
 export const CartProvider = ({ children }) => {
+  // const navigate = useNavigate();
   const [cart, setCart] = useState([]);
   const [fav, setFav] = useState([]);
 
@@ -21,7 +24,9 @@ export const CartProvider = ({ children }) => {
     setFav(storedFav);
   }, []);
 
+
   const addToCart = (product) => {
+     
     // Check if the product with the same mainId, size, and color already exists
     const isDuplicate = cart.some(
       (cartProduct) =>
@@ -85,9 +90,15 @@ export const CartProvider = ({ children }) => {
     localStorage.removeItem('fav');
   };
 
+  // token recived and token setLocalStorage 
+  const tokenSet =(token) => {
+    // Set the token in local storage with the key 'token'
+    localStorage.setItem('token', token);
+  }
+
   return (
     <CartContext.Provider
-      value={{ cart, addToCart, removeFromCart, clearCart, fav, addToFav, removeFromFav, clearFav }}
+      value={{ cart, addToCart, removeFromCart, clearCart, fav, addToFav, removeFromFav, clearFav , tokenSet }}
     >
       <Toaster />
       {children}

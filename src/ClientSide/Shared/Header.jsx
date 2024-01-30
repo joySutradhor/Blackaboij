@@ -285,6 +285,18 @@ const Header = () => {
                                     onMouseLeave={() => SetIsAccessoriesHovered(false)}
                                 >ACCESSORIES</li>
                             </Link>
+                            <Link to="/signIn">
+                                <li className={`relative px-[15px] py-[10px] text-[15px] border-b-2-transparent group ${isAccessoriesHovered ? 'text-white  border-b-2' : ''}`}
+                                    onMouseEnter={() => SetIsAccessoriesHovered(true)}
+                                    onMouseLeave={() => SetIsAccessoriesHovered(false)}
+                                >Sign In</li>
+                            </Link>
+                            <Link to="/signUp">
+                                <li className={`relative px-[15px] py-[10px] text-[15px] border-b-2-transparent group ${isAccessoriesHovered ? 'text-white  border-b-2' : ''}`}
+                                    onMouseEnter={() => SetIsAccessoriesHovered(true)}
+                                    onMouseLeave={() => SetIsAccessoriesHovered(false)}
+                                >Sign Up</li>
+                            </Link>
                         </div>
                     </div>
                 </div>

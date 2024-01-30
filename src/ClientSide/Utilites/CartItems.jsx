@@ -5,8 +5,10 @@ import { FaMinus } from 'react-icons/fa6';
 import { useCart } from './CartContext';
 import { FiPlus } from 'react-icons/fi';
 import { Fade } from 'react-awesome-reveal';
+import { useNavigate } from 'react-router-dom';
 
 const CartItems = ({ cart, closeCart }) => {
+    const navigate = useNavigate();
     console.log(cart)
     const { removeFromCart } = useCart();
     const [quantities, setQuantities] = useState(
@@ -34,6 +36,21 @@ const CartItems = ({ cart, closeCart }) => {
             removeFromCart(productId);
         }, 300); // Adjust the duration of the fade-out animation
     };
+
+  
+
+    const handleCheckout = () => {
+        const loginToken = localStorage.getItem('loginToken');
+
+        if (loginToken) {
+            // If login token exists, navigate to the payment page
+            navigate('/checkout');
+        } else {
+            // If login token doesn't exist, navigate to the sign-in page
+            navigate('/signIn');
+        }
+    };
+
 
     return (
         <div className="absolute md:top-[75px] top-0 z-50 font-custom right-0  bg-black text-white px-5 pb-5  pt-[6px] md:h-screen md:w-[28%] w-full overflow-auto ">
@@ -95,7 +112,7 @@ const CartItems = ({ cart, closeCart }) => {
                             <p className="text-[12px] py-1 text-[#b7b7b7]">Shipping, taxes, and discount codes are calculated at checkout</p>
                         </div>
                         <div className="flex justify-center items-center bg-slate-200 text-black py-2 px-6">
-                            <button> CHECK OUT</button>
+                            <button onClick={handleCheckout} > CHECK OUT</button>
                         </div>
                     </div>
                 </div>

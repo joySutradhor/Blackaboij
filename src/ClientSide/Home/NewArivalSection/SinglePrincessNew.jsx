@@ -9,7 +9,7 @@ import { useCart } from '../../Utilites/CartContext';
 
 
 
-const SinglePrincess = () => {
+const SinglePrincessNew = () => {
     const singleData = useLoaderData();
     const [sizeByProduct, setSizeByProduct] = useState({});
     const [colorByProduct, setColorByProduct] = useState({});
@@ -198,4 +198,4 @@ const SinglePrincess = () => {
     );
 };
 
-export default SinglePrincess;
+export default SinglePrincessNew;
