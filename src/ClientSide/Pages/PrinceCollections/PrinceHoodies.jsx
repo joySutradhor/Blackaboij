@@ -203,7 +203,7 @@ const PrinceHoodies = () => {
                                     White
                                 </button>
                                 <button
-                                    className={`size-button ${selectedSize[product.id] && selectedColor[product.id] ? 'bg-gray-500 text-white' : 'hidden'}`}
+                                    className={`size-button ${selectedSize[product.id] && selectedColor[product.id] ? 'bg-gray-500 text-white' : 'bg-gray-500 text-white'}`}
                                     onClick={() => {
                                         if (selectedSize[product.id] && selectedColor[product.id]) {
 
