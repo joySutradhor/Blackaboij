@@ -69,6 +69,8 @@ import SignIn from './ClientSide/UserLoginAndRegiter/SignIn';
 import SignUp from './ClientSide/UserLoginAndRegiter/SignUp';
 import Checkout from './ClientSide/Pages/Payment/Checkout';
 import SinglePrincessNew from './ClientSide/Home/NewArivalSection/SinglePrincessNew';
+import ForgetPassword from './ClientSide/UserLoginAndRegiter/ForgetPassword';
+import NewPassword from './ClientSide/UserLoginAndRegiter/NewPassword';
 // import SinglePrincess from './ClientSide/Home/NewArivalSection/SinglePrincessNew';
 
 
@@ -670,6 +672,17 @@ const router = createBrowserRouter([
         element: <SignUp></SignUp>
       },
       // ------- Sign in and SignUp route End --------
+
+      //========= password forget ==========
+      {
+        path : "forgetPassword" ,
+        element : <ForgetPassword></ForgetPassword>
+      } ,
+      // ---------new Password ---------
+      {
+        path:"/newPassword",
+        element : <NewPassword></NewPassword>
+      },
 
       // ------ checkOut page ------
       {

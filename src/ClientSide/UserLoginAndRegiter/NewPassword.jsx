@@ -16,24 +16,10 @@ import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { Link, useNavigate } from 'react-router-dom';
 import { useState } from 'react';
 
-// function Copyright(props) {
-//   return (
-//     <Typography variant="body2" color="text.secondary" align="center" {...props}>
-//       {'Copyright © '}
-//       <Link color="inherit" href="https://mui.com/">
-//         Your Website
-//       </Link>{' '}
-//       {new Date().getFullYear()}
-//       {'.'}
-//     </Typography>
-//   );
-// }
-
-// TODO remove, this demo shouldn't need to reset the theme.
 
 const defaultTheme = createTheme();
 
-export default function SignIn() {
+export default function NewPassword() {
     const navigate = useNavigate();
     // eslint-disable-next-line no-unused-vars
     const [email, setEmail] = useState('');
@@ -49,32 +35,6 @@ export default function SignIn() {
         };
         console.log(loginData)
 
-        try {
-            // Make a POST request to the login endpoint
-            const response = await fetch('http://localhost:9000/v1/auth/login', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify(loginData),
-            });
-
-            // Handle the login response
-            if (response.ok) {
-                const result = await response.json();
-
-                // Store the new token in localStorage
-                localStorage.setItem('loginToken', result.tokens.access.token);
-
-                // Navigate to a protected route or redirect to the home page
-                navigate('/');
-            } else {
-                console.error(response);
-                // Handle unsuccessful login, show error message, etc.
-            }
-        } catch (error) {
-            console.error('Error:', error);
-        }
     };
 
     return (
@@ -91,11 +51,8 @@ export default function SignIn() {
                         height: '100vh',
                     }}
                 >
-                    {/* <Avatar sx={{ m: 1, bgcolor: 'secondary.main' }}>
-            <LockOutlinedIcon />
-          </Avatar> */}
                     <Typography component="h1" variant="h5">
-                        Sign in
+                    Reset your password
                     </Typography>
                     <Box component="form" onSubmit={handleLogin} noValidate sx={{ mt: 1 }}>
                         <TextField
@@ -103,9 +60,9 @@ export default function SignIn() {
                             required
                             fullWidth
                             id="email"
-                            label="Email Address"
-                            name="email"
-                            autoComplete="email"
+                            label="New Password"
+                            name="newPassword"
+                            // autoComplete="email"
                             autoFocus
                             sx={{
                                 '& input': {
@@ -128,11 +85,11 @@ export default function SignIn() {
                             margin="normal"
                             required
                             fullWidth
-                            name="password"
-                            label="Password"
+                            name="retypePassword"
+                            label="Retype Password"
                             type="password"
-                            id="password"
-                            autoComplete="current-password"
+                            id="retypePassword"
+                            // autoComplete="current-password"
                             sx={{
                                 '& input': {
 
@@ -150,10 +107,7 @@ export default function SignIn() {
                             }}
                             onChange={(e) => setPassword(e.target.value)}
                         />
-                        <FormControlLabel
-                            control={<Checkbox value="remember" color="primary" />}
-                            label="Remember me"
-                        />
+
                         <Button
                             type="submit"
                             fullWidth
@@ -167,21 +121,9 @@ export default function SignIn() {
                                 backgroundColor: "black",
                             }}
                         >
-                            Sign In
+                           Submit
                         </Button>
-                        <Grid container>
-                            <Grid item xs>
-                                <Link to="/forgetPassword" className='text-sky-500 underline'>
-                                    Forgot password?
-                                </Link>
-                            </Grid>
-                            <Grid item>
-                                
-                                <Link to="/signUp" className='text-sky-500 underline' >
-                                    Already an account? Sign in
-                                </Link>
-                            </Grid>
-                        </Grid>
+
                     </Box>
                 </Box>
                 {/* <Copyright sx={{ mt: 8, mb: 4 }} /> */}

@@ -303,7 +303,7 @@ const Header = () => {
             </div>
             {/* mobile menu */}
             <div className={`header md:hidden  block w-full ${isSticky ? "fixed top-0 z-50" : ""} bg-black text-white transition-colors duration-500 ease-in-out z-50 `}>
-                <div className={`grid grid-cols-3 items-center  py-[18px]   px-[20px] font-custom  relative ${isMobileMenuOpen ? "bg-black z-100  " : ""}  `}>
+                <div className={`grid grid-cols-3 items-center z-50  py-[18px]   px-[20px] font-custom  relative ${isMobileMenuOpen ? "bg-black z-100  " : ""}  `}>
                     <div className="   flex  relative">
                         <Link className="pr-[6px]">
                             <span style={{ fontSize: `18px` }} > <FaRegUser className="text-white " /></span>
@@ -330,7 +330,7 @@ const Header = () => {
                         )}
                     </div>
                     {isMobileMenuOpen && (
-                        <div className={`bg-black  text-white absolute left-0 top-16 w-full  h-screen px-5 `}>
+                        <div className={`bg-black  text-white absolute left-0 top-10 w-full  h-screen px-5 `}>
                             <ul className="flex flex-col   py-4 space-y-4">
                                 <li>
                                     <div

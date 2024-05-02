@@ -6,7 +6,7 @@ import Footer from "./Shared/Footer";
 const Main = () => {
 
     const location = useLocation();
-    const pathsToHideHeaderFooter = ['/signIn', '/signUp', '/checkout'];
+    const pathsToHideHeaderFooter = ['/signIn', '/signUp', '/checkout', "/forgetPassword", "/newPassword"];
     // Check if the current pathname is in the array of paths to hide Header and Footer.
     const shouldHideHeaderFooter = pathsToHideHeaderFooter.includes(location.pathname);
 
